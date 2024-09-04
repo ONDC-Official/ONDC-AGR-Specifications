@@ -1,75 +1,53 @@
-Agri Products - Basic order flow:
-  summary: Agri Products - Basic order flow
+Agricultural output product - Negotiation:
+  summary: Agri output product - Negotiation
   description: >-
-    This elaborates the model implementations for agricultural product order process over the network.
-    The process majorly happens in four phases of order processing flow, i.e. Discovery of available products, and providers based on serviceability, order, fulfillment and post-fulfillment.
+    This elaborates the model implementations for agricultural output product negotiation over the network.
+    The negotiation majorly happens in four phases of order processing flow, i.e. Discovery of available commodity for negotiation, and service providers based on serviceability, order, fulfillment and post-fulfillment.
   example_set:
-    $ref: "./Agri_Products_yaml/index.yaml"
-Agri Products - Flow 1 (Catalog pull):
-  summary: Agri Products - Flow 1 (Catalog pull)
+    $ref: "./Agri_Bids_And_Auction_yaml/index.yaml"
+Agricultural product - Bids and Auction:
+  summary: Bids and Auction
   description: >-
-    This elaborates the model implementations for agricultural product catalog pull process over the network.
-    ✳️ Buyer NP initiates full catalog pull;
-    ✳️ Seller responds with full catalog;
-    ✳️ Buyer NP initiates catalog incremental refresh request;
-    ✳️ Seller NP responds with incremental catalog refresh response;
+    This elaborates the model implementations for agricultural product bids and auction over the network.
+    The bids and auction majorly happens in four phases of order processing flow, i.e. Discovery of available commodity for bids and auction, and service providers based on serviceability, order, fulfillment and post-fulfillment.
   example_set:
-    $ref: "./Agri_Products_yaml/index.yaml"
-Agri Products - Flow 2 (Multi item successful order):
-  summary: Agri Products - Flow 2 (Multi item successful order)
+    $ref: "./Agri_Bids_And_Auction_yaml/index.yaml"
+Agricultural product - Bids and Auction (Close Bid):
+  summary: Bids and Auction (Close Bid)
   description: >-
-    This elaborates the model implementations for agricultural product order process over the network.
-    ✳️ Buyer selects multiple items (> 1 qty for each item) for checkout;
-    ✳️ Seller NP provides all fulfillment slots (different fulfillment types), some with tracking enabled;                        
-    ✳️ Buyer selects different type or different slot for which tracking is enabled;
-    ✳️ Seller NP accepts and proceeds to checkout;
-    ✳️ Order is confirmed;
-    ✳️ Buyer NP tracks live status of order;
-    ✳️ Unsolicited status updates for order until delivery;
+    This elaborates the model implementations for agricultural product bids and auction over the network.
+    The bids and auction majorly happens in four phases of order processing flow, i.e. Discovery of available commodity for bids and auction, and service providers based on serviceability, order, fulfillment and post-fulfillment
+    but in Close Bid, the buyers places their bid which is encrypted (not made visible) for other buyers.
   example_set:
-    $ref: "./Agri_Products_yaml/index.yaml"
-Agri Products - Flow 3 (Item out of stock):
-  summary: Agri Products - Flow 3 (Item out of stock)
+    $ref: "./Agri_Bids_And_Auction_yaml/index.yaml"
+Agricultural product - Bids and Auction (Buyer fails to make payment):
+  summary: Bids and Auction (Buyer fails to make payment)
   description: >-
-    This elaborates the model implementations for agricultural product order process over the network.
-    ✳️ Buyer selects multiple items (> 1 qty for each item) for checkout;
-    ✳️ Seller NP provides all fulfillment slots (different fulfillment types), some with tracking enabled;
-    ✳️ Seller NP provides details of item which is out of stock and item for which the quantity requested isn't available;
-    ✳️ Buyer selects different type or different slot for which tracking is disabled;
-    ✳️ Buyer NP accepts and proceeds to checkout;
-    ✳️ Order is confirmed;
-    ✳️ Buyer NP tracks live status of order;
-    ✳️ Unsolicited status updates for order until delivery;
+    This elaborates the model implementations for agricultural product bids and auction over the network.
+    The bids and auction majorly happens in four phases of order processing flow, i.e. Discovery of available commodity for bids and auction, and service providers based on serviceability, order, fulfillment and post-fulfillment
+    but winning bidder fails to make payment within the specified timeframe, leading to a dispute resolution process involving the platform's customer support.
   example_set:
-    $ref: "./Agri_Products_yaml/index.yaml"
-Agri Products - Flow 4 (Buyer side cancellation):
-  summary: Agri Products - Flow 4 (Buyer side cancellation)
+    $ref: "./Agri_Bids_And_Auction_yaml/index.yaml"
+Agricultural product - Bids and Auction (Buyer not satisfied with the quality):
+  summary: Bids and Auction (Buyer not satisfied with the quality)
   description: >-
-    This elaborates the model implementations for agricultural product order process over the network and after the order creation Buyer NP cancels order before pickup.
+    This elaborates the model implementations for agricultural product bids and auction over the network.
+    The bids and auction majorly happens in four phases of order processing flow, i.e. Discovery of available commodity for bids and auction, and service providers based on serviceability, order, fulfillment and post-fulfillment
+    but gricultural produce received by the buyer does not match the description provided by the seller, the buyer may raise a complaint on the buyer app and the buyer app tries to analyse the complaints.
   example_set:
-    $ref: "./Agri_Products_yaml/index.yaml"
-Agri Products - Flow 5 (Seller side cancellation):
-  summary: Agri Products - Flow 5 (Seller side cancellation)
+    $ref: "./Agri_Bids_And_Auction_yaml/index.yaml"
+Agricultural product - Bids and Auction (Pull and Push catalogs):
+  summary: Bids and Auction - Buyer can pull the current bids state for the changed catalog and seller can push (send) all the catalog which bids prices are modified
   description: >-
-    This elaborates the model implementations for agricultural product order process over the network and after the order creation LSP/Seller NP cancel order due to buyer unavailability.
+    This elaborates the model implementations for agricultural product bids and auction over the network.
+    Buyer can pull the current bids state for the changed catalog and seller can push (send) all the catalog which bids prices are modified
   example_set:
-    $ref: "./Agri_Products_yaml/index.yaml"
-Agri Products - Flow 6 (Seller side part cancel before pickup):
-  summary: Agri Products - Flow 6 (Seller side part cancel before pickup)
+    $ref: "./Agri_Bids_And_Auction_yaml/index.yaml"
+Agricultural product - Bids and Auction (Minimum Bid Quantity):
+  summary: Bids and Auction (Minimum Bid Quantity)
   description: >-
-    This elaborates the model implementations for agricultural product order process over the network and after the order creation Merchant cancels one of the items before pickup.
+    This elaborates the model implementations for agricultural product bids and auction over the network.
+    The bids and auction majorly happens in four phases of order processing flow, i.e. Discovery of available commodity for bids and auction, and service providers based on serviceability, order, fulfillment and post-fulfillment and bids can be done with minimum quantity (If a Seller has 3 MT, and MBQ is (or can be) 1 MT).
   example_set:
-    $ref: "./Agri_Products_yaml/index.yaml"
-Agri Products - Flow 6 (Buyer returns and seller liquidate the request):
-  summary: Agri Products - Flow 6 (Buyer returns and seller liquidate the request)
-  description: >-
-    This elaborates the model implementations for agricultural product order process over the network and after the order creation Buyer returns an item which seller NP accepts with liquidation.
-  example_set:
-    $ref: "./Agri_Products_yaml/index.yaml"
-Agri Products - Flow 6 (Buyer returns and seller accept the request i.e. Reverse QC):
-  summary: Agri Products - Flow 6 (Buyer returns and seller accept the request i.e. Reverse QC)
-  description: >-
-    This elaborates the model implementations for agricultural product order process over the network and after the order creation Buyer returns another item from previous order which seller NP accepts with return of item.
-  example_set:
-    $ref: "./Agri_Products_yaml/index.yaml"
+    $ref: "./Agri_Bids_And_Auction_yaml/index.yaml"
 
