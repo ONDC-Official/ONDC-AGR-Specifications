@@ -1,29 +1,35 @@
 fulfillments:
   type:
-    - code: Delivery
-      description: When order is 
+    - code: Buyer-Fulfilled
+      description: Buyer will pickup the commodity
       reference: <PR/Issue/Discussion Links md format text>
   state:
     descriptor:
       code:
-        - code: Pending
-          description: default fulfillment state
+        - code: Placed
+          description: When the bids fulfillment is Placed
           reference: <PR/Issue/Discussion Links md format text>
-        - code: Packed
-          description: packed for shipping
+        - code: Awarded
+          description: When the bids is awarded to winner
           reference: <PR/Issue/Discussion Links md format text>
-        - code: Agent-assigned
-          description: rider assigned
-          reference: <PR/Issue/Discussion Links md format text>
-        - code: Order-picked-up
-          description: order picked up by rider
-          reference: <PR/Issue/Discussion Links md format text>
-        - code: Out-for-delivery
-          description: Out for delivery
-          reference: <PR/Issue/Discussion Links md format text>
-        - code: Order-delivered
-          description: When order is delivered to buyer
+        - code: Not-Awarded
+          description: When buyer is not the highest winner
           reference: <PR/Issue/Discussion Links md format text>
         - code: Cancelled
-          description: When order is cancelled
+          description: When bids is cancelled
+          reference: <PR/Issue/Discussion Links md format text>
+        - code: Pending
+          description: When order is created
+          reference: <PR/Issue/Discussion Links md format text>
+        - code: Packed
+          description: When order is packed
+          reference: <PR/Issue/Discussion Links md format text>
+        - code: Order-picked-up
+          description: When order is picked up
+          reference: <PR/Issue/Discussion Links md format text>
+        - code: In-transit
+          description: When order is in transit to move at destination
+          reference: <PR/Issue/Discussion Links md format text>
+        - code: Delivered
+          description: When order is delivered
           reference: <PR/Issue/Discussion Links md format text>

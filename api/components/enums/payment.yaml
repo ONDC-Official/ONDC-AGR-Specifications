@@ -23,8 +23,11 @@ payment:
     Payment_Details:
       Reason:
         - code: cancellation_charge
-          description: Cancellation charge for products
+          description: cancellation charge for bid
           reference: <PR/Issue/Discussion Links md format text>
-        - code: refund_charge
-          description: Refund charge for products
+        - code: quality_degrade_charge
+          description: Quality is not upto the mark so deduction in total bid amount
+          reference: <PR/Issue/Discussion Links md format text>
+        - code: tandc_violation_charge
+          description: Terms and condition violation charge for bids
           reference: <PR/Issue/Discussion Links md format text>

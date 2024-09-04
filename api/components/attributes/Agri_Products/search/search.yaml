@@ -46,7 +46,7 @@ message:
       category:
         description: Category of the commodity
         required: optional
-        usage: "SRV18-1001"
+        usage: "AGR11-1001"
         reference: if any
     payment:
       parent: true
