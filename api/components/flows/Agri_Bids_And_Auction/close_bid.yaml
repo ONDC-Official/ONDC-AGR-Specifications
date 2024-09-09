@@ -11,7 +11,7 @@ details:
         participant SA1 as SellerApp1
         participant SA2 as SellerApp2
         
-        Note Over B,SA: **SEARCH FLOW**
+        Note Over B,SA2: **SEARCH FLOW**
         B ->> BA: Buyer initiates an exploratory search for Bids and Auctions.
         BA ->> G: **/search** - Search by city for a commodity and <br>additional parameters
         Note left of BA: Additional params include: <br><br>

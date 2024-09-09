@@ -3353,7 +3353,7 @@ x-flows:
             participant SA1 as SellerApp1
             participant SA2 as SellerApp2
             
-            Note Over B,SA: **SEARCH FLOW**
+            Note Over B,SA2: **SEARCH FLOW**
             B ->> BA: Buyer initiates an exploratory search for Negotiations.
             BA ->> G: **/search** - Search by city for a commodity and <br>additional parameters
             Note left of BA: Additional params include: <br><br>
@@ -5835,7 +5835,7 @@ x-flows:
             participant SA1 as SellerApp1
             participant SA2 as SellerApp2
             
-            Note Over B,SA: **SEARCH FLOW**
+            Note Over B,SA2: **SEARCH FLOW**
             B ->> BA: Buyer initiates an exploratory search for Negotiations.
             BA ->> G: **/search** - Search by city for a commodity and <br>additional parameters
             Note left of BA: Additional params include: <br><br>
@@ -8191,7 +8191,7 @@ x-flows:
             participant SA1 as SellerApp1
             participant SA2 as SellerApp2
             
-            Note Over B,SA: **SEARCH FLOW**
+            Note Over B,SA2: **SEARCH FLOW**
             B ->> BA: Buyer initiates an exploratory search for Bids and Auctions.
             BA ->> G: **/search** - Search by city for a commodity and <br>additional parameters
             Note left of BA: Additional params include: <br><br>
@@ -11045,7 +11045,7 @@ x-flows:
             participant SA1 as SellerApp1
             participant SA2 as SellerApp2
             
-            Note Over B,SA: **SEARCH FLOW**
+            Note Over B,SA2: **SEARCH FLOW**
             B ->> BA: Buyer initiates an exploratory search for Bids and Auctions.
             BA ->> G: **/search** - Search by city for a commodity and <br>additional parameters
             Note left of BA: Additional params include: <br><br>
@@ -11642,7 +11642,7 @@ x-flows:
             participant SA1 as SellerApp1
             participant SA2 as SellerApp2
             
-            Note Over B,SA: **SEARCH FLOW**
+            Note Over B,SA2: **SEARCH FLOW**
             B ->> BA: Buyer initiates an exploratory search for Bids and Auctions.
             BA ->> G: **/search** - Search by city for a commodity and <br>additional parameters
             Note left of BA: Additional params include: <br><br>
@@ -12596,7 +12596,7 @@ x-flows:
             participant SA1 as SellerApp1
             participant SA2 as SellerApp2
             
-            Note Over B,SA: **SEARCH FLOW**
+            Note Over B,SA2: **SEARCH FLOW**
             B ->> BA: Buyer initiates an exploratory search for Bids and Auctions.
             BA ->> G: **/search** - Search by city for a commodity and <br>additional parameters
             Note left of BA: Additional params include: <br><br>
@@ -12785,7 +12785,7 @@ x-flows:
             participant SA1 as SellerApp1
             participant SA2 as SellerApp2
             
-            Note Over B,SA: **SEARCH FLOW**
+            Note Over B,SA2: **SEARCH FLOW**
             B ->> BA: Buyer initiates an exploratory search for Bids and Auctions.
             BA ->> G: **/search** - Search by city for a commodity and <br>additional parameters
             Note left of BA: Additional params include: <br><br>
@@ -12804,7 +12804,7 @@ x-flows:
             participant SA1 as SellerApp1
             participant SA2 as SellerApp2
             
-            Note Over B,SA: **SEARCH FLOW**
+            Note Over B,SA2: **SEARCH FLOW**
             B ->> BA: Buyer initiates an exploratory search for Bids and Auctions with incremental pull request
             BA ->> G: **/search** - Search by city for a commodity <br> for modified calelogs
             Note left of BA: Additional params include: <br><br>
@@ -12823,7 +12823,7 @@ x-flows:
             participant SA1 as SellerApp1
             participant SA2 as SellerApp2
             
-            Note Over B,SA: **SEARCH FLOW**
+            Note Over B,SA2: **SEARCH FLOW**
             B ->> BA: Buyer initiates an exploratory search for Bids and Auctions with incremental regular start
             BA ->> G: **/search** - Search by city for a auction commodity
             Note left of BA: Additional params include: <br><br>
@@ -13055,7 +13055,7 @@ x-flows:
             participant SA1 as SellerApp1
             participant SA2 as SellerApp2
             
-            Note Over B,SA: **SEARCH FLOW**
+            Note Over B,SA2: **SEARCH FLOW**
             B ->> BA: Buyer initiates an exploratory search for Bids and Auctions.
             BA ->> G: **/search** - Search by city for a commodity and <br>additional parameters
             Note left of BA: Additional params include: <br><br>
@@ -25241,4 +25241,3 @@ x-errorcodes:
       Who can use code?: BPP
       Usage: Used in NACK
       Action: NACK on /select
-      
