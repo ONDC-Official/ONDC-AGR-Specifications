@@ -32,17 +32,14 @@ value:
             - AGR11-1001
           price:
             currency: INR
-            offered_value: '270.00'
+            value: '270.00'
           quantity:
             selected:
               count: 100
           tags:
             - descriptor:
-                code: COMMODITY_SPECIFICATION
+                code: NEGOTIATION_BAP
               list:
-                - descriptor:
-                    code: SHELF_LIFE
-                  value: P10M
                 - descriptor:
                     code: MOISTURE
                   value: 10%
@@ -52,19 +49,6 @@ value:
                 - descriptor:
                     code: DEFECTIVES
                   value: 7%
-            - descriptor:
-                code: QUALITY_ASSESSMENT_REPORT
-              display: true
-              list:
-                - descriptor:
-                    code: NAME
-                  value: CER-001
-                - descriptor:
-                    code: MIME_TYPE
-                  value: application/pdf
-                - descriptor:
-                    code: COPY
-                  value: https://abc.com/certificates
       billing:
         name: ONDC buyer
         address: >-

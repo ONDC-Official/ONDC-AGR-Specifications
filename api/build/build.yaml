@@ -3805,6 +3805,99 @@ x-flows:
                               - descriptor:
                                   code: FINENESS
                                 value: Fine (10)
+                          - descriptor:
+                              code: NEGOTIATION_SPECIFICATION
+                            list:
+                              - descriptor:
+                                  code: MOISTURE
+                                value: 10%
+                              - descriptor:
+                                  code: FOREIGN_MATTER
+                                value: 3%
+                              - descriptor:
+                                  code: OIL_CONTENT
+                                value: 2%
+                              - descriptor:
+                                  code: DEFECTIVES
+                                value: 7%
+                              - descriptor:
+                                  code: OTHER_EDIBLE_GRAINS
+                                value: 1%
+                              - descriptor:
+                                  code: SIZE_RANGE_MEASURE
+                                value: Diameter
+                              - descriptor:
+                                  code: SIZE_RANGE
+                                value: 15-18
+                              - descriptor:
+                                  code: PERCENTAGE_OF_DEFECTS
+                                value: 1.5%
+                              - descriptor:
+                                  code: PERCENTAGE_OF_WASTAGE
+                                value: 3%
+                              - descriptor:
+                                  code: BUNCH_SIZE
+                                value: '50'
+                              - descriptor:
+                                  code: BUNCH_SIZE_UNIT
+                                value: gm
+                              - descriptor:
+                                  code: VISIBLE_COLOUR
+                                value: Brown
+                              - descriptor:
+                                  code: COLOUR_PERCENTAGE
+                                value: More than 70
+                              - descriptor:
+                                  code: TRACES_OF_SOIL
+                                value: Sight traces
+                              - descriptor:
+                                  code: VOLATILE_OIL_PERCENTAGE
+                                value: Up to 2.5
+                              - descriptor:
+                                  code: TOTAL_ASH_PERCENTAGE
+                                value: Not more than 7.0
+                              - descriptor:
+                                  code: CORIANDER_SPLIT_SEEDS_PERCENTAGE
+                                value: 5%
+                              - descriptor:
+                                  code: MIN_FLOWER_PER_STEM
+                                value: '1'
+                              - descriptor:
+                                  code: GIRTH_AT_THIN_END
+                                value: less than 6 cm
+                              - descriptor:
+                                  code: FLOWER_DIAMETER_IN_CM
+                                value: '3.45'
+                              - descriptor:
+                                  code: STAPLE_LENGTH_OF_COTTON_IN_MM
+                                value: 28‑30
+                              - descriptor:
+                                  code: TRASH_PERCENTAGE
+                                value: 3%
+                              - descriptor:
+                                  code: BUNDLE_STRENGTH
+                                value: 24.0 and above
+                              - descriptor:
+                                  code: MICRONAIRE
+                                value: 2.8 to 3.0
+                              - descriptor:
+                                  code: PERCENTAGE_OF_MATURED_FIBERS
+                                value: Above 70.0-75.0 mm
+                              - descriptor:
+                                  code: SIEVE_ANALYSIS
+                                value: '98'
+                              - descriptor:
+                                  code: NUMBER_OF_NUTS_PER_KG
+                                value: '210'
+                              - descriptor:
+                                  code: VOID_NUTS_PERCENTAGE
+                                value: '1'
+                              - descriptor:
+                                  code: IMMATURE_NUTS_PERCENTAGE
+                                value: '2'
+                              - descriptor:
+                                  code: FINENESS
+                                value: Fine (10)
                     offers:
                       - id: offer-1
                         descriptor:
@@ -3959,8 +4052,8 @@ x-flows:
                         count: 100
                     price:
                       currency: INR
-                      value: '300.00'
-                      offered_value: '280.00'
+                      value: '280.00'
+                      offered_value: '250.00'
                 fulfillments:
                   - id: F1
                     stops:
@@ -3973,6 +4066,71 @@ x-flows:
                           range:
                             start: '2024-06-09T22:00:00.000Z'
                             end: '2024-06-10T02:00:00.000Z'
+                quote:
+                  price:
+                    currency: INR
+                    value: '28050.00'
+                    offered_value: '25050.00'
+                  breakup:
+                    - title: Wheat (Negotiation)
+                      price:
+                        currency: INR
+                        value: '28000.00'
+                      item:
+                        id: I1
+                        quantity:
+                          selected:
+                            count: 100
+                        price:
+                          currency: INR
+                          value: '280.00'
+                      tags:
+                        - descriptor:
+                            code: TITLE
+                          list:
+                            - descriptor:
+                                code: type
+                              value: item
+                    - title: tax
+                      price:
+                        currency: INR
+                        value: '50'
+                      item:
+                        id: I1
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: tax
+                    - title: discount
+                      price:
+                        currency: INR
+                        value: '100'
+                      item:
+                        id: I1
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: discount
+                    - title: pickup_charge
+                      price:
+                        currency: INR
+                        value: '100'
+                      item:
+                        id: I1
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: misc
+                  ttl: P1D
                 payments:
                   - type: PRE-FULFILLMENT
                     collected_by: BAP
@@ -4018,7 +4176,7 @@ x-flows:
                         count: 100
                     price:
                       currency: INR
-                      value: '300.00'
+                      value: '280.00'
                       offered_value: '270.00'
                 fulfillments:
                   - stops:
@@ -4081,7 +4239,7 @@ x-flows:
                         count: 100
                     price:
                       currency: INR
-                      value: '300.00'
+                      value: '270.00'
                       offered_value: '270.00'
                 fulfillments:
                   - id: F1
@@ -4099,6 +4257,7 @@ x-flows:
                   price:
                     currency: INR
                     value: '27050.00'
+                    offered_value: '27050.00'
                   breakup:
                     - title: Wheat (Negotiation)
                       price:
@@ -4201,7 +4360,7 @@ x-flows:
                       - AGR11-1001
                     price:
                       currency: INR
-                      offered_value: '270.00'
+                      value: '270.00'
                     quantity:
                       selected:
                         count: 100
@@ -4294,7 +4453,7 @@ x-flows:
                       - AGR11-1001
                     price:
                       currency: INR
-                      offered_value: '270.00'
+                      value: '270.00'
                     quantity:
                       selected:
                         count: 100
@@ -4465,7 +4624,7 @@ x-flows:
                       - AGR11-1001
                     price:
                       currency: INR
-                      offered_value: '270.00'
+                      value: '270.00'
                     quantity:
                       selected:
                         count: 100
@@ -4650,7 +4809,7 @@ x-flows:
                       - AGR11-1001
                     price:
                       currency: INR
-                      offered_value: '270.00'
+                      value: '270.00'
                     quantity:
                       selected:
                         count: 100
@@ -4891,8 +5050,7 @@ x-flows:
                       - AGR11-1001
                     price:
                       currency: INR
-                      value: '300.00'
-                      offered_value: '270.00'
+                      value: '270.00'
                     quantity:
                       selected:
                         count: 100
@@ -5084,8 +5242,7 @@ x-flows:
                       - AGR11-1001
                     price:
                       currency: INR
-                      value: '300.00'
-                      offered_value: '270.00'
+                      value: '270.00'
                     quantity:
                       selected:
                         count: 100
@@ -5277,8 +5434,7 @@ x-flows:
                       - AGR11-1001
                     price:
                       currency: INR
-                      value: '300.00'
-                      offered_value: '270.00'
+                      value: '270.00'
                     quantity:
                       selected:
                         count: 100
@@ -5470,8 +5626,7 @@ x-flows:
                       - AGR11-1001
                     price:
                       currency: INR
-                      value: '300.00'
-                      offered_value: '270.00'
+                      value: '270.00'
                     quantity:
                       selected:
                         count: 100
@@ -5663,8 +5818,7 @@ x-flows:
                       - AGR11-1001
                     price:
                       currency: INR
-                      value: '300.00'
-                      offered_value: '270.00'
+                      value: '270.00'
                     quantity:
                       selected:
                         count: 100
@@ -5965,11 +6119,8 @@ x-flows:
                       offered_value: '250.00'
                     tags:
                       - descriptor:
-                          code: COMMODITY_SPECIFICATION
+                          code: NEGOTIATION_BAP
                         list:
-                          - descriptor:
-                              code: SHELF_LIFE
-                            value: P10M
                           - descriptor:
                               code: MOISTURE
                             value: 10%
@@ -6039,24 +6190,114 @@ x-flows:
                         count: 100
                     price:
                       currency: INR
-                      value: '300.00'
-                      offered_value: '280.00'
+                      value: '280.00'
+                      offered_value: '250.00'
                     tags:
                       - descriptor:
-                          code: COMMODITY_SPECIFICATION
+                          code: NEGOTIATION_BAP
                         list:
                           - descriptor:
-                              code: SHELF_LIFE
-                            value: P10M
-                          - descriptor:
                               code: MOISTURE
-                            value: 10%
+                            value: 4%
                           - descriptor:
                               code: OIL_CONTENT
                             value: 2%
                           - descriptor:
                               code: DEFECTIVES
                             value: 7%
+                      - descriptor:
+                          code: NEGOTIATION_BPP
+                        list:
+                          - descriptor:
+                              code: MOISTURE
+                            value: 10%
+                          - descriptor:
+                              code: FOREIGN_MATTER
+                            value: 3%
+                          - descriptor:
+                              code: OIL_CONTENT
+                            value: 2%
+                          - descriptor:
+                              code: DEFECTIVES
+                            value: 7%
+                          - descriptor:
+                              code: OTHER_EDIBLE_GRAINS
+                            value: 1%
+                          - descriptor:
+                              code: SIZE_RANGE_MEASURE
+                            value: Diameter
+                          - descriptor:
+                              code: SIZE_RANGE
+                            value: 15-18
+                          - descriptor:
+                              code: PERCENTAGE_OF_DEFECTS
+                            value: 1.5%
+                          - descriptor:
+                              code: PERCENTAGE_OF_WASTAGE
+                            value: 3%
+                          - descriptor:
+                              code: BUNCH_SIZE
+                            value: '50'
+                          - descriptor:
+                              code: BUNCH_SIZE_UNIT
+                            value: gm
+                          - descriptor:
+                              code: VISIBLE_COLOUR
+                            value: Brown
+                          - descriptor:
+                              code: COLOUR_PERCENTAGE
+                            value: More than 70
+                          - descriptor:
+                              code: TRACES_OF_SOIL
+                            value: Sight traces
+                          - descriptor:
+                              code: VOLATILE_OIL_PERCENTAGE
+                            value: Up to 2.5
+                          - descriptor:
+                              code: TOTAL_ASH_PERCENTAGE
+                            value: Not more than 7.0
+                          - descriptor:
+                              code: CORIANDER_SPLIT_SEEDS_PERCENTAGE
+                            value: 5%
+                          - descriptor:
+                              code: MIN_FLOWER_PER_STEM
+                            value: '1'
+                          - descriptor:
+                              code: GIRTH_AT_THIN_END
+                            value: less than 6 cm
+                          - descriptor:
+                              code: FLOWER_DIAMETER_IN_CM
+                            value: '3.45'
+                          - descriptor:
+                              code: STAPLE_LENGTH_OF_COTTON_IN_MM
+                            value: 28‑30
+                          - descriptor:
+                              code: TRASH_PERCENTAGE
+                            value: 3%
+                          - descriptor:
+                              code: BUNDLE_STRENGTH
+                            value: 24.0 and above
+                          - descriptor:
+                              code: MICRONAIRE
+                            value: 2.8 to 3.0
+                          - descriptor:
+                              code: PERCENTAGE_OF_MATURED_FIBERS
+                            value: Above 70.0-75.0 mm
+                          - descriptor:
+                              code: SIEVE_ANALYSIS
+                            value: '98'
+                          - descriptor:
+                              code: NUMBER_OF_NUTS_PER_KG
+                            value: '210'
+                          - descriptor:
+                              code: VOID_NUTS_PERCENTAGE
+                            value: '1'
+                          - descriptor:
+                              code: IMMATURE_NUTS_PERCENTAGE
+                            value: '2'
+                          - descriptor:
+                              code: FINENESS
+                            value: Fine (10)
                 fulfillments:
                   - id: F1
                     stops:
@@ -6069,6 +6310,71 @@ x-flows:
                           range:
                             start: '2024-06-09T22:00:00.000Z'
                             end: '2024-06-10T02:00:00.000Z'
+                quote:
+                  price:
+                    currency: INR
+                    value: '28050.00'
+                    offered_value: '25050.00'
+                  breakup:
+                    - title: Wheat (Negotiation)
+                      price:
+                        currency: INR
+                        value: '28000.00'
+                      item:
+                        id: I1
+                        quantity:
+                          selected:
+                            count: 100
+                        price:
+                          currency: INR
+                          value: '280.00'
+                      tags:
+                        - descriptor:
+                            code: TITLE
+                          list:
+                            - descriptor:
+                                code: type
+                              value: item
+                    - title: tax
+                      price:
+                        currency: INR
+                        value: '50'
+                      item:
+                        id: I1
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: tax
+                    - title: discount
+                      price:
+                        currency: INR
+                        value: '100'
+                      item:
+                        id: I1
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: discount
+                    - title: pickup_charge
+                      price:
+                        currency: INR
+                        value: '100'
+                      item:
+                        id: I1
+                      tags:
+                        - descriptor:
+                            code: title
+                          list:
+                            - descriptor:
+                                code: type
+                              value: misc
+                  ttl: P1D
                 payments:
                   - type: PRE-FULFILLMENT
                     collected_by: BAP
@@ -6114,15 +6420,12 @@ x-flows:
                         count: 100
                     price:
                       currency: INR
-                      value: '300.00'
+                      value: '280.00'
                       offered_value: '270.00'
                     tags:
                       - descriptor:
-                          code: COMMODITY_SPECIFICATION
+                          code: NEGOTIATION_BAP
                         list:
-                          - descriptor:
-                              code: SHELF_LIFE
-                            value: P10M
                           - descriptor:
                               code: MOISTURE
                             value: 10%
@@ -6193,24 +6496,114 @@ x-flows:
                         count: 100
                     price:
                       currency: INR
-                      value: '300.00'
+                      value: '270.00'
                       offered_value: '270.00'
                     tags:
                       - descriptor:
-                          code: COMMODITY_SPECIFICATION
+                          code: NEGOTIATION_BAP
                         list:
                           - descriptor:
-                              code: SHELF_LIFE
-                            value: P10M
-                          - descriptor:
                               code: MOISTURE
-                            value: 10%
+                            value: 4%
                           - descriptor:
                               code: OIL_CONTENT
                             value: 2%
                           - descriptor:
                               code: DEFECTIVES
                             value: 7%
+                      - descriptor:
+                          code: NEGOTIATION_BPP
+                        list:
+                          - descriptor:
+                              code: MOISTURE
+                            value: 10%
+                          - descriptor:
+                              code: FOREIGN_MATTER
+                            value: 3%
+                          - descriptor:
+                              code: OIL_CONTENT
+                            value: 2%
+                          - descriptor:
+                              code: DEFECTIVES
+                            value: 7%
+                          - descriptor:
+                              code: OTHER_EDIBLE_GRAINS
+                            value: 1%
+                          - descriptor:
+                              code: SIZE_RANGE_MEASURE
+                            value: Diameter
+                          - descriptor:
+                              code: SIZE_RANGE
+                            value: 15-18
+                          - descriptor:
+                              code: PERCENTAGE_OF_DEFECTS
+                            value: 1.5%
+                          - descriptor:
+                              code: PERCENTAGE_OF_WASTAGE
+                            value: 3%
+                          - descriptor:
+                              code: BUNCH_SIZE
+                            value: '50'
+                          - descriptor:
+                              code: BUNCH_SIZE_UNIT
+                            value: gm
+                          - descriptor:
+                              code: VISIBLE_COLOUR
+                            value: Brown
+                          - descriptor:
+                              code: COLOUR_PERCENTAGE
+                            value: More than 70
+                          - descriptor:
+                              code: TRACES_OF_SOIL
+                            value: Sight traces
+                          - descriptor:
+                              code: VOLATILE_OIL_PERCENTAGE
+                            value: Up to 2.5
+                          - descriptor:
+                              code: TOTAL_ASH_PERCENTAGE
+                            value: Not more than 7.0
+                          - descriptor:
+                              code: CORIANDER_SPLIT_SEEDS_PERCENTAGE
+                            value: 5%
+                          - descriptor:
+                              code: MIN_FLOWER_PER_STEM
+                            value: '1'
+                          - descriptor:
+                              code: GIRTH_AT_THIN_END
+                            value: less than 6 cm
+                          - descriptor:
+                              code: FLOWER_DIAMETER_IN_CM
+                            value: '3.45'
+                          - descriptor:
+                              code: STAPLE_LENGTH_OF_COTTON_IN_MM
+                            value: 28‑30
+                          - descriptor:
+                              code: TRASH_PERCENTAGE
+                            value: 3%
+                          - descriptor:
+                              code: BUNDLE_STRENGTH
+                            value: 24.0 and above
+                          - descriptor:
+                              code: MICRONAIRE
+                            value: 2.8 to 3.0
+                          - descriptor:
+                              code: PERCENTAGE_OF_MATURED_FIBERS
+                            value: Above 70.0-75.0 mm
+                          - descriptor:
+                              code: SIEVE_ANALYSIS
+                            value: '98'
+                          - descriptor:
+                              code: NUMBER_OF_NUTS_PER_KG
+                            value: '210'
+                          - descriptor:
+                              code: VOID_NUTS_PERCENTAGE
+                            value: '1'
+                          - descriptor:
+                              code: IMMATURE_NUTS_PERCENTAGE
+                            value: '2'
+                          - descriptor:
+                              code: FINENESS
+                            value: Fine (10)
                 fulfillments:
                   - id: F1
                     stops:
@@ -6227,6 +6620,7 @@ x-flows:
                   price:
                     currency: INR
                     value: '27050.00'
+                    offered_value: '27050.00'
                   breakup:
                     - title: Wheat (Negotiation)
                       price:
@@ -6329,17 +6723,14 @@ x-flows:
                       - AGR11-1001
                     price:
                       currency: INR
-                      offered_value: '270.00'
+                      value: '270.00'
                     quantity:
                       selected:
                         count: 100
                     tags:
                       - descriptor:
-                          code: COMMODITY_SPECIFICATION
+                          code: NEGOTIATION_BAP
                         list:
-                          - descriptor:
-                              code: SHELF_LIFE
-                            value: P10M
                           - descriptor:
                               code: MOISTURE
                             value: 10%
@@ -6438,20 +6829,17 @@ x-flows:
                       - AGR11-1001
                     price:
                       currency: INR
-                      offered_value: '270.00'
+                      value: '270.00'
                     quantity:
                       selected:
                         count: 100
                     tags:
                       - descriptor:
-                          code: COMMODITY_SPECIFICATION
+                          code: NEGOTIATION_BAP
                         list:
                           - descriptor:
-                              code: SHELF_LIFE
-                            value: P10M
-                          - descriptor:
                               code: MOISTURE
-                            value: 10%
+                            value: 4%
                           - descriptor:
                               code: OIL_CONTENT
                             value: 2%
@@ -6459,18 +6847,98 @@ x-flows:
                               code: DEFECTIVES
                             value: 7%
                       - descriptor:
-                          code: QUALITY_ASSESSMENT_REPORT
-                        display: true
+                          code: NEGOTIATION_BPP
                         list:
                           - descriptor:
-                              code: NAME
-                            value: CER-001
+                              code: MOISTURE
+                            value: 10%
                           - descriptor:
-                              code: MIME_TYPE
-                            value: application/pdf
+                              code: FOREIGN_MATTER
+                            value: 3%
                           - descriptor:
-                              code: COPY
-                            value: https://abc.com/certificates
+                              code: OIL_CONTENT
+                            value: 2%
+                          - descriptor:
+                              code: DEFECTIVES
+                            value: 7%
+                          - descriptor:
+                              code: OTHER_EDIBLE_GRAINS
+                            value: 1%
+                          - descriptor:
+                              code: SIZE_RANGE_MEASURE
+                            value: Diameter
+                          - descriptor:
+                              code: SIZE_RANGE
+                            value: 15-18
+                          - descriptor:
+                              code: PERCENTAGE_OF_DEFECTS
+                            value: 1.5%
+                          - descriptor:
+                              code: PERCENTAGE_OF_WASTAGE
+                            value: 3%
+                          - descriptor:
+                              code: BUNCH_SIZE
+                            value: '50'
+                          - descriptor:
+                              code: BUNCH_SIZE_UNIT
+                            value: gm
+                          - descriptor:
+                              code: VISIBLE_COLOUR
+                            value: Brown
+                          - descriptor:
+                              code: COLOUR_PERCENTAGE
+                            value: More than 70
+                          - descriptor:
+                              code: TRACES_OF_SOIL
+                            value: Sight traces
+                          - descriptor:
+                              code: VOLATILE_OIL_PERCENTAGE
+                            value: Up to 2.5
+                          - descriptor:
+                              code: TOTAL_ASH_PERCENTAGE
+                            value: Not more than 7.0
+                          - descriptor:
+                              code: CORIANDER_SPLIT_SEEDS_PERCENTAGE
+                            value: 5%
+                          - descriptor:
+                              code: MIN_FLOWER_PER_STEM
+                            value: '1'
+                          - descriptor:
+                              code: GIRTH_AT_THIN_END
+                            value: less than 6 cm
+                          - descriptor:
+                              code: FLOWER_DIAMETER_IN_CM
+                            value: '3.45'
+                          - descriptor:
+                              code: STAPLE_LENGTH_OF_COTTON_IN_MM
+                            value: 28‑30
+                          - descriptor:
+                              code: TRASH_PERCENTAGE
+                            value: 3%
+                          - descriptor:
+                              code: BUNDLE_STRENGTH
+                            value: 24.0 and above
+                          - descriptor:
+                              code: MICRONAIRE
+                            value: 2.8 to 3.0
+                          - descriptor:
+                              code: PERCENTAGE_OF_MATURED_FIBERS
+                            value: Above 70.0-75.0 mm
+                          - descriptor:
+                              code: SIEVE_ANALYSIS
+                            value: '98'
+                          - descriptor:
+                              code: NUMBER_OF_NUTS_PER_KG
+                            value: '210'
+                          - descriptor:
+                              code: VOID_NUTS_PERCENTAGE
+                            value: '1'
+                          - descriptor:
+                              code: IMMATURE_NUTS_PERCENTAGE
+                            value: '2'
+                          - descriptor:
+                              code: FINENESS
+                            value: Fine (10)
                 billing:
                   name: ONDC buyer
                   address: >-
@@ -6638,17 +7106,14 @@ x-flows:
                       - AGR11-1001
                     price:
                       currency: INR
-                      offered_value: '270.00'
+                      value: '270.00'
                     quantity:
                       selected:
                         count: 100
                     tags:
                       - descriptor:
-                          code: COMMODITY_SPECIFICATION
+                          code: NEGOTIATION_BAP
                         list:
-                          - descriptor:
-                              code: SHELF_LIFE
-                            value: P10M
                           - descriptor:
                               code: MOISTURE
                             value: 10%
@@ -6658,19 +7123,6 @@ x-flows:
                           - descriptor:
                               code: DEFECTIVES
                             value: 7%
-                      - descriptor:
-                          code: QUALITY_ASSESSMENT_REPORT
-                        display: true
-                        list:
-                          - descriptor:
-                              code: NAME
-                            value: CER-001
-                          - descriptor:
-                              code: MIME_TYPE
-                            value: application/pdf
-                          - descriptor:
-                              code: COPY
-                            value: https://abc.com/certificates
                 billing:
                   name: ONDC buyer
                   address: >-
@@ -6852,20 +7304,17 @@ x-flows:
                       - AGR11-1001
                     price:
                       currency: INR
-                      offered_value: '270.00'
+                      value: '270.00'
                     quantity:
                       selected:
                         count: 100
                     tags:
                       - descriptor:
-                          code: COMMODITY_SPECIFICATION
+                          code: NEGOTIATION_BAP
                         list:
                           - descriptor:
-                              code: SHELF_LIFE
-                            value: P10M
-                          - descriptor:
                               code: MOISTURE
-                            value: 10%
+                            value: 4%
                           - descriptor:
                               code: OIL_CONTENT
                             value: 2%
@@ -6873,18 +7322,98 @@ x-flows:
                               code: DEFECTIVES
                             value: 7%
                       - descriptor:
-                          code: QUALITY_ASSESSMENT_REPORT
-                        display: true
+                          code: NEGOTIATION_BPP
                         list:
                           - descriptor:
-                              code: NAME
-                            value: CER-001
+                              code: MOISTURE
+                            value: 10%
                           - descriptor:
-                              code: MIME_TYPE
-                            value: application/pdf
+                              code: FOREIGN_MATTER
+                            value: 3%
                           - descriptor:
-                              code: COPY
-                            value: https://abc.com/certificates
+                              code: OIL_CONTENT
+                            value: 2%
+                          - descriptor:
+                              code: DEFECTIVES
+                            value: 7%
+                          - descriptor:
+                              code: OTHER_EDIBLE_GRAINS
+                            value: 1%
+                          - descriptor:
+                              code: SIZE_RANGE_MEASURE
+                            value: Diameter
+                          - descriptor:
+                              code: SIZE_RANGE
+                            value: 15-18
+                          - descriptor:
+                              code: PERCENTAGE_OF_DEFECTS
+                            value: 1.5%
+                          - descriptor:
+                              code: PERCENTAGE_OF_WASTAGE
+                            value: 3%
+                          - descriptor:
+                              code: BUNCH_SIZE
+                            value: '50'
+                          - descriptor:
+                              code: BUNCH_SIZE_UNIT
+                            value: gm
+                          - descriptor:
+                              code: VISIBLE_COLOUR
+                            value: Brown
+                          - descriptor:
+                              code: COLOUR_PERCENTAGE
+                            value: More than 70
+                          - descriptor:
+                              code: TRACES_OF_SOIL
+                            value: Sight traces
+                          - descriptor:
+                              code: VOLATILE_OIL_PERCENTAGE
+                            value: Up to 2.5
+                          - descriptor:
+                              code: TOTAL_ASH_PERCENTAGE
+                            value: Not more than 7.0
+                          - descriptor:
+                              code: CORIANDER_SPLIT_SEEDS_PERCENTAGE
+                            value: 5%
+                          - descriptor:
+                              code: MIN_FLOWER_PER_STEM
+                            value: '1'
+                          - descriptor:
+                              code: GIRTH_AT_THIN_END
+                            value: less than 6 cm
+                          - descriptor:
+                              code: FLOWER_DIAMETER_IN_CM
+                            value: '3.45'
+                          - descriptor:
+                              code: STAPLE_LENGTH_OF_COTTON_IN_MM
+                            value: 28‑30
+                          - descriptor:
+                              code: TRASH_PERCENTAGE
+                            value: 3%
+                          - descriptor:
+                              code: BUNDLE_STRENGTH
+                            value: 24.0 and above
+                          - descriptor:
+                              code: MICRONAIRE
+                            value: 2.8 to 3.0
+                          - descriptor:
+                              code: PERCENTAGE_OF_MATURED_FIBERS
+                            value: Above 70.0-75.0 mm
+                          - descriptor:
+                              code: SIEVE_ANALYSIS
+                            value: '98'
+                          - descriptor:
+                              code: NUMBER_OF_NUTS_PER_KG
+                            value: '210'
+                          - descriptor:
+                              code: VOID_NUTS_PERCENTAGE
+                            value: '1'
+                          - descriptor:
+                              code: IMMATURE_NUTS_PERCENTAGE
+                            value: '2'
+                          - descriptor:
+                              code: FINENESS
+                            value: Fine (10)
                 billing:
                   name: ONDC buyer
                   address: >-
@@ -7102,8 +7631,7 @@ x-flows:
                       - AGR11-1001
                     price:
                       currency: INR
-                      value: '300.00'
-                      offered_value: '270.00'
+                      value: '270.00'
                     quantity:
                       selected:
                         count: 100
@@ -7324,8 +7852,7 @@ x-flows:
                       - AGR11-1001
                     price:
                       currency: INR
-                      value: '300.00'
-                      offered_value: '270.00'
+                      value: '270.00'
                     quantity:
                       selected:
                         count: 100
@@ -7546,8 +8073,7 @@ x-flows:
                       - AGR11-1001
                     price:
                       currency: INR
-                      value: '300.00'
-                      offered_value: '270.00'
+                      value: '270.00'
                     quantity:
                       selected:
                         count: 100
@@ -7768,8 +8294,7 @@ x-flows:
                       - AGR11-1001
                     price:
                       currency: INR
-                      value: '300.00'
-                      offered_value: '270.00'
+                      value: '270.00'
                     quantity:
                       selected:
                         count: 100
@@ -7990,8 +8515,7 @@ x-flows:
                       - AGR11-1001
                     price:
                       currency: INR
-                      value: '300.00'
-                      offered_value: '270.00'
+                      value: '270.00'
                     quantity:
                       selected:
                         count: 100
@@ -14059,7 +14583,7 @@ x-examples:
                           count: 100
                       price:
                         currency: INR
-                        value: '300.00'
+                        value: '280.00'
                         offered_value: '270.00'
                   fulfillments:
                     - stops:
@@ -14123,11 +14647,8 @@ x-examples:
                         offered_value: '250.00'
                       tags:
                         - descriptor:
-                            code: COMMODITY_SPECIFICATION
+                            code: NEGOTIATION_BAP
                           list:
-                            - descriptor:
-                                code: SHELF_LIFE
-                              value: P10M
                             - descriptor:
                                 code: MOISTURE
                               value: 10%
@@ -14194,15 +14715,12 @@ x-examples:
                           count: 100
                       price:
                         currency: INR
-                        value: '300.00'
+                        value: '280.00'
                         offered_value: '270.00'
                       tags:
                         - descriptor:
-                            code: COMMODITY_SPECIFICATION
+                            code: NEGOTIATION_BAP
                           list:
-                            - descriptor:
-                                code: SHELF_LIFE
-                              value: P10M
                             - descriptor:
                                 code: MOISTURE
                               value: 10%
@@ -14431,7 +14949,7 @@ x-examples:
                         - AGR11-1001
                       price:
                         currency: INR
-                        offered_value: '270.00'
+                        value: '270.00'
                       quantity:
                         selected:
                           count: 100
@@ -14515,17 +15033,14 @@ x-examples:
                         - AGR11-1001
                       price:
                         currency: INR
-                        offered_value: '270.00'
+                        value: '270.00'
                       quantity:
                         selected:
                           count: 100
                       tags:
                         - descriptor:
-                            code: COMMODITY_SPECIFICATION
+                            code: NEGOTIATION_BAP
                           list:
-                            - descriptor:
-                                code: SHELF_LIFE
-                              value: P10M
                             - descriptor:
                                 code: MOISTURE
                               value: 10%
@@ -14836,7 +15351,7 @@ x-examples:
                         - AGR11-1001
                       price:
                         currency: INR
-                        offered_value: '270.00'
+                        value: '270.00'
                       quantity:
                         selected:
                           count: 100
@@ -15011,17 +15526,14 @@ x-examples:
                         - AGR11-1001
                       price:
                         currency: INR
-                        offered_value: '270.00'
+                        value: '270.00'
                       quantity:
                         selected:
                           count: 100
                       tags:
                         - descriptor:
-                            code: COMMODITY_SPECIFICATION
+                            code: NEGOTIATION_BAP
                           list:
-                            - descriptor:
-                                code: SHELF_LIFE
-                              value: P10M
                             - descriptor:
                                 code: MOISTURE
                               value: 10%
@@ -15031,19 +15543,6 @@ x-examples:
                             - descriptor:
                                 code: DEFECTIVES
                               value: 7%
-                        - descriptor:
-                            code: QUALITY_ASSESSMENT_REPORT
-                          display: true
-                          list:
-                            - descriptor:
-                                code: NAME
-                              value: CER-001
-                            - descriptor:
-                                code: MIME_TYPE
-                              value: application/pdf
-                            - descriptor:
-                                code: COPY
-                              value: https://abc.com/certificates
                   billing:
                     name: ONDC buyer
                     address: >-
@@ -16977,6 +17476,99 @@ x-examples:
                                 - descriptor:
                                     code: FINENESS
                                   value: Fine (10)
+                            - descriptor:
+                                code: NEGOTIATION_SPECIFICATION
+                              list:
+                                - descriptor:
+                                    code: MOISTURE
+                                  value: 10%
+                                - descriptor:
+                                    code: FOREIGN_MATTER
+                                  value: 3%
+                                - descriptor:
+                                    code: OIL_CONTENT
+                                  value: 2%
+                                - descriptor:
+                                    code: DEFECTIVES
+                                  value: 7%
+                                - descriptor:
+                                    code: OTHER_EDIBLE_GRAINS
+                                  value: 1%
+                                - descriptor:
+                                    code: SIZE_RANGE_MEASURE
+                                  value: Diameter
+                                - descriptor:
+                                    code: SIZE_RANGE
+                                  value: 15-18
+                                - descriptor:
+                                    code: PERCENTAGE_OF_DEFECTS
+                                  value: 1.5%
+                                - descriptor:
+                                    code: PERCENTAGE_OF_WASTAGE
+                                  value: 3%
+                                - descriptor:
+                                    code: BUNCH_SIZE
+                                  value: '50'
+                                - descriptor:
+                                    code: BUNCH_SIZE_UNIT
+                                  value: gm
+                                - descriptor:
+                                    code: VISIBLE_COLOUR
+                                  value: Brown
+                                - descriptor:
+                                    code: COLOUR_PERCENTAGE
+                                  value: More than 70
+                                - descriptor:
+                                    code: TRACES_OF_SOIL
+                                  value: Sight traces
+                                - descriptor:
+                                    code: VOLATILE_OIL_PERCENTAGE
+                                  value: Up to 2.5
+                                - descriptor:
+                                    code: TOTAL_ASH_PERCENTAGE
+                                  value: Not more than 7.0
+                                - descriptor:
+                                    code: CORIANDER_SPLIT_SEEDS_PERCENTAGE
+                                  value: 5%
+                                - descriptor:
+                                    code: MIN_FLOWER_PER_STEM
+                                  value: '1'
+                                - descriptor:
+                                    code: GIRTH_AT_THIN_END
+                                  value: less than 6 cm
+                                - descriptor:
+                                    code: FLOWER_DIAMETER_IN_CM
+                                  value: '3.45'
+                                - descriptor:
+                                    code: STAPLE_LENGTH_OF_COTTON_IN_MM
+                                  value: 28‑30
+                                - descriptor:
+                                    code: TRASH_PERCENTAGE
+                                  value: 3%
+                                - descriptor:
+                                    code: BUNDLE_STRENGTH
+                                  value: 24.0 and above
+                                - descriptor:
+                                    code: MICRONAIRE
+                                  value: 2.8 to 3.0
+                                - descriptor:
+                                    code: PERCENTAGE_OF_MATURED_FIBERS
+                                  value: Above 70.0-75.0 mm
+                                - descriptor:
+                                    code: SIEVE_ANALYSIS
+                                  value: '98'
+                                - descriptor:
+                                    code: NUMBER_OF_NUTS_PER_KG
+                                  value: '210'
+                                - descriptor:
+                                    code: VOID_NUTS_PERCENTAGE
+                                  value: '1'
+                                - descriptor:
+                                    code: IMMATURE_NUTS_PERCENTAGE
+                                  value: '2'
+                                - descriptor:
+                                    code: FINENESS
+                                  value: Fine (10)
                       offers:
                         - id: offer-1
                           descriptor:
@@ -17109,8 +17701,8 @@ x-examples:
                           count: 100
                       price:
                         currency: INR
-                        value: '300.00'
-                        offered_value: '280.00'
+                        value: '280.00'
+                        offered_value: '250.00'
                   fulfillments:
                     - id: F1
                       stops:
@@ -17123,6 +17715,71 @@ x-examples:
                             range:
                               start: '2024-06-09T22:00:00.000Z'
                               end: '2024-06-10T02:00:00.000Z'
+                  quote:
+                    price:
+                      currency: INR
+                      value: '28050.00'
+                      offered_value: '25050.00'
+                    breakup:
+                      - title: Wheat (Negotiation)
+                        price:
+                          currency: INR
+                          value: '28000.00'
+                        item:
+                          id: I1
+                          quantity:
+                            selected:
+                              count: 100
+                          price:
+                            currency: INR
+                            value: '280.00'
+                        tags:
+                          - descriptor:
+                              code: TITLE
+                            list:
+                              - descriptor:
+                                  code: type
+                                value: item
+                      - title: tax
+                        price:
+                          currency: INR
+                          value: '50'
+                        item:
+                          id: I1
+                        tags:
+                          - descriptor:
+                              code: title
+                            list:
+                              - descriptor:
+                                  code: type
+                                value: tax
+                      - title: discount
+                        price:
+                          currency: INR
+                          value: '100'
+                        item:
+                          id: I1
+                        tags:
+                          - descriptor:
+                              code: title
+                            list:
+                              - descriptor:
+                                  code: type
+                                value: discount
+                      - title: pickup_charge
+                        price:
+                          currency: INR
+                          value: '100'
+                        item:
+                          id: I1
+                        tags:
+                          - descriptor:
+                              code: title
+                            list:
+                              - descriptor:
+                                  code: type
+                                value: misc
+                    ttl: P1D
                   payments:
                     - type: PRE-FULFILLMENT
                       collected_by: BAP
@@ -17161,7 +17818,7 @@ x-examples:
                           count: 100
                       price:
                         currency: INR
-                        value: '300.00'
+                        value: '270.00'
                         offered_value: '270.00'
                   fulfillments:
                     - id: F1
@@ -17179,6 +17836,7 @@ x-examples:
                     price:
                       currency: INR
                       value: '27050.00'
+                      offered_value: '27050.00'
                     breakup:
                       - title: Wheat (Negotiation)
                         price:
@@ -17277,24 +17935,114 @@ x-examples:
                           count: 100
                       price:
                         currency: INR
-                        value: '300.00'
-                        offered_value: '280.00'
+                        value: '280.00'
+                        offered_value: '250.00'
                       tags:
                         - descriptor:
-                            code: COMMODITY_SPECIFICATION
+                            code: NEGOTIATION_BAP
                           list:
                             - descriptor:
-                                code: SHELF_LIFE
-                              value: P10M
-                            - descriptor:
                                 code: MOISTURE
-                              value: 10%
+                              value: 4%
                             - descriptor:
                                 code: OIL_CONTENT
                               value: 2%
                             - descriptor:
                                 code: DEFECTIVES
                               value: 7%
+                        - descriptor:
+                            code: NEGOTIATION_BPP
+                          list:
+                            - descriptor:
+                                code: MOISTURE
+                              value: 10%
+                            - descriptor:
+                                code: FOREIGN_MATTER
+                              value: 3%
+                            - descriptor:
+                                code: OIL_CONTENT
+                              value: 2%
+                            - descriptor:
+                                code: DEFECTIVES
+                              value: 7%
+                            - descriptor:
+                                code: OTHER_EDIBLE_GRAINS
+                              value: 1%
+                            - descriptor:
+                                code: SIZE_RANGE_MEASURE
+                              value: Diameter
+                            - descriptor:
+                                code: SIZE_RANGE
+                              value: 15-18
+                            - descriptor:
+                                code: PERCENTAGE_OF_DEFECTS
+                              value: 1.5%
+                            - descriptor:
+                                code: PERCENTAGE_OF_WASTAGE
+                              value: 3%
+                            - descriptor:
+                                code: BUNCH_SIZE
+                              value: '50'
+                            - descriptor:
+                                code: BUNCH_SIZE_UNIT
+                              value: gm
+                            - descriptor:
+                                code: VISIBLE_COLOUR
+                              value: Brown
+                            - descriptor:
+                                code: COLOUR_PERCENTAGE
+                              value: More than 70
+                            - descriptor:
+                                code: TRACES_OF_SOIL
+                              value: Sight traces
+                            - descriptor:
+                                code: VOLATILE_OIL_PERCENTAGE
+                              value: Up to 2.5
+                            - descriptor:
+                                code: TOTAL_ASH_PERCENTAGE
+                              value: Not more than 7.0
+                            - descriptor:
+                                code: CORIANDER_SPLIT_SEEDS_PERCENTAGE
+                              value: 5%
+                            - descriptor:
+                                code: MIN_FLOWER_PER_STEM
+                              value: '1'
+                            - descriptor:
+                                code: GIRTH_AT_THIN_END
+                              value: less than 6 cm
+                            - descriptor:
+                                code: FLOWER_DIAMETER_IN_CM
+                              value: '3.45'
+                            - descriptor:
+                                code: STAPLE_LENGTH_OF_COTTON_IN_MM
+                              value: 28‑30
+                            - descriptor:
+                                code: TRASH_PERCENTAGE
+                              value: 3%
+                            - descriptor:
+                                code: BUNDLE_STRENGTH
+                              value: 24.0 and above
+                            - descriptor:
+                                code: MICRONAIRE
+                              value: 2.8 to 3.0
+                            - descriptor:
+                                code: PERCENTAGE_OF_MATURED_FIBERS
+                              value: Above 70.0-75.0 mm
+                            - descriptor:
+                                code: SIEVE_ANALYSIS
+                              value: '98'
+                            - descriptor:
+                                code: NUMBER_OF_NUTS_PER_KG
+                              value: '210'
+                            - descriptor:
+                                code: VOID_NUTS_PERCENTAGE
+                              value: '1'
+                            - descriptor:
+                                code: IMMATURE_NUTS_PERCENTAGE
+                              value: '2'
+                            - descriptor:
+                                code: FINENESS
+                              value: Fine (10)
                   fulfillments:
                     - id: F1
                       stops:
@@ -17307,6 +18055,71 @@ x-examples:
                             range:
                               start: '2024-06-09T22:00:00.000Z'
                               end: '2024-06-10T02:00:00.000Z'
+                  quote:
+                    price:
+                      currency: INR
+                      value: '28050.00'
+                      offered_value: '25050.00'
+                    breakup:
+                      - title: Wheat (Negotiation)
+                        price:
+                          currency: INR
+                          value: '28000.00'
+                        item:
+                          id: I1
+                          quantity:
+                            selected:
+                              count: 100
+                          price:
+                            currency: INR
+                            value: '280.00'
+                        tags:
+                          - descriptor:
+                              code: TITLE
+                            list:
+                              - descriptor:
+                                  code: type
+                                value: item
+                      - title: tax
+                        price:
+                          currency: INR
+                          value: '50'
+                        item:
+                          id: I1
+                        tags:
+                          - descriptor:
+                              code: title
+                            list:
+                              - descriptor:
+                                  code: type
+                                value: tax
+                      - title: discount
+                        price:
+                          currency: INR
+                          value: '100'
+                        item:
+                          id: I1
+                        tags:
+                          - descriptor:
+                              code: title
+                            list:
+                              - descriptor:
+                                  code: type
+                                value: discount
+                      - title: pickup_charge
+                        price:
+                          currency: INR
+                          value: '100'
+                        item:
+                          id: I1
+                        tags:
+                          - descriptor:
+                              code: title
+                            list:
+                              - descriptor:
+                                  code: type
+                                value: misc
+                    ttl: P1D
                   payments:
                     - type: PRE-FULFILLMENT
                       collected_by: BAP
@@ -17345,24 +18158,114 @@ x-examples:
                           count: 100
                       price:
                         currency: INR
-                        value: '300.00'
+                        value: '270.00'
                         offered_value: '270.00'
                       tags:
                         - descriptor:
-                            code: COMMODITY_SPECIFICATION
+                            code: NEGOTIATION_BAP
                           list:
                             - descriptor:
-                                code: SHELF_LIFE
-                              value: P10M
-                            - descriptor:
                                 code: MOISTURE
-                              value: 10%
+                              value: 4%
                             - descriptor:
                                 code: OIL_CONTENT
                               value: 2%
                             - descriptor:
                                 code: DEFECTIVES
                               value: 7%
+                        - descriptor:
+                            code: NEGOTIATION_BPP
+                          list:
+                            - descriptor:
+                                code: MOISTURE
+                              value: 10%
+                            - descriptor:
+                                code: FOREIGN_MATTER
+                              value: 3%
+                            - descriptor:
+                                code: OIL_CONTENT
+                              value: 2%
+                            - descriptor:
+                                code: DEFECTIVES
+                              value: 7%
+                            - descriptor:
+                                code: OTHER_EDIBLE_GRAINS
+                              value: 1%
+                            - descriptor:
+                                code: SIZE_RANGE_MEASURE
+                              value: Diameter
+                            - descriptor:
+                                code: SIZE_RANGE
+                              value: 15-18
+                            - descriptor:
+                                code: PERCENTAGE_OF_DEFECTS
+                              value: 1.5%
+                            - descriptor:
+                                code: PERCENTAGE_OF_WASTAGE
+                              value: 3%
+                            - descriptor:
+                                code: BUNCH_SIZE
+                              value: '50'
+                            - descriptor:
+                                code: BUNCH_SIZE_UNIT
+                              value: gm
+                            - descriptor:
+                                code: VISIBLE_COLOUR
+                              value: Brown
+                            - descriptor:
+                                code: COLOUR_PERCENTAGE
+                              value: More than 70
+                            - descriptor:
+                                code: TRACES_OF_SOIL
+                              value: Sight traces
+                            - descriptor:
+                                code: VOLATILE_OIL_PERCENTAGE
+                              value: Up to 2.5
+                            - descriptor:
+                                code: TOTAL_ASH_PERCENTAGE
+                              value: Not more than 7.0
+                            - descriptor:
+                                code: CORIANDER_SPLIT_SEEDS_PERCENTAGE
+                              value: 5%
+                            - descriptor:
+                                code: MIN_FLOWER_PER_STEM
+                              value: '1'
+                            - descriptor:
+                                code: GIRTH_AT_THIN_END
+                              value: less than 6 cm
+                            - descriptor:
+                                code: FLOWER_DIAMETER_IN_CM
+                              value: '3.45'
+                            - descriptor:
+                                code: STAPLE_LENGTH_OF_COTTON_IN_MM
+                              value: 28‑30
+                            - descriptor:
+                                code: TRASH_PERCENTAGE
+                              value: 3%
+                            - descriptor:
+                                code: BUNDLE_STRENGTH
+                              value: 24.0 and above
+                            - descriptor:
+                                code: MICRONAIRE
+                              value: 2.8 to 3.0
+                            - descriptor:
+                                code: PERCENTAGE_OF_MATURED_FIBERS
+                              value: Above 70.0-75.0 mm
+                            - descriptor:
+                                code: SIEVE_ANALYSIS
+                              value: '98'
+                            - descriptor:
+                                code: NUMBER_OF_NUTS_PER_KG
+                              value: '210'
+                            - descriptor:
+                                code: VOID_NUTS_PERCENTAGE
+                              value: '1'
+                            - descriptor:
+                                code: IMMATURE_NUTS_PERCENTAGE
+                              value: '2'
+                            - descriptor:
+                                code: FINENESS
+                              value: Fine (10)
                   fulfillments:
                     - id: F1
                       stops:
@@ -17379,6 +18282,7 @@ x-examples:
                     price:
                       currency: INR
                       value: '27050.00'
+                      offered_value: '27050.00'
                     breakup:
                       - title: Wheat (Negotiation)
                         price:
@@ -17841,7 +18745,7 @@ x-examples:
                         - AGR11-1001
                       price:
                         currency: INR
-                        offered_value: '270.00'
+                        value: '270.00'
                       quantity:
                         selected:
                           count: 100
@@ -18006,20 +18910,17 @@ x-examples:
                         - AGR11-1001
                       price:
                         currency: INR
-                        offered_value: '270.00'
+                        value: '270.00'
                       quantity:
                         selected:
                           count: 100
                       tags:
                         - descriptor:
-                            code: COMMODITY_SPECIFICATION
+                            code: NEGOTIATION_BAP
                           list:
                             - descriptor:
-                                code: SHELF_LIFE
-                              value: P10M
-                            - descriptor:
                                 code: MOISTURE
-                              value: 10%
+                              value: 4%
                             - descriptor:
                                 code: OIL_CONTENT
                               value: 2%
@@ -18027,18 +18928,98 @@ x-examples:
                                 code: DEFECTIVES
                               value: 7%
                         - descriptor:
-                            code: QUALITY_ASSESSMENT_REPORT
-                          display: true
+                            code: NEGOTIATION_BPP
                           list:
                             - descriptor:
-                                code: NAME
-                              value: CER-001
+                                code: MOISTURE
+                              value: 10%
                             - descriptor:
-                                code: MIME_TYPE
-                              value: application/pdf
+                                code: FOREIGN_MATTER
+                              value: 3%
                             - descriptor:
-                                code: COPY
-                              value: https://abc.com/certificates
+                                code: OIL_CONTENT
+                              value: 2%
+                            - descriptor:
+                                code: DEFECTIVES
+                              value: 7%
+                            - descriptor:
+                                code: OTHER_EDIBLE_GRAINS
+                              value: 1%
+                            - descriptor:
+                                code: SIZE_RANGE_MEASURE
+                              value: Diameter
+                            - descriptor:
+                                code: SIZE_RANGE
+                              value: 15-18
+                            - descriptor:
+                                code: PERCENTAGE_OF_DEFECTS
+                              value: 1.5%
+                            - descriptor:
+                                code: PERCENTAGE_OF_WASTAGE
+                              value: 3%
+                            - descriptor:
+                                code: BUNCH_SIZE
+                              value: '50'
+                            - descriptor:
+                                code: BUNCH_SIZE_UNIT
+                              value: gm
+                            - descriptor:
+                                code: VISIBLE_COLOUR
+                              value: Brown
+                            - descriptor:
+                                code: COLOUR_PERCENTAGE
+                              value: More than 70
+                            - descriptor:
+                                code: TRACES_OF_SOIL
+                              value: Sight traces
+                            - descriptor:
+                                code: VOLATILE_OIL_PERCENTAGE
+                              value: Up to 2.5
+                            - descriptor:
+                                code: TOTAL_ASH_PERCENTAGE
+                              value: Not more than 7.0
+                            - descriptor:
+                                code: CORIANDER_SPLIT_SEEDS_PERCENTAGE
+                              value: 5%
+                            - descriptor:
+                                code: MIN_FLOWER_PER_STEM
+                              value: '1'
+                            - descriptor:
+                                code: GIRTH_AT_THIN_END
+                              value: less than 6 cm
+                            - descriptor:
+                                code: FLOWER_DIAMETER_IN_CM
+                              value: '3.45'
+                            - descriptor:
+                                code: STAPLE_LENGTH_OF_COTTON_IN_MM
+                              value: 28‑30
+                            - descriptor:
+                                code: TRASH_PERCENTAGE
+                              value: 3%
+                            - descriptor:
+                                code: BUNDLE_STRENGTH
+                              value: 24.0 and above
+                            - descriptor:
+                                code: MICRONAIRE
+                              value: 2.8 to 3.0
+                            - descriptor:
+                                code: PERCENTAGE_OF_MATURED_FIBERS
+                              value: Above 70.0-75.0 mm
+                            - descriptor:
+                                code: SIEVE_ANALYSIS
+                              value: '98'
+                            - descriptor:
+                                code: NUMBER_OF_NUTS_PER_KG
+                              value: '210'
+                            - descriptor:
+                                code: VOID_NUTS_PERCENTAGE
+                              value: '1'
+                            - descriptor:
+                                code: IMMATURE_NUTS_PERCENTAGE
+                              value: '2'
+                            - descriptor:
+                                code: FINENESS
+                              value: Fine (10)
                   billing:
                     name: ONDC buyer
                     address: >-
@@ -18452,7 +19433,7 @@ x-examples:
                         - AGR11-1001
                       price:
                         currency: INR
-                        offered_value: '270.00'
+                        value: '270.00'
                       quantity:
                         selected:
                           count: 100
@@ -18666,20 +19647,17 @@ x-examples:
                         - AGR11-1001
                       price:
                         currency: INR
-                        offered_value: '270.00'
+                        value: '270.00'
                       quantity:
                         selected:
                           count: 100
                       tags:
                         - descriptor:
-                            code: COMMODITY_SPECIFICATION
+                            code: NEGOTIATION_BAP
                           list:
                             - descriptor:
-                                code: SHELF_LIFE
-                              value: P10M
-                            - descriptor:
                                 code: MOISTURE
-                              value: 10%
+                              value: 4%
                             - descriptor:
                                 code: OIL_CONTENT
                               value: 2%
@@ -18687,18 +19665,98 @@ x-examples:
                                 code: DEFECTIVES
                               value: 7%
                         - descriptor:
-                            code: QUALITY_ASSESSMENT_REPORT
-                          display: true
+                            code: NEGOTIATION_BPP
                           list:
                             - descriptor:
-                                code: NAME
-                              value: CER-001
+                                code: MOISTURE
+                              value: 10%
                             - descriptor:
-                                code: MIME_TYPE
-                              value: application/pdf
+                                code: FOREIGN_MATTER
+                              value: 3%
                             - descriptor:
-                                code: COPY
-                              value: https://abc.com/certificates
+                                code: OIL_CONTENT
+                              value: 2%
+                            - descriptor:
+                                code: DEFECTIVES
+                              value: 7%
+                            - descriptor:
+                                code: OTHER_EDIBLE_GRAINS
+                              value: 1%
+                            - descriptor:
+                                code: SIZE_RANGE_MEASURE
+                              value: Diameter
+                            - descriptor:
+                                code: SIZE_RANGE
+                              value: 15-18
+                            - descriptor:
+                                code: PERCENTAGE_OF_DEFECTS
+                              value: 1.5%
+                            - descriptor:
+                                code: PERCENTAGE_OF_WASTAGE
+                              value: 3%
+                            - descriptor:
+                                code: BUNCH_SIZE
+                              value: '50'
+                            - descriptor:
+                                code: BUNCH_SIZE_UNIT
+                              value: gm
+                            - descriptor:
+                                code: VISIBLE_COLOUR
+                              value: Brown
+                            - descriptor:
+                                code: COLOUR_PERCENTAGE
+                              value: More than 70
+                            - descriptor:
+                                code: TRACES_OF_SOIL
+                              value: Sight traces
+                            - descriptor:
+                                code: VOLATILE_OIL_PERCENTAGE
+                              value: Up to 2.5
+                            - descriptor:
+                                code: TOTAL_ASH_PERCENTAGE
+                              value: Not more than 7.0
+                            - descriptor:
+                                code: CORIANDER_SPLIT_SEEDS_PERCENTAGE
+                              value: 5%
+                            - descriptor:
+                                code: MIN_FLOWER_PER_STEM
+                              value: '1'
+                            - descriptor:
+                                code: GIRTH_AT_THIN_END
+                              value: less than 6 cm
+                            - descriptor:
+                                code: FLOWER_DIAMETER_IN_CM
+                              value: '3.45'
+                            - descriptor:
+                                code: STAPLE_LENGTH_OF_COTTON_IN_MM
+                              value: 28‑30
+                            - descriptor:
+                                code: TRASH_PERCENTAGE
+                              value: 3%
+                            - descriptor:
+                                code: BUNDLE_STRENGTH
+                              value: 24.0 and above
+                            - descriptor:
+                                code: MICRONAIRE
+                              value: 2.8 to 3.0
+                            - descriptor:
+                                code: PERCENTAGE_OF_MATURED_FIBERS
+                              value: Above 70.0-75.0 mm
+                            - descriptor:
+                                code: SIEVE_ANALYSIS
+                              value: '98'
+                            - descriptor:
+                                code: NUMBER_OF_NUTS_PER_KG
+                              value: '210'
+                            - descriptor:
+                                code: VOID_NUTS_PERCENTAGE
+                              value: '1'
+                            - descriptor:
+                                code: IMMATURE_NUTS_PERCENTAGE
+                              value: '2'
+                            - descriptor:
+                                code: FINENESS
+                              value: Fine (10)
                   billing:
                     name: ONDC buyer
                     address: >-
@@ -19144,8 +20202,7 @@ x-examples:
                         - AGR11-1001
                       price:
                         currency: INR
-                        value: '300.00'
-                        offered_value: '270.00'
+                        value: '270.00'
                       quantity:
                         selected:
                           count: 100
@@ -19333,8 +20390,7 @@ x-examples:
                         - AGR11-1001
                       price:
                         currency: INR
-                        value: '300.00'
-                        offered_value: '270.00'
+                        value: '270.00'
                       quantity:
                         selected:
                           count: 100
@@ -19522,8 +20578,7 @@ x-examples:
                         - AGR11-1001
                       price:
                         currency: INR
-                        value: '300.00'
-                        offered_value: '270.00'
+                        value: '270.00'
                       quantity:
                         selected:
                           count: 100
@@ -19711,8 +20766,7 @@ x-examples:
                         - AGR11-1001
                       price:
                         currency: INR
-                        value: '300.00'
-                        offered_value: '270.00'
+                        value: '270.00'
                       quantity:
                         selected:
                           count: 100
@@ -19900,8 +20954,7 @@ x-examples:
                         - AGR11-1001
                       price:
                         currency: INR
-                        value: '300.00'
-                        offered_value: '270.00'
+                        value: '270.00'
                       quantity:
                         selected:
                           count: 100
@@ -20089,8 +21142,7 @@ x-examples:
                         - AGR11-1001
                       price:
                         currency: INR
-                        value: '300.00'
-                        offered_value: '270.00'
+                        value: '270.00'
                       quantity:
                         selected:
                           count: 100
@@ -20307,8 +21359,7 @@ x-examples:
                         - AGR11-1001
                       price:
                         currency: INR
-                        value: '300.00'
-                        offered_value: '270.00'
+                        value: '270.00'
                       quantity:
                         selected:
                           count: 100
@@ -20525,8 +21576,7 @@ x-examples:
                         - AGR11-1001
                       price:
                         currency: INR
-                        value: '300.00'
-                        offered_value: '270.00'
+                        value: '270.00'
                       quantity:
                         selected:
                           count: 100
@@ -20743,8 +21793,7 @@ x-examples:
                         - AGR11-1001
                       price:
                         currency: INR
-                        value: '300.00'
-                        offered_value: '270.00'
+                        value: '270.00'
                       quantity:
                         selected:
                           count: 100
@@ -20961,8 +22010,7 @@ x-examples:
                         - AGR11-1001
                       price:
                         currency: INR
-                        value: '300.00'
-                        offered_value: '270.00'
+                        value: '270.00'
                       quantity:
                         selected:
                           count: 100

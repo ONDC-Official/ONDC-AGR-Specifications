@@ -32,7 +32,7 @@ value:
             - AGR11-1001
           price:
             currency: INR
-            offered_value: '270.00'
+            value: '270.00'
           quantity:
             selected:
               count: 100

@@ -43,7 +43,7 @@
           ],
           "price": {
             "currency": "INR",
-            "offered_value": "270.00"
+            "value": "270.00"
           },
           "quantity": {
             "selected": {
@@ -53,15 +53,9 @@
           "tags": [
             {
               "descriptor": {
-                "code": "COMMODITY_SPECIFICATION"
+                "code": "NEGOTIATION_BAP"
               },
               "list": [
-                {
-                  "descriptor": {
-                    "code": "SHELF_LIFE"
-                  },
-                  "value": "P10M"
-                },
                 {
                   "descriptor": {
                     "code": "MOISTURE"
@@ -79,32 +73,6 @@
                     "code": "DEFECTIVES"
                   },
                   "value": "7%"
-                }
-              ]
-            },
-            {
-              "descriptor": {
-                "code": "QUALITY_ASSESSMENT_REPORT"
-              },
-              "display": true,
-              "list": [
-                {
-                  "descriptor": {
-                    "code": "NAME"
-                  },
-                  "value": "CER-001"
-                },
-                {
-                  "descriptor": {
-                    "code": "MIME_TYPE"
-                  },
-                  "value": "application/pdf"
-                },
-                {
-                  "descriptor": {
-                    "code": "COPY"
-                  },
-                  "value": "https://abc.com/certificates"
                 }
               ]
             }

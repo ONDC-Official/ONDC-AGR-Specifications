@@ -40,7 +40,7 @@
           },
           "price": {
             "currency": "INR",
-            "value": "300.00",
+            "value": "270.00",
             "offered_value": "270.00"
           }
         }
@@ -69,7 +69,8 @@
       "quote": {
         "price": {
           "currency": "INR",
-          "value": "27050.00"
+          "value": "27050.00",
+          "offered_value": "27050.00"
         },
         "breakup": [
           {

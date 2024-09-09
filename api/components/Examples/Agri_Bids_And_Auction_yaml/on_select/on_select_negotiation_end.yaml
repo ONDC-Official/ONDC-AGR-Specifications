@@ -31,7 +31,7 @@ value:
               count: 100
           price:
             currency: INR
-            value: '300.00'
+            value: '270.00'
             offered_value: '270.00'
       fulfillments:
         - id: F1
@@ -49,6 +49,7 @@ value:
         price:
           currency: INR
           value: '27050.00'
+          offered_value: '27050.00'
         breakup:
           - title: Wheat (Negotiation)
             price:

@@ -37,11 +37,8 @@ value:
             offered_value: '250.00'
           tags:
             - descriptor:
-                code: COMMODITY_SPECIFICATION
+                code: NEGOTIATION_BAP
               list:
-                - descriptor:
-                    code: SHELF_LIFE
-                  value: P10M
                 - descriptor:
                     code: MOISTURE
                   value: 10%

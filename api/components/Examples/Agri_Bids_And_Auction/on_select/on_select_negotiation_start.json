@@ -40,8 +40,8 @@
           },
           "price": {
             "currency": "INR",
-            "value": "300.00",
-            "offered_value": "280.00"
+            "value": "280.00",
+            "offered_value": "250.00"
           }
         }
       ],
@@ -66,6 +66,125 @@
           ]
         }
       ],
+      "quote": {
+        "price": {
+          "currency": "INR",
+          "value": "28050.00",
+          "offered_value": "25050.00"
+        },
+        "breakup": [
+          {
+            "title": "Wheat (Negotiation)",
+            "price": {
+              "currency": "INR",
+              "value": "28000.00"
+            },
+            "item": {
+              "id": "I1",
+              "quantity": {
+                "selected": {
+                  "count": 100
+                }
+              },
+              "price": {
+                "currency": "INR",
+                "value": "280.00"
+              }
+            },
+            "tags": [
+              {
+                "descriptor": {
+                  "code": "TITLE"
+                },
+                "list": [
+                  {
+                    "descriptor": {
+                      "code": "type"
+                    },
+                    "value": "item"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "tax",
+            "price": {
+              "currency": "INR",
+              "value": "50"
+            },
+            "item": {
+              "id": "I1"
+            },
+            "tags": [
+              {
+                "descriptor": {
+                  "code": "title"
+                },
+                "list": [
+                  {
+                    "descriptor": {
+                      "code": "type"
+                    },
+                    "value": "tax"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "discount",
+            "price": {
+              "currency": "INR",
+              "value": "100"
+            },
+            "item": {
+              "id": "I1"
+            },
+            "tags": [
+              {
+                "descriptor": {
+                  "code": "title"
+                },
+                "list": [
+                  {
+                    "descriptor": {
+                      "code": "type"
+                    },
+                    "value": "discount"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "title": "pickup_charge",
+            "price": {
+              "currency": "INR",
+              "value": "100"
+            },
+            "item": {
+              "id": "I1"
+            },
+            "tags": [
+              {
+                "descriptor": {
+                  "code": "title"
+                },
+                "list": [
+                  {
+                    "descriptor": {
+                      "code": "type"
+                    },
+                    "value": "misc"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "ttl": "P1D"
+      },
       "payments": [
         {
           "type": "PRE-FULFILLMENT",

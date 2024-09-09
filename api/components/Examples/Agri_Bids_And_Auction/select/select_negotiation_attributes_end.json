@@ -46,21 +46,15 @@
           },
           "price": {
             "currency": "INR",
-            "value": "300.00",
+            "value": "280.00",
             "offered_value": "270.00"
           },
           "tags": [
             {
               "descriptor": {
-                "code": "COMMODITY_SPECIFICATION"
+                "code": "NEGOTIATION_BAP"
               },
               "list": [
-                {
-                  "descriptor": {
-                    "code": "SHELF_LIFE"
-                  },
-                  "value": "P10M"
-                },
                 {
                   "descriptor": {
                     "code": "MOISTURE"
