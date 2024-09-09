@@ -1,0 +1,180 @@
+summary: Agricultural output product - Negotiation by Attributes 
+description: The following is an illustrative flow to perform a transaction of a nature where a buyer would like to negotiate for agricultural commodity based on selected attributes. The Negotiation majorly happens in four phases of order processing flow, i.e. Discovery of available commodity and service providers, order, fulfillment and post-fulfillment.
+details:
+
+  - description: Sequence Diagram for Negotiation
+    mermaidGraph: >-
+      sequenceDiagram
+        participant B as Buyer
+        participant BA as BuyerApp
+        participant G as Gateway
+        participant SA1 as SellerApp1
+        participant SA2 as SellerApp2
+        
+        Note Over B,SA: **SEARCH FLOW**
+        B ->> BA: Buyer initiates an exploratory search for Negotiations.
+        BA ->> G: **/search** - Search by city for a commodity and <br>additional parameters
+        Note left of BA: Additional params include: <br><br>
+        G ->> SA1: **/search** - Commodity request broadcasted based <br>on city and domain in context
+        G ->> SA2: **/search** - Commodity request broadcasted based <br>on city and domain in context
+        SA1 ->> BA: **/on_search** - Seller responds with /on_search, providing available product <br> with their details, including price, fulfilment, avilable quantity
+        SA2 ->> BA: **/on_search** - Seller responds with /on_search, providing available product <br> with their details, including price, fulfilment, avilable quantity
+        Note Over BA,SA1: Buyer now has the option to choose the <br>product from either Seller 1 or Seller 2 or both
+        BA ->> B: Shows all the avilable product <br>options from sellers
+
+  - description: Selection and Negotiation
+    mermaidGraph: >-
+      sequenceDiagram
+        participant B as Buyer
+        participant BA as BuyerApp
+        participant G as Gateway
+        participant SA as SellerApp
+        
+        Note over B, SA: **SELECT FLOW**
+        note right of B: If negotiation:
+        G->>B: Buyer sends offered_price and selected quantity with attributes
+        SA->>BA: Seller accepts/counter-offers with price and allocated quantity
+        BA-->>SA: Buyer can reject the counter-offer by not responding to on_select
+        SA-->>BA: Seller can reject the offer in the error object of on_select
+        loop repeated till acceptance
+            BA ->> SA: Buyer selects item id and gets quote for item?
+            alt if negotiable
+                BA ->> SA: Buyer selects item id and gets quote for item?
+            else if direct purchase
+                SA ->> BA: Seller sends the same quote as decided on the last on_select
+            end
+        end
+        BA ->> B: Shows response with price details if item is in stock
+        note right of BA: Everything else works as per the protocol
+
+
+  - description: Initializing the order
+    mermaidGraph: >-
+      sequenceDiagram
+        participant B as Buyer
+        participant BA as BuyerApp
+        participant G as Gateway
+        participant SA as SellerApp
+        Note Over B,SA: **ORDER INITIALISATION FLOW**
+        B ->> BA: Buyer Initializes the order and sends billing details
+        BA ->> SA: **/init** - Buyer sends /init, indicating the order. <br> The product price will be shared in the intent.
+        SA ->> BA: **/on_init** - Order initialization with fulfillment & settlement information <br> including UPI or NEFT/IMPS/Bank Transfer
+        BA ->> B: Confirms initialization
+
+  - description: Order Confirmation
+    mermaidGraph: >-
+      sequenceDiagram
+        participant B as Buyer
+        participant BA as BuyerApp
+        participant SA as SellerApp
+        Note Over B,SA: **CONFIRMATION FLOW**
+        B ->> BA: Confirms the Order
+        BA ->> SA: **/confirm** - Buyer confirms the order
+        SA ->> BA: **/on_confirm** - Seller responds with /on_confirm, <br> creating an Order ID for negotiated placed order
+        BA ->> B: Confirms the order 
+
+  - description: Fulfillment
+    mermaidGraph: >-
+      sequenceDiagram
+        participant B as Buyer
+        participant BA as BuyerApp
+        participant SA as SellerApp 
+        Note Over B,SA: **ORDER STATUS FLOW**
+        B ->> BA: Checks the order status
+        BA ->> SA: **/status** - Enquire order status
+        SA ->> BA: **/on_status** - Seller responds with the current order status
+        BA ->> B: Updates the latest status 
+
+
+reference: if any
+steps:
+  - summary: Buyer initiates an exploratory search for Negotiations.
+    api: search
+    description: The buyer expresses interest in purchasing a commodity (such as wheat) from all currently available products, serviceable to him
+    reference: if any
+    example:
+      $ref: "../../Examples/Agri_Bids_And_Auction_yaml/search/search_by_category.yaml"
+  - summary: Seller providing available product with their details, including price, fulfilment, avilable quantity
+    api: on_search
+    description: Seller responds with /on_search, providing available product with their details, including price, fulfilment, avilable quantity
+    reference: if any
+    example:
+      $ref: "../../Examples/Agri_Bids_And_Auction_yaml/on_search/on_search_negotiation.yaml"
+  - summary: Buyer sends offered_price and selected quantity with attributes
+    api: select (counter-offers)
+    description: Buyer sends offered_price and selected quantity with attributes
+    reference: if any
+    example:
+      $ref: "../../Examples/Agri_Bids_And_Auction_yaml/select/select_negotiation_attributes_start.yaml"
+  - summary: Seller accepts/counter-offers with price and allocated quantity
+    api: on_select (counter-offers)
+    description: Seller accepts/counter-offers with price and allocated quantity
+    reference: if any
+    example:
+      $ref: "../../Examples/Agri_Bids_And_Auction_yaml/on_select/on_select_negotiation_attributes_start.yaml"
+  - summary: Buyer sends offered_price and selected quantity with attributes
+    api: select (accepts)
+    description: Buyer sends offered_price and selected quantity with attributes
+    reference: if any
+    example:
+      $ref: "../../Examples/Agri_Bids_And_Auction_yaml/select/select_negotiation_attributes_end.yaml"
+  - summary: Seller accepts/counter-offers with price and allocated quantity
+    api: on_select (accepts)
+    description: Seller accepts/counter-offers with price and allocated quantity
+    reference: if any
+    example:
+      $ref: "../../Examples/Agri_Bids_And_Auction_yaml/on_select/on_select_negotiation_attributes_end.yaml"
+  - summary: Buyer Initializes the order and sends billing details
+    api: init
+    description: Buyer Initializes the order and sends billing details
+    reference: if any
+    example:
+      $ref: "../../Examples/Agri_Bids_And_Auction_yaml/init/init_attributes_negotiation.yaml"
+  - summary: Order initialization with fulfillment & settlement information including UPI or NEFT/IMPS/Bank Transfer
+    api: on_init
+    description: Order initialization with fulfillment & settlement information including UPI or NEFT/IMPS/Bank Transfer
+    reference: if any
+    example:
+      $ref: "../../Examples/Agri_Bids_And_Auction_yaml/on_init/on_init_attributes_negotiation.yaml"
+  - summary: Buyer confirms the order with /confirm.
+    api: confirm
+    description: Buyer confirms the order with /confirm.
+    example:
+      $ref: "../../Examples/Agri_Bids_And_Auction_yaml/confirm/confirm_attributes_negotiation.yaml"
+  - summary: Seller responds with /on_confirm, creating an Order ID for negotiated placed order
+    api: on_confirm
+    description: Seller responds with /on_confirm, creating an Order ID for negotiated placed order
+    reference: if any
+    example:
+      $ref: "../../Examples/Agri_Bids_And_Auction_yaml/on_confirm/on_confirm_attributes_negotiation.yaml"
+  - summary: Buyer requests for the status of the order
+    api: status
+    description: Buyer requests for the status of the order
+    example:
+      $ref: "../../Examples/Agri_Bids_And_Auction_yaml/status/status.yaml"
+  - summary: Seller app sends order status update with the latest fulfilement state
+    api: on_status (Accepted)
+    description: Seller app sends order status update with the latest fulfilement state
+    example:
+      $ref: "../../Examples/Agri_Bids_And_Auction_yaml/on_status/on_status_attributes_negotiation_accepted.yaml"
+  - summary: Seller app sends order status update with the latest fulfilement state
+    api: on_status (Packed)
+    description: Seller app sends order status update with the latest fulfilement state
+    example:
+      $ref: "../../Examples/Agri_Bids_And_Auction_yaml/on_status/on_status_attributes_negotiation_packed.yaml"
+  - summary: Seller app sends order status update with the latest fulfilement state
+    api: on_status (Order-picked-up)
+    description: Seller app sends order status update with the latest fulfilement state
+    example:
+      $ref: "../../Examples/Agri_Bids_And_Auction_yaml/on_status/on_status_attributes_negotiation_order_picked_up.yaml"
+  - summary: Seller app sends order status update with the latest fulfilement state
+    api: on_status (In-Transit)
+    description: Seller app sends order status update with the latest fulfilement state
+    example:
+      $ref: "../../Examples/Agri_Bids_And_Auction_yaml/on_status/on_status__attributes_negotiation_in_transit.yaml"
+  - summary: Seller app sends order status update with the latest fulfilement state
+    api: on_status (Completed)
+    description: Seller app sends order status update with the latest fulfilement state
+    example:
+      $ref: "../../Examples/Agri_Bids_And_Auction_yaml/on_status/on_status_attributes_negotiation_completed.yaml"
+  

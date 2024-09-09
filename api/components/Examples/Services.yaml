@@ -5,6 +5,13 @@ Agricultural output product - Negotiation:
     The negotiation majorly happens in four phases of order processing flow, i.e. Discovery of available commodity for negotiation, and service providers based on serviceability, order, fulfillment and post-fulfillment.
   example_set:
     $ref: "./Agri_Bids_And_Auction_yaml/index.yaml"
+Agricultural output product - Negotiation by Attributes:
+  summary: Agri output product - Negotiation by Attributes
+  description: >-
+    This elaborates the model implementations for agricultural output product negotiation over the network based on attributes.
+    The negotiation majorly happens in four phases of order processing flow, i.e. Discovery of available commodity for negotiation, and service providers based on serviceability, order, fulfillment and post-fulfillment.
+  example_set:
+    $ref: "./Agri_Bids_And_Auction_yaml/index.yaml"
 Agricultural product - Bids and Auction:
   summary: Bids and Auction
   description: >-

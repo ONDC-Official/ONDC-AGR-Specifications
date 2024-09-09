@@ -32,7 +32,7 @@ details:
         
         Note over B, SA: **SELECT FLOW**
         note right of B: If negotiation:
-        G->>B: Buyer sends offered_price and selected quantity with attributes
+        G->>B: Buyer sends offered_price and selected quantity
         SA->>BA: Seller accepts/counter-offers with price and allocated quantity
         BA-->>SA: Buyer can reject the counter-offer by not responding to on_select
         SA-->>BA: Seller can reject the offer in the error object of on_select
@@ -100,9 +100,9 @@ steps:
     reference: if any
     example:
       $ref: "../../Examples/Agri_Bids_And_Auction_yaml/on_search/on_search_negotiation.yaml"
-  - summary: Buyer sends offered_price and selected quantity with attributes
+  - summary: Buyer sends offered_price and selected quantity
     api: select (counter-offers)
-    description: Buyer sends offered_price and selected quantity with attributes
+    description: Buyer sends offered_price and selected quantity
     reference: if any
     example:
       $ref: "../../Examples/Agri_Bids_And_Auction_yaml/select/select_negotiation_start.yaml"
@@ -112,9 +112,9 @@ steps:
     reference: if any
     example:
       $ref: "../../Examples/Agri_Bids_And_Auction_yaml/on_select/on_select_negotiation_start.yaml"
-  - summary: Buyer sends offered_price and selected quantity with attributes
+  - summary: Buyer sends offered_price and selected quantity
     api: select (accepts)
-    description: Buyer sends offered_price and selected quantity with attributes
+    description: Buyer sends offered_price and selected quantity
     reference: if any
     example:
       $ref: "../../Examples/Agri_Bids_And_Auction_yaml/select/select_negotiation_end.yaml"

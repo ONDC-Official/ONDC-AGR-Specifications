@@ -11,15 +11,19 @@ select:
     - $ref: "./select/select.yaml"
     - $ref: "./select/select_negotiation_start.yaml"
     - $ref: "./select/select_negotiation_end.yaml"
+    - $ref: "./select/select_negotiation_attributes_start.yaml"
+    - $ref: "./select/select_negotiation_attributes_end.yaml"
 init:
   examples:
     - $ref: "./init/init.yaml"
     - $ref: "./init/init_bid_placement.yaml"
     - $ref: "./init/init_negotiation.yaml"
+    - $ref: "./init/init_attributes_negotiation.yaml"
 confirm:
   examples:
     - $ref: "./confirm/confirm.yaml"
     - $ref: "./confirm/confirm_negotiation.yaml"
+    - $ref: "./confirm/confirm_attributes_negotiation.yaml"
 status:
   examples:
     - $ref: "./status/status.yaml"
@@ -41,15 +45,19 @@ on_select:
     - $ref: "./on_select/on_select.yaml"
     - $ref: "./on_select/on_select_negotiation_start.yaml"
     - $ref: "./on_select/on_select_negotiation_end.yaml"
+    - $ref: "./on_select/on_select_negotiation_attributes_start.yaml"
+    - $ref: "./on_select/on_select_negotiation_attributes_end.yaml"
 on_init:
   examples:
     - $ref: "./on_init/on_init.yaml"
     - $ref: "./on_init/on_init_bid_placement.yaml"
     - $ref: "./on_init/on_init_negotiation.yaml"
+    - $ref: "./on_init/on_init_attributes_negotiation.yaml"
 on_confirm:
   examples:
     - $ref: "./on_confirm/on_confirm.yaml"
     - $ref: "./on_confirm/on_confirm_negotiation.yaml"
+    - $ref: "./on_confirm/on_confirm_attributes_negotiation.yaml"
 on_status:
   examples:
     - $ref: "./on_status/on_status.yaml"
@@ -58,6 +66,11 @@ on_status:
     - $ref: "./on_status/on_status_negotiation_order_picked_up.yaml"
     - $ref: "./on_status/on_status_negotiation_in_transit.yaml"
     - $ref: "./on_status/on_status_negotiation_completed.yaml"
+    - $ref: "./on_status/on_status_attributes_negotiation_accepted.yaml"
+    - $ref: "./on_status/on_status_attributes_negotiation_packed.yaml"
+    - $ref: "./on_status/on_status_attributes_negotiation_order_picked_up.yaml"
+    - $ref: "./on_status/on_status__attributes_negotiation_in_transit.yaml"
+    - $ref: "./on_status/on_status_attributes_negotiation_completed.yaml"
 on_cancel:
   examples:
     - $ref: "./on_cancel/on_cancel.yaml"

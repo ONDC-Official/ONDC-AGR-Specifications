@@ -50,66 +50,7 @@
             "selected": {
               "count": 100
             }
-          },
-          "tags": [
-            {
-              "descriptor": {
-                "code": "COMMODITY_SPECIFICATION"
-              },
-              "list": [
-                {
-                  "descriptor": {
-                    "code": "SHELF_LIFE"
-                  },
-                  "value": "P10M"
-                },
-                {
-                  "descriptor": {
-                    "code": "MOISTURE"
-                  },
-                  "value": "10%"
-                },
-                {
-                  "descriptor": {
-                    "code": "OIL_CONTENT"
-                  },
-                  "value": "2%"
-                },
-                {
-                  "descriptor": {
-                    "code": "DEFECTIVES"
-                  },
-                  "value": "7%"
-                }
-              ]
-            },
-            {
-              "descriptor": {
-                "code": "QUALITY_ASSESSMENT_REPORT"
-              },
-              "display": true,
-              "list": [
-                {
-                  "descriptor": {
-                    "code": "NAME"
-                  },
-                  "value": "CER-001"
-                },
-                {
-                  "descriptor": {
-                    "code": "MIME_TYPE"
-                  },
-                  "value": "application/pdf"
-                },
-                {
-                  "descriptor": {
-                    "code": "COPY"
-                  },
-                  "value": "https://abc.com/certificates"
-                }
-              ]
-            }
-          ]
+          }
         }
       ],
       "billing": {

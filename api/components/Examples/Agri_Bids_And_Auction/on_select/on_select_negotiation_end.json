@@ -42,40 +42,7 @@
             "currency": "INR",
             "value": "300.00",
             "offered_value": "270.00"
-          },
-          "tags": [
-            {
-              "descriptor": {
-                "code": "COMMODITY_SPECIFICATION"
-              },
-              "list": [
-                {
-                  "descriptor": {
-                    "code": "SHELF_LIFE"
-                  },
-                  "value": "P10M"
-                },
-                {
-                  "descriptor": {
-                    "code": "MOISTURE"
-                  },
-                  "value": "10%"
-                },
-                {
-                  "descriptor": {
-                    "code": "OIL_CONTENT"
-                  },
-                  "value": "2%"
-                },
-                {
-                  "descriptor": {
-                    "code": "DEFECTIVES"
-                  },
-                  "value": "7%"
-                }
-              ]
-            }
-          ]
+          }
         }
       ],
       "fulfillments": [
