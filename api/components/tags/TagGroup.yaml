@@ -46,10 +46,15 @@ catalog:
           list:
             $ref: "./Tag.yaml#/SERVICE_INFORMATION"
         - code: AUCTION_SPECIFICATION
-          description: Auction specification for the commodity bid (Required)
+          description: Auction specification for the commodity bid (Required if item for auction)
           reference: <PR/Issue/Discussion Links md format text>
           list:
             $ref: "./Tag.yaml#/AUCTION_SPECIFICATION"
+        - code: NEGOTIATION_SPECIFICATION
+          description: Negotiation specification for the commodity attributes (Required if item for attribute negotiation)
+          reference: <PR/Issue/Discussion Links md format text>
+          list:
+            $ref: "./Tag.yaml#/NEGOTIATION_SPECIFICATION"
         - code: COMMODITY_SPECIFICATION
           description: Bids and auction specifications of a particular commodity (Required)
           reference: <PR/Issue/Discussion Links md format text>

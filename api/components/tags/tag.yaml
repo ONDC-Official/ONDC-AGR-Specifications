@@ -301,6 +301,315 @@ COMMODITY_SPECIFICATION:
   - code: FINENESS
     description: Fineness for the commodity if applicable like Fine (10), Very Fine (15), Coarse (05) (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
+NEGOTIATION_SPECIFICATION:
+  - code: MOISTURE
+    description: Moisture of the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: FOREIGN_MATTER
+    description: foreign matter in the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: OIL_CONTENT
+    description: Oil Content in the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: DEFECTIVES
+    description: Defectives into the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: OTHER_EDIBLE_GRAINS
+    description: Other edible grains into the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: URIC_ACID
+    description: Uric Acid into the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: ARGEMONE_SEEDS
+    description: Is Argemone seeds if applicable - Yes, No (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: SIZE_RANGE_MEASURE
+    description: Size and Range measure for the commodity if applicable i.e. Diameter, Length (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: SIZE_RANGE
+    description: Size (Diameter, Length) Range (mm) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: PERCENTAGE_OF_DEFECTS
+    description: '% of Defects (Cuts, Cracks, Discoloured, mis-shape,Bruising Marks, Black/Brown Spots, Soft patches, mech. Damage, insect eaten, bird eaten, immature, dry/old look, shriveleld, under/over ripe, twins, fresh rooting,hail damage, latex marks/burns  sprouted,holes, wilting, chipped, puffy, without stem/calyx, slanky, nodes on surace, loose jacket, improper colour, Ricenous, long stem,Chitty, smut, sun burn, hard seed stem, open neck, yellow diseased leaves, foreign matter, watery berries etc for the commodity if applicable (Optional - depends on commodity)'
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: PERCENTAGE_OF_WASTAGE
+    description: '% of Wastage Not fit for Human Consumption (Rotten, Fungal infected, Diseased, Totally Damaged) for the commodity if applicable (Optional - depends on commodity)'
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: BUNCH_SIZE
+    description: Bunch size for leafy vegetables weight (gm) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: BUNCH_SIZE_UNIT
+    description: Bunch size unit for leafy vegetables weight (gm) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: VISIBLE_COLOUR
+    description: Visible Colour for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: COLOUR_PERCENTAGE
+    description: Colour % (Characteristic true to the variety) Scale (1 to 100*) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: TOTAL_SOLUBLE_SOLIDS
+    description: Total soluble solids (TSS) % (MInimum) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: TRACES_OF_SOIL
+    description: Traces of Soil for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: VOLATILE_OIL_PERCENTAGE
+    description: Volatile oil % for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: TOTAL_ASH_PERCENTAGE
+    description: Total Ash, % (m/m) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: CORIANDER_SPLIT_SEEDS_PERCENTAGE
+    description: Damaged /Coriander Split seeds(% by weight) Max for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: MIN_FLOWER_PER_STEM
+    description: Min. flower per stem for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: GIRTH_AT_THIN_END
+    description: Girth at thin end for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: FLOWER_DIAMETER_IN_CM
+    description: Flower Diameter in cm for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: STAPLE_LENGTH_OF_COTTON_IN_MM
+    description: Staple Length of cotton (in mm) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: TRASH_PERCENTAGE
+    description: Trash (% by wt) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: BUNDLE_STRENGTH
+    description: Bundle Strength for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: MICRONAIRE
+    description: Micronaire for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: PERCENTAGE_OF_MATURED_FIBERS
+    description: Percentage of Matured fibers (mm) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: SIEVE_ANALYSIS
+    description: Sieve analysis (% passing through 75 µm IS Sieve) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: NUMBER_OF_NUTS_PER_KG
+    description: Number of nuts per kg for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: VOID_NUTS_PERCENTAGE
+    description: Void nuts (% by Weight) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: IMMATURE_NUTS_PERCENTAGE
+    description: Immature nuts (% by Weight) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: STRENGTH
+    description: Strength for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: FINENESS
+    description: Fineness for the commodity if applicable like Fine (10), Very Fine (15), Coarse (05) (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+NEGOTIATION_BPP:
+  - code: MOISTURE
+    description: Moisture of the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: FOREIGN_MATTER
+    description: foreign matter in the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: OIL_CONTENT
+    description: Oil Content in the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: DEFECTIVES
+    description: Defectives into the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: OTHER_EDIBLE_GRAINS
+    description: Other edible grains into the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: URIC_ACID
+    description: Uric Acid into the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: ARGEMONE_SEEDS
+    description: Is Argemone seeds if applicable - Yes, No (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: SIZE_RANGE_MEASURE
+    description: Size and Range measure for the commodity if applicable i.e. Diameter, Length (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: SIZE_RANGE
+    description: Size (Diameter, Length) Range (mm) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: PERCENTAGE_OF_DEFECTS
+    description: '% of Defects (Cuts, Cracks, Discoloured, mis-shape,Bruising Marks, Black/Brown Spots, Soft patches, mech. Damage, insect eaten, bird eaten, immature, dry/old look, shriveleld, under/over ripe, twins, fresh rooting,hail damage, latex marks/burns  sprouted,holes, wilting, chipped, puffy, without stem/calyx, slanky, nodes on surace, loose jacket, improper colour, Ricenous, long stem,Chitty, smut, sun burn, hard seed stem, open neck, yellow diseased leaves, foreign matter, watery berries etc for the commodity if applicable (Optional - depends on commodity)'
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: PERCENTAGE_OF_WASTAGE
+    description: '% of Wastage Not fit for Human Consumption (Rotten, Fungal infected, Diseased, Totally Damaged) for the commodity if applicable (Optional - depends on commodity)'
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: BUNCH_SIZE
+    description: Bunch size for leafy vegetables weight (gm) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: BUNCH_SIZE_UNIT
+    description: Bunch size unit for leafy vegetables weight (gm) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: VISIBLE_COLOUR
+    description: Visible Colour for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: COLOUR_PERCENTAGE
+    description: Colour % (Characteristic true to the variety) Scale (1 to 100*) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: TOTAL_SOLUBLE_SOLIDS
+    description: Total soluble solids (TSS) % (MInimum) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: TRACES_OF_SOIL
+    description: Traces of Soil for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: VOLATILE_OIL_PERCENTAGE
+    description: Volatile oil % for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: TOTAL_ASH_PERCENTAGE
+    description: Total Ash, % (m/m) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: CORIANDER_SPLIT_SEEDS_PERCENTAGE
+    description: Damaged /Coriander Split seeds(% by weight) Max for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: MIN_FLOWER_PER_STEM
+    description: Min. flower per stem for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: GIRTH_AT_THIN_END
+    description: Girth at thin end for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: FLOWER_DIAMETER_IN_CM
+    description: Flower Diameter in cm for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: STAPLE_LENGTH_OF_COTTON_IN_MM
+    description: Staple Length of cotton (in mm) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: TRASH_PERCENTAGE
+    description: Trash (% by wt) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: BUNDLE_STRENGTH
+    description: Bundle Strength for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: MICRONAIRE
+    description: Micronaire for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: PERCENTAGE_OF_MATURED_FIBERS
+    description: Percentage of Matured fibers (mm) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: SIEVE_ANALYSIS
+    description: Sieve analysis (% passing through 75 µm IS Sieve) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: NUMBER_OF_NUTS_PER_KG
+    description: Number of nuts per kg for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: VOID_NUTS_PERCENTAGE
+    description: Void nuts (% by Weight) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: IMMATURE_NUTS_PERCENTAGE
+    description: Immature nuts (% by Weight) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: STRENGTH
+    description: Strength for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: FINENESS
+    description: Fineness for the commodity if applicable like Fine (10), Very Fine (15), Coarse (05) (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+NEGOTIATION_BAP:
+  - code: MOISTURE
+    description: Moisture of the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: FOREIGN_MATTER
+    description: foreign matter in the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: OIL_CONTENT
+    description: Oil Content in the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: DEFECTIVES
+    description: Defectives into the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: OTHER_EDIBLE_GRAINS
+    description: Other edible grains into the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: URIC_ACID
+    description: Uric Acid into the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: ARGEMONE_SEEDS
+    description: Is Argemone seeds if applicable - Yes, No (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: SIZE_RANGE_MEASURE
+    description: Size and Range measure for the commodity if applicable i.e. Diameter, Length (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: SIZE_RANGE
+    description: Size (Diameter, Length) Range (mm) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: PERCENTAGE_OF_DEFECTS
+    description: '% of Defects (Cuts, Cracks, Discoloured, mis-shape,Bruising Marks, Black/Brown Spots, Soft patches, mech. Damage, insect eaten, bird eaten, immature, dry/old look, shriveleld, under/over ripe, twins, fresh rooting,hail damage, latex marks/burns  sprouted,holes, wilting, chipped, puffy, without stem/calyx, slanky, nodes on surace, loose jacket, improper colour, Ricenous, long stem,Chitty, smut, sun burn, hard seed stem, open neck, yellow diseased leaves, foreign matter, watery berries etc for the commodity if applicable (Optional - depends on commodity)'
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: PERCENTAGE_OF_WASTAGE
+    description: '% of Wastage Not fit for Human Consumption (Rotten, Fungal infected, Diseased, Totally Damaged) for the commodity if applicable (Optional - depends on commodity)'
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: BUNCH_SIZE
+    description: Bunch size for leafy vegetables weight (gm) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: BUNCH_SIZE_UNIT
+    description: Bunch size unit for leafy vegetables weight (gm) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: VISIBLE_COLOUR
+    description: Visible Colour for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: COLOUR_PERCENTAGE
+    description: Colour % (Characteristic true to the variety) Scale (1 to 100*) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: TOTAL_SOLUBLE_SOLIDS
+    description: Total soluble solids (TSS) % (MInimum) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: TRACES_OF_SOIL
+    description: Traces of Soil for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: VOLATILE_OIL_PERCENTAGE
+    description: Volatile oil % for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: TOTAL_ASH_PERCENTAGE
+    description: Total Ash, % (m/m) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: CORIANDER_SPLIT_SEEDS_PERCENTAGE
+    description: Damaged /Coriander Split seeds(% by weight) Max for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: MIN_FLOWER_PER_STEM
+    description: Min. flower per stem for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: GIRTH_AT_THIN_END
+    description: Girth at thin end for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: FLOWER_DIAMETER_IN_CM
+    description: Flower Diameter in cm for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: STAPLE_LENGTH_OF_COTTON_IN_MM
+    description: Staple Length of cotton (in mm) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: TRASH_PERCENTAGE
+    description: Trash (% by wt) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: BUNDLE_STRENGTH
+    description: Bundle Strength for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: MICRONAIRE
+    description: Micronaire for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: PERCENTAGE_OF_MATURED_FIBERS
+    description: Percentage of Matured fibers (mm) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: SIEVE_ANALYSIS
+    description: Sieve analysis (% passing through 75 µm IS Sieve) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: NUMBER_OF_NUTS_PER_KG
+    description: Number of nuts per kg for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: VOID_NUTS_PERCENTAGE
+    description: Void nuts (% by Weight) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: IMMATURE_NUTS_PERCENTAGE
+    description: Immature nuts (% by Weight) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: STRENGTH
+    description: Strength for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: FINENESS
+    description: Fineness for the commodity if applicable like Fine (10), Very Fine (15), Coarse (05) (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
 SETTLEMENT_DETAILS:
   - code: COUNTERPARTY
     description: The counterparty to which the settlement needs to be done - BAP/BPP (Required)

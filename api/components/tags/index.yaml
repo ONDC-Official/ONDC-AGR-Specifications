@@ -7,9 +7,32 @@ on_search:
     catalog:
       $ref: "./TagGroup.yaml#/catalog"
 
+select:
+  message:
+    order:
+      items:
+        tags:
+          - code: NEGOTIATION_BAP
+            description: When negotiating by attributes, the buyer selects the attribute beneath it (Required if negotiation by attribute)
+            reference: <PR/Issue/Discussion Links md format text>
+            list:
+              $ref: "./Tag.yaml#/NEGOTIATION_BAP"
+
 on_select:
   message:
     order:
+      items:
+        tags:
+          - code: NEGOTIATION_BAP
+            description: When negotiating by attributes, the buyer selects the attribute beneath it (Required if negotiation by attribute)
+            reference: <PR/Issue/Discussion Links md format text>
+            list:
+              $ref: "./Tag.yaml#/NEGOTIATION_BAP"
+          - code: NEGOTIATION_BPP
+            description: When negotiating by attributes, the seller provides the attribute associated with it (Required if negotiation by attribute)
+            reference: <PR/Issue/Discussion Links md format text>
+            list:
+              $ref: "./Tag.yaml#/NEGOTIATION_BPP"
       quote:
         breakup:
           $ref: "./TagGroup.yaml#/order/quote/breakup"
