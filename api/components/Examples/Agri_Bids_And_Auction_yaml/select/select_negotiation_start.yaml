@@ -36,7 +36,8 @@ value:
             value: '300.00'
             offered_value: '250.00'
       fulfillments:
-        - stops:
+        - id: F1
+          stops:
             - type: end
               time:
                 label: selected

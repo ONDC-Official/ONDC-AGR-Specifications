@@ -18,6 +18,11 @@ value:
     ttl: PT30S
   message:
     catalog:
+      fulfillments:
+        - id: F1
+          type: Buyer-Fulfilled
+        - id: F2
+          type: Bids
       payments:
         - id: PY1
           type: PRE-FULFILLMENT
@@ -132,6 +137,9 @@ value:
                   count: 100
               category_ids:
                 - AGR11-1001
+              fulfillment_ids:
+                - F1
+                - F2
               location_ids:
                 - L1
               payment_ids:

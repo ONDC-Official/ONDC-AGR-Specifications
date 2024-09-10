@@ -22,6 +22,16 @@
   },
   "message": {
     "catalog": {
+      "fulfillments": [
+        {
+          "id": "F1",
+          "type": "Buyer-Fulfilled"
+        },
+        {
+          "id": "F2",
+          "type": "Seller-Fulfilled"
+        }
+      ],
       "payments": [
         {
           "id": "PY1",
@@ -212,6 +222,10 @@
               "category_ids": [
                 "AGR11-1001"
               ],
+              "fulfillment_ids": [
+                "F1",
+                "F2"
+              ],
               "location_ids": [
                 "L1"
               ],
@@ -270,19 +284,13 @@
               "tags": [
                 {
                   "descriptor": {
-                    "code": "SERVICE_INFORMATION"
+                    "code": "INFO"
                   },
                   "display": true,
                   "list": [
                     {
                       "descriptor": {
-                        "code": "PICKUP_TAT"
-                      },
-                      "value": "PT2D"
-                    },
-                    {
-                      "descriptor": {
-                        "code": "CANCELLABLE"
+                        "code": "NEGOTIABLE"
                       },
                       "value": "true"
                     }

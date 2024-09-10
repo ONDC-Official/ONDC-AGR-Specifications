@@ -27,12 +27,11 @@ details:
       sequenceDiagram
         participant B as Buyer
         participant BA as BuyerApp
-        participant G as Gateway
         participant SA as SellerApp
         
         Note over B, SA: **SELECT FLOW**
         note right of B: If negotiation:
-        G->>B: Buyer sends offered_price and selected quantity
+        BA->>SA: Buyer sends offered_price and selected quantity
         SA->>BA: Seller accepts/counter-offers with price and allocated quantity
         BA-->>SA: Buyer can reject the counter-offer by not responding to on_select
         SA-->>BA: Seller can reject the offer in the error object of on_select
@@ -53,7 +52,6 @@ details:
       sequenceDiagram
         participant B as Buyer
         participant BA as BuyerApp
-        participant G as Gateway
         participant SA as SellerApp
         Note Over B,SA: **ORDER INITIALISATION FLOW**
         B ->> BA: Buyer Initializes the order and sends billing details

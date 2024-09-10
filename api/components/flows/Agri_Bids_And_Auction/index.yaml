@@ -27,7 +27,6 @@ details:
       sequenceDiagram
         participant B as Buyer
         participant BA as BuyerApp
-        participant G as Gateway
         participant SA as SellerApp
         Note Over B,SA: **SELECT FLOW**
         B ->> BA: Buyer selects an auction.
@@ -41,7 +40,6 @@ details:
       sequenceDiagram
         participant B as Buyer
         participant BA as BuyerApp
-        participant G as Gateway
         participant SA as SellerApp
         Note Over B,SA: **FEE REQUIREMENT CHECK**
         B ->> BA: If a fee is required, buyer check payment
@@ -54,7 +52,6 @@ details:
       sequenceDiagram
         participant B as Buyer
         participant BA as BuyerApp
-        participant G as Gateway
         participant SA as SellerApp
         Note Over B,SA: **BID PLACEMENT FLOW**
         B ->> BA: Buyer places a bid.

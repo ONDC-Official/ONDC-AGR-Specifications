@@ -3946,12 +3946,11 @@ x-flows:
           sequenceDiagram
             participant B as Buyer
             participant BA as BuyerApp
-            participant G as Gateway
             participant SA as SellerApp
             
             Note over B, SA: **SELECT FLOW**
             note right of B: If negotiation:
-            G->>B: Buyer sends offered_price and selected quantity
+            BA->>SA: Buyer sends offered_price and selected quantity
             SA->>BA: Seller accepts/counter-offers with price and allocated quantity
             BA-->>SA: Buyer can reject the counter-offer by not responding to on_select
             SA-->>BA: Seller can reject the offer in the error object of on_select
@@ -3970,7 +3969,6 @@ x-flows:
           sequenceDiagram
             participant B as Buyer
             participant BA as BuyerApp
-            participant G as Gateway
             participant SA as SellerApp
             Note Over B,SA: **ORDER INITIALISATION FLOW**
             B ->> BA: Buyer Initializes the order and sends billing details
@@ -4081,6 +4079,11 @@ x-flows:
               ttl: PT30S
             message:
               catalog:
+                fulfillments:
+                  - id: F1
+                    type: Buyer-Fulfilled
+                  - id: F2
+                    type: Seller-Fulfilled
                 payments:
                   - id: PY1
                     type: PRE-FULFILLMENT
@@ -4195,6 +4198,9 @@ x-flows:
                             count: 100
                         category_ids:
                           - AGR11-1001
+                        fulfillment_ids:
+                          - F1
+                          - F2
                         location_ids:
                           - L1
                         payment_ids:
@@ -4231,14 +4237,11 @@ x-flows:
                         recommended: true
                         tags:
                           - descriptor:
-                              code: SERVICE_INFORMATION
+                              code: INFO
                             display: true
                             list:
                               - descriptor:
-                                  code: PICKUP_TAT
-                                value: PT2D
-                              - descriptor:
-                                  code: CANCELLABLE
+                                  code: NEGOTIABLE
                                 value: 'true'
                           - descriptor:
                               code: QUALITY_ASSESSMENT_REPORT
@@ -4566,7 +4569,8 @@ x-flows:
                       value: '300.00'
                       offered_value: '250.00'
                 fulfillments:
-                  - stops:
+                  - id: F1
+                    stops:
                       - type: end
                         time:
                           label: selected
@@ -4752,7 +4756,8 @@ x-flows:
                       value: '280.00'
                       offered_value: '270.00'
                 fulfillments:
-                  - stops:
+                  - id: F1
+                    stops:
                       - type: end
                         time:
                           label: selected
@@ -6577,12 +6582,11 @@ x-flows:
           sequenceDiagram
             participant B as Buyer
             participant BA as BuyerApp
-            participant G as Gateway
             participant SA as SellerApp
             
             Note over B, SA: **SELECT FLOW**
             note right of B: If negotiation:
-            G->>B: Buyer sends offered_price and selected quantity with attributes
+            BA->>SA: Buyer sends offered_price and selected quantity with attributes
             SA->>BA: Seller accepts/counter-offers with price and allocated quantity
             BA-->>SA: Buyer can reject the counter-offer by not responding to on_select
             SA-->>BA: Seller can reject the offer in the error object of on_select
@@ -6601,7 +6605,6 @@ x-flows:
           sequenceDiagram
             participant B as Buyer
             participant BA as BuyerApp
-            participant G as Gateway
             participant SA as SellerApp
             Note Over B,SA: **ORDER INITIALISATION FLOW**
             B ->> BA: Buyer Initializes the order and sends billing details
@@ -6704,7 +6707,8 @@ x-flows:
                               code: DEFECTIVES
                             value: 7%
                 fulfillments:
-                  - stops:
+                  - id: F1
+                    stops:
                       - type: end
                         time:
                           label: selected
@@ -7009,7 +7013,8 @@ x-flows:
                               code: DEFECTIVES
                             value: 7%
                 fulfillments:
-                  - stops:
+                  - id: F1
+                    stops:
                       - type: end
                         time:
                           label: selected
@@ -7089,7 +7094,7 @@ x-flows:
                         list:
                           - descriptor:
                               code: MOISTURE
-                            value: 10%
+                            value: 4%
                           - descriptor:
                               code: FOREIGN_MATTER
                             value: 3%
@@ -9303,7 +9308,6 @@ x-flows:
           sequenceDiagram
             participant B as Buyer
             participant BA as BuyerApp
-            participant G as Gateway
             participant SA as SellerApp
             Note Over B,SA: **SELECT FLOW**
             B ->> BA: Buyer selects an auction.
@@ -9316,7 +9320,6 @@ x-flows:
           sequenceDiagram
             participant B as Buyer
             participant BA as BuyerApp
-            participant G as Gateway
             participant SA as SellerApp
             Note Over B,SA: **FEE REQUIREMENT CHECK**
             B ->> BA: If a fee is required, buyer check payment
@@ -9328,7 +9331,6 @@ x-flows:
           sequenceDiagram
             participant B as Buyer
             participant BA as BuyerApp
-            participant G as Gateway
             participant SA as SellerApp
             Note Over B,SA: **BID PLACEMENT FLOW**
             B ->> BA: Buyer places a bid.
@@ -9419,6 +9421,11 @@ x-flows:
               ttl: PT30S
             message:
               catalog:
+                fulfillments:
+                  - id: F1
+                    type: Buyer-Fulfilled
+                  - id: F2
+                    type: Bids
                 payments:
                   - id: PY1
                     type: PRE-FULFILLMENT
@@ -9533,6 +9540,9 @@ x-flows:
                             count: 100
                         category_ids:
                           - AGR11-1001
+                        fulfillment_ids:
+                          - F1
+                          - F2
                         location_ids:
                           - L1
                         payment_ids:
@@ -12157,7 +12167,6 @@ x-flows:
           sequenceDiagram
             participant B as Buyer
             participant BA as BuyerApp
-            participant G as Gateway
             participant SA as SellerApp
             Note Over B,SA: **SELECT FLOW**
             B ->> BA: Buyer selects an auction.
@@ -12170,7 +12179,6 @@ x-flows:
           sequenceDiagram
             participant B as Buyer
             participant BA as BuyerApp
-            participant G as Gateway
             participant SA as SellerApp
             Note Over B,SA: **FEE REQUIREMENT CHECK**
             B ->> BA: If a fee is required, buyer check payment
@@ -12182,7 +12190,6 @@ x-flows:
           sequenceDiagram
             participant B as Buyer
             participant BA as BuyerApp
-            participant G as Gateway
             participant SA as SellerApp
             Note Over B,SA: **BID PLACEMENT FLOW**
             B ->> BA: Buyer places a bid.
@@ -12273,6 +12280,11 @@ x-flows:
               ttl: PT30S
             message:
               catalog:
+                fulfillments:
+                  - id: F1
+                    type: Buyer-Fulfilled
+                  - id: F2
+                    type: Bids
                 payments:
                   - id: PY1
                     type: PRE-FULFILLMENT
@@ -12387,6 +12399,9 @@ x-flows:
                             count: 100
                         category_ids:
                           - AGR11-1001
+                        fulfillment_ids:
+                          - F1
+                          - F2
                         location_ids:
                           - L1
                         payment_ids:
@@ -12754,7 +12769,6 @@ x-flows:
           sequenceDiagram
             participant B as Buyer
             participant BA as BuyerApp
-            participant G as Gateway
             participant SA as SellerApp
             Note Over B,SA: **SELECT FLOW**
             B ->> BA: Buyer selects an auction.
@@ -12767,7 +12781,6 @@ x-flows:
           sequenceDiagram
             participant B as Buyer
             participant BA as BuyerApp
-            participant G as Gateway
             participant SA as SellerApp
             Note Over B,SA: **FEE REQUIREMENT CHECK**
             B ->> BA: If a fee is required, buyer check payment
@@ -12779,7 +12792,6 @@ x-flows:
           sequenceDiagram
             participant B as Buyer
             participant BA as BuyerApp
-            participant G as Gateway
             participant SA as SellerApp
             Note Over B,SA: **BID PLACEMENT FLOW**
             B ->> BA: Buyer places a bid.
@@ -13708,7 +13720,6 @@ x-flows:
           sequenceDiagram
             participant B as Buyer
             participant BA as BuyerApp
-            participant G as Gateway
             participant SA as SellerApp
             Note Over B,SA: **SELECT FLOW**
             B ->> BA: Buyer selects an auction.
@@ -13721,7 +13732,6 @@ x-flows:
           sequenceDiagram
             participant B as Buyer
             participant BA as BuyerApp
-            participant G as Gateway
             participant SA as SellerApp
             Note Over B,SA: **FEE REQUIREMENT CHECK**
             B ->> BA: If a fee is required, buyer check payment
@@ -13733,7 +13743,6 @@ x-flows:
           sequenceDiagram
             participant B as Buyer
             participant BA as BuyerApp
-            participant G as Gateway
             participant SA as SellerApp
             Note Over B,SA: **BID PLACEMENT FLOW**
             B ->> BA: Buyer places a bid.
@@ -14167,7 +14176,6 @@ x-flows:
           sequenceDiagram
             participant B as Buyer
             participant BA as BuyerApp
-            participant G as Gateway
             participant SA as SellerApp
             Note Over B,SA: **SELECT FLOW**
             B ->> BA: Buyer selects an auction.
@@ -14180,7 +14188,6 @@ x-flows:
           sequenceDiagram
             participant B as Buyer
             participant BA as BuyerApp
-            participant G as Gateway
             participant SA as SellerApp
             Note Over B,SA: **FEE REQUIREMENT CHECK**
             B ->> BA: If a fee is required, buyer check payment
@@ -14192,7 +14199,6 @@ x-flows:
           sequenceDiagram
             participant B as Buyer
             participant BA as BuyerApp
-            participant G as Gateway
             participant SA as SellerApp
             Note Over B,SA: **BID PLACEMENT FLOW**
             B ->> BA: Buyer places a bid.
@@ -14283,6 +14289,11 @@ x-flows:
               ttl: PT30S
             message:
               catalog:
+                fulfillments:
+                  - id: F1
+                    type: Buyer-Fulfilled
+                  - id: F2
+                    type: Bids
                 payments:
                   - id: PY1
                     type: PRE-FULFILLMENT
@@ -14397,6 +14408,9 @@ x-flows:
                             count: 100
                         category_ids:
                           - AGR11-1001
+                        fulfillment_ids:
+                          - F1
+                          - F2
                         location_ids:
                           - L1
                         payment_ids:
@@ -15100,7 +15114,8 @@ x-examples:
                         value: '300.00'
                         offered_value: '250.00'
                   fulfillments:
-                    - stops:
+                    - id: F1
+                      stops:
                         - type: end
                           time:
                             label: selected
@@ -15159,7 +15174,8 @@ x-examples:
                         value: '280.00'
                         offered_value: '270.00'
                   fulfillments:
-                    - stops:
+                    - id: F1
+                      stops:
                         - type: end
                           time:
                             label: selected
@@ -15232,7 +15248,8 @@ x-examples:
                                 code: DEFECTIVES
                               value: 7%
                   fulfillments:
-                    - stops:
+                    - id: F1
+                      stops:
                         - type: end
                           time:
                             label: selected
@@ -15304,7 +15321,8 @@ x-examples:
                                 code: DEFECTIVES
                               value: 7%
                   fulfillments:
-                    - stops:
+                    - id: F1
+                      stops:
                         - type: end
                           time:
                             label: selected
@@ -16961,6 +16979,11 @@ x-examples:
                 ttl: PT30S
               message:
                 catalog:
+                  fulfillments:
+                    - id: F1
+                      type: Buyer-Fulfilled
+                    - id: F2
+                      type: Bids
                   payments:
                     - id: PY1
                       type: PRE-FULFILLMENT
@@ -17075,6 +17098,9 @@ x-examples:
                               count: 100
                           category_ids:
                             - AGR11-1001
+                          fulfillment_ids:
+                            - F1
+                            - F2
                           location_ids:
                             - L1
                           payment_ids:
@@ -17354,6 +17380,11 @@ x-examples:
                 ttl: PT30S
               message:
                 catalog:
+                  fulfillments:
+                    - id: F1
+                      type: Buyer-Fulfilled
+                    - id: F2
+                      type: Bids
                   payments:
                     - id: PY1
                       type: PRE-FULFILLMENT
@@ -17468,6 +17499,9 @@ x-examples:
                               count: 100
                           category_ids:
                             - AGR11-1001
+                          fulfillment_ids:
+                            - F1
+                            - F2
                           location_ids:
                             - L1
                           payment_ids:
@@ -17747,6 +17781,11 @@ x-examples:
                 ttl: PT30S
               message:
                 catalog:
+                  fulfillments:
+                    - id: F1
+                      type: Buyer-Fulfilled
+                    - id: F2
+                      type: Seller-Fulfilled
                   payments:
                     - id: PY1
                       type: PRE-FULFILLMENT
@@ -17861,6 +17900,9 @@ x-examples:
                               count: 100
                           category_ids:
                             - AGR11-1001
+                          fulfillment_ids:
+                            - F1
+                            - F2
                           location_ids:
                             - L1
                           payment_ids:
@@ -17897,14 +17939,11 @@ x-examples:
                           recommended: true
                           tags:
                             - descriptor:
-                                code: SERVICE_INFORMATION
+                                code: INFO
                               display: true
                               list:
                                 - descriptor:
-                                    code: PICKUP_TAT
-                                  value: PT2D
-                                - descriptor:
-                                    code: CANCELLABLE
+                                    code: NEGOTIABLE
                                   value: 'true'
                             - descriptor:
                                 code: QUALITY_ASSESSMENT_REPORT
@@ -18746,7 +18785,7 @@ x-examples:
                           list:
                             - descriptor:
                                 code: MOISTURE
-                              value: 10%
+                              value: 4%
                             - descriptor:
                                 code: FOREIGN_MATTER
                               value: 3%

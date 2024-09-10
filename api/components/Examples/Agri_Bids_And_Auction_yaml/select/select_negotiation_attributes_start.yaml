@@ -49,7 +49,8 @@ value:
                     code: DEFECTIVES
                   value: 7%
       fulfillments:
-        - stops:
+        - id: F1
+          stops:
             - type: end
               time:
                 label: selected
