@@ -4557,6 +4557,8 @@ x-flows:
                     - id: L1
                 items:
                   - id: I1
+                    fulfillment_ids:
+                      - F1
                     location_ids:
                       - L1
                     category_ids:
@@ -4620,6 +4622,8 @@ x-flows:
                   id: P1
                 items:
                   - id: I1
+                    fulfillment_ids:
+                      - F1
                     location_ids:
                       - L1
                     category_ids:
@@ -4744,6 +4748,8 @@ x-flows:
                     - id: L1
                 items:
                   - id: I1
+                    fulfillment_ids:
+                      - F1
                     location_ids:
                       - L1
                     category_ids:
@@ -4808,6 +4814,8 @@ x-flows:
                   id: P1
                 items:
                   - id: I1
+                    fulfillment_ids:
+                      - F1
                     location_ids:
                       - L1
                     category_ids:
@@ -6682,6 +6690,8 @@ x-flows:
                     - id: L1
                 items:
                   - id: I1
+                    fulfillment_ids:
+                      - F1
                     location_ids:
                       - L1
                     category_ids:
@@ -6699,7 +6709,7 @@ x-flows:
                         list:
                           - descriptor:
                               code: MOISTURE
-                            value: 10%
+                            value: 4%
                           - descriptor:
                               code: OIL_CONTENT
                             value: 2%
@@ -6758,6 +6768,8 @@ x-flows:
                   id: P1
                 items:
                   - id: I1
+                    fulfillment_ids:
+                      - F1
                     location_ids:
                       - L1
                     category_ids:
@@ -6787,7 +6799,7 @@ x-flows:
                         list:
                           - descriptor:
                               code: MOISTURE
-                            value: 10%
+                            value: 8%
                           - descriptor:
                               code: FOREIGN_MATTER
                             value: 3%
@@ -6988,6 +7000,8 @@ x-flows:
                     - id: L1
                 items:
                   - id: I1
+                    fulfillment_ids:
+                      - F1
                     location_ids:
                       - L1
                     category_ids:
@@ -7005,7 +7019,7 @@ x-flows:
                         list:
                           - descriptor:
                               code: MOISTURE
-                            value: 10%
+                            value: 4%
                           - descriptor:
                               code: OIL_CONTENT
                             value: 2%
@@ -7065,6 +7079,8 @@ x-flows:
                   id: P1
                 items:
                   - id: I1
+                    fulfillment_ids:
+                      - F1
                     location_ids:
                       - L1
                     category_ids:
@@ -15102,6 +15118,8 @@ x-examples:
                       - id: L1
                   items:
                     - id: I1
+                      fulfillment_ids:
+                        - F1
                       location_ids:
                         - L1
                       category_ids:
@@ -15162,6 +15180,8 @@ x-examples:
                       - id: L1
                   items:
                     - id: I1
+                      fulfillment_ids:
+                        - F1
                       location_ids:
                         - L1
                       category_ids:
@@ -15223,6 +15243,8 @@ x-examples:
                       - id: L1
                   items:
                     - id: I1
+                      fulfillment_ids:
+                        - F1
                       location_ids:
                         - L1
                       category_ids:
@@ -15240,7 +15262,7 @@ x-examples:
                           list:
                             - descriptor:
                                 code: MOISTURE
-                              value: 10%
+                              value: 4%
                             - descriptor:
                                 code: OIL_CONTENT
                               value: 2%
@@ -15296,6 +15318,8 @@ x-examples:
                       - id: L1
                   items:
                     - id: I1
+                      fulfillment_ids:
+                        - F1
                       location_ids:
                         - L1
                       category_ids:
@@ -15313,7 +15337,7 @@ x-examples:
                           list:
                             - descriptor:
                                 code: MOISTURE
-                              value: 10%
+                              value: 4%
                             - descriptor:
                                 code: OIL_CONTENT
                               value: 2%
@@ -18299,6 +18323,8 @@ x-examples:
                     id: P1
                   items:
                     - id: I1
+                      fulfillment_ids:
+                        - F1
                       location_ids:
                         - L1
                       category_ids:
@@ -18416,6 +18442,8 @@ x-examples:
                     id: P1
                   items:
                     - id: I1
+                      fulfillment_ids:
+                        - F1
                       location_ids:
                         - L1
                       category_ids:
@@ -18533,6 +18561,8 @@ x-examples:
                     id: P1
                   items:
                     - id: I1
+                      fulfillment_ids:
+                        - F1
                       location_ids:
                         - L1
                       category_ids:
@@ -18562,7 +18592,7 @@ x-examples:
                           list:
                             - descriptor:
                                 code: MOISTURE
-                              value: 10%
+                              value: 8%
                             - descriptor:
                                 code: FOREIGN_MATTER
                               value: 3%
@@ -18756,6 +18786,8 @@ x-examples:
                     id: P1
                   items:
                     - id: I1
+                      fulfillment_ids:
+                        - F1
                       location_ids:
                         - L1
                       category_ids:
