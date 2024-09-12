@@ -1,5 +1,6 @@
 - $ref: "./Agri_Bids_And_Auction/negotiation.yaml"
 - $ref: "./Agri_Bids_And_Auction/negotiation_via_attributes.yaml"
+- $ref: "./Agri_Bids_And_Auction/negotiation_reject.yaml"
 - $ref: "./Agri_Bids_And_Auction/index.yaml"
 - $ref: "./Agri_Bids_And_Auction/close_bid.yaml"
 - $ref: "./Agri_Bids_And_Auction/quality_issue.yaml"

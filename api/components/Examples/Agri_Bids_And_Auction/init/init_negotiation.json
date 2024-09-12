@@ -36,6 +36,9 @@
           "location_ids": [
             "L1"
           ],
+          "fulfillment_ids": [
+            "F1"
+          ],
           "category_ids": [
             "AGR11-1001"
           ],

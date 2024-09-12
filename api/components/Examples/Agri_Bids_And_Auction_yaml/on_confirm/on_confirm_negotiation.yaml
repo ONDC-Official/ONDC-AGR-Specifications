@@ -27,6 +27,8 @@ value:
         rateable: true
       items:
         - id: I1
+          fulfillment_ids:
+            - F1
           location_ids:
             - L1
           category_ids:

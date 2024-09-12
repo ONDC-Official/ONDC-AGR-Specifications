@@ -24,3 +24,8 @@ code:
     Who can use code?: BPP
     Usage: Used in NACK
     Action: NACK on /select
+  - Code: '90006'
+    Reason: You have selected the lower price which we can't proceed with order
+    Who can use code?: BPP
+    Usage: Used in NACK
+    Action: NACK on /on_select

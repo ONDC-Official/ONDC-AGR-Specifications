@@ -1,0 +1,113 @@
+summary: Agricultural output product - Negotiation rejected by seller
+description: The following is an illustrative flow to perform a transaction of a nature where a buyer would like to negotiate for agricultural commodity. The Negotiation majorly happens in four phases of order processing flow, i.e. Discovery of available commodity and service providers, order, fulfillment and post-fulfillment.
+details:
+
+  - description: Sequence Diagram for Negotiation
+    mermaidGraph: >-
+      sequenceDiagram
+        participant B as Buyer
+        participant BA as BuyerApp
+        participant G as Gateway
+        participant SA1 as SellerApp1
+        participant SA2 as SellerApp2
+        
+        Note Over B,SA2: **SEARCH FLOW**
+        B ->> BA: Buyer initiates an exploratory search for Negotiations.
+        BA ->> G: **/search** - Search by city for a commodity and <br>additional parameters
+        Note left of BA: Additional params include: <br><br>
+        G ->> SA1: **/search** - Commodity request broadcasted based <br>on city and domain in context
+        G ->> SA2: **/search** - Commodity request broadcasted based <br>on city and domain in context
+        SA1 ->> BA: **/on_search** - Seller responds with /on_search, providing available product <br> with their details, including price, fulfilment, avilable quantity
+        SA2 ->> BA: **/on_search** - Seller responds with /on_search, providing available product <br> with their details, including price, fulfilment, avilable quantity
+        Note Over BA,SA1: Buyer now has the option to choose the <br>product from either Seller 1 or Seller 2 or both
+        BA ->> B: Shows all the avilable product <br>options from sellers
+
+  - description: Selection and Negotiation
+    mermaidGraph: >-
+      sequenceDiagram
+        participant B as Buyer
+        participant BA as BuyerApp
+        participant SA as SellerApp
+        
+        Note over B, SA: **SELECT FLOW**
+        note right of B: If negotiation:
+        BA->>SA: Buyer sends offered_price and selected quantity
+        SA->>BA: Seller accepts/counter-offers with price and allocated quantity
+        BA-->>SA: Buyer can reject the counter-offer by not responding to on_select
+        SA-->>BA: Seller can reject the offer in the error object of on_select
+        loop repeated till acceptance
+            BA ->> SA: Buyer selects item id and gets quote for item?
+            alt if negotiable
+                BA ->> SA: Buyer selects item id and gets quote for item?
+            else if direct purchase
+                SA ->> BA: Seller sends the same quote as decided on the last on_select
+            end
+        end
+        BA ->> B: Shows response with price details if item is in stock
+        note right of BA: Everything else works as per the protocol
+
+
+  - description: Initializing the order
+    mermaidGraph: >-
+      sequenceDiagram
+        participant B as Buyer
+        participant BA as BuyerApp
+        participant SA as SellerApp
+        Note Over B,SA: **ORDER INITIALISATION FLOW**
+        B ->> BA: Buyer Initializes the order and sends billing details
+        BA ->> SA: **/init** - Buyer sends /init, indicating the order. <br> The product price will be shared in the intent.
+        SA ->> BA: **/on_init** - Order initialization with fulfillment & settlement information <br> including UPI or NEFT/IMPS/Bank Transfer
+        BA ->> B: Confirms initialization
+
+  - description: Order Confirmation
+    mermaidGraph: >-
+      sequenceDiagram
+        participant B as Buyer
+        participant BA as BuyerApp
+        participant SA as SellerApp
+        Note Over B,SA: **CONFIRMATION FLOW**
+        B ->> BA: Confirms the Order
+        BA ->> SA: **/confirm** - Buyer confirms the order
+        SA ->> BA: **/on_confirm** - Seller responds with /on_confirm, <br> creating an Order ID for negotiated placed order
+        BA ->> B: Confirms the order 
+
+  - description: Fulfillment
+    mermaidGraph: >-
+      sequenceDiagram
+        participant B as Buyer
+        participant BA as BuyerApp
+        participant SA as SellerApp 
+        Note Over B,SA: **ORDER STATUS FLOW**
+        B ->> BA: Checks the order status
+        BA ->> SA: **/status** - Enquire order status
+        SA ->> BA: **/on_status** - Seller responds with the current order status
+        BA ->> B: Updates the latest status 
+
+
+reference: if any
+steps:
+  - summary: Buyer initiates an exploratory search for Negotiations.
+    api: search
+    description: The buyer expresses interest in purchasing a commodity (such as wheat) from all currently available products, serviceable to him
+    reference: if any
+    example:
+      $ref: "../../Examples/Agri_Bids_And_Auction_yaml/search/search_by_category.yaml"
+  - summary: Seller providing available product with their details, including price, fulfilment, avilable quantity
+    api: on_search
+    description: Seller responds with /on_search, providing available product with their details, including price, fulfilment, avilable quantity
+    reference: if any
+    example:
+      $ref: "../../Examples/Agri_Bids_And_Auction_yaml/on_search/on_search_negotiation.yaml"
+  - summary: Buyer sends offered_price and selected quantity
+    api: select
+    description: Buyer sends offered_price and selected quantity
+    reference: if any
+    example:
+      $ref: "../../Examples/Agri_Bids_And_Auction_yaml/select/select_negotiation_start.yaml"
+  - summary: Seller reject the offer due to very low price asked by buyer 
+    api: on_select (reject)
+    description: Seller reject the offer due to very low price asked by buyer
+    reference: if any
+    example:
+      $ref: "../../Examples/Agri_Bids_And_Auction_yaml/on_select/on_select_negotiation_reject.yaml"
+  
