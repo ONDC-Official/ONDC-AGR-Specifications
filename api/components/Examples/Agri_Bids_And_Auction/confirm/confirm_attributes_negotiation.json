@@ -58,21 +58,15 @@
               "list": [
                 {
                   "descriptor": {
-                    "code": "MOISTURE"
+                    "code": "items.price.value"
                   },
-                  "value": "10%"
+                  "value": "270.00"
                 },
                 {
                   "descriptor": {
-                    "code": "OIL_CONTENT"
+                    "code": "items.tags.commodity_specification.moisture"
                   },
-                  "value": "2%"
-                },
-                {
-                  "descriptor": {
-                    "code": "DEFECTIVES"
-                  },
-                  "value": "7%"
+                  "value": "4%"
                 }
               ]
             }

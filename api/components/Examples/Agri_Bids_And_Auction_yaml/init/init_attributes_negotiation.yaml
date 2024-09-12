@@ -39,14 +39,11 @@ value:
                 code: NEGOTIATION_BAP
               list:
                 - descriptor:
-                    code: MOISTURE
-                  value: 10%
+                    code: items.price.value
+                  value: '270.00'
                 - descriptor:
-                    code: OIL_CONTENT
-                  value: 2%
-                - descriptor:
-                    code: DEFECTIVES
-                  value: 7%
+                    code: items.tags.commodity_specification.moisture
+                  value: 4%
       billing:
         name: ONDC buyer
         address: >-

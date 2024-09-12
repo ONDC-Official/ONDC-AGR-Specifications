@@ -36,20 +36,16 @@ value:
           price:
             currency: INR
             value: '300.00'
-            offered_value: '250.00'
           tags:
             - descriptor:
                 code: NEGOTIATION_BAP
               list:
                 - descriptor:
-                    code: MOISTURE
+                    code: items.price.value
+                  value: '250.00'
+                - descriptor:
+                    code: items.tags.commodity_specification.moisture
                   value: 4%
-                - descriptor:
-                    code: OIL_CONTENT
-                  value: 2%
-                - descriptor:
-                    code: DEFECTIVES
-                  value: 7%
       fulfillments:
         - id: F1
           stops:

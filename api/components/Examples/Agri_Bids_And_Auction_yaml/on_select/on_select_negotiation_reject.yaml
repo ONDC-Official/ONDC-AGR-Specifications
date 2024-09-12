@@ -18,4 +18,4 @@ value:
     ttl: PT30S
   error:
     code: 90006
-    message: You have selected the lower price which we can't proceed with order
+    message: The selected price is too low for us to proceed with the order

@@ -198,12 +198,6 @@
                 "value": "300.00"
               },
               "quantity": {
-                "unitized": {
-                  "measure": {
-                    "unit": "kg",
-                    "value": "5000"
-                  }
-                },
                 "available": {
                   "measure": {
                     "unit": "kg",
@@ -282,20 +276,6 @@
               "matched": true,
               "recommended": true,
               "tags": [
-                {
-                  "descriptor": {
-                    "code": "INFO"
-                  },
-                  "display": true,
-                  "list": [
-                    {
-                      "descriptor": {
-                        "code": "NEGOTIABLE"
-                      },
-                      "value": "true"
-                    }
-                  ]
-                },
                 {
                   "descriptor": {
                     "code": "QUALITY_ASSESSMENT_REPORT"
@@ -419,7 +399,7 @@
                     },
                     {
                       "descriptor": {
-                        "code": "BUNCH_SIZE"
+                        "code": "BUNCH_SIZE_VALUE"
                       },
                       "value": "50"
                     },
@@ -439,7 +419,7 @@
                       "descriptor": {
                         "code": "COLOUR_PERCENTAGE"
                       },
-                      "value": "More than 70"
+                      "value": ">=70%"
                     },
                     {
                       "descriptor": {
@@ -455,15 +435,15 @@
                     },
                     {
                       "descriptor": {
-                        "code": "VOLATILE_OIL_PERCENTAGE"
+                        "code": "VOLATILE_OIL"
                       },
-                      "value": "Up to 2.5"
+                      "value": "<=2.5%"
                     },
                     {
                       "descriptor": {
-                        "code": "TOTAL_ASH_PERCENTAGE"
+                        "code": "TOTAL_ASH"
                       },
-                      "value": "Not more than 7.0"
+                      "value": "<=7%"
                     },
                     {
                       "descriptor": {
@@ -479,27 +459,45 @@
                     },
                     {
                       "descriptor": {
-                        "code": "GIRTH_AT_THIN_END"
+                        "code": "GIRTH_AT_THIN_END_VALUE"
                       },
-                      "value": "less than 6 cm"
+                      "value": "<=6"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "GIRTH_AT_THIN_END_UNIT"
+                      },
+                      "value": "cm"
                     },
                     {
                       "descriptor": {
                         "code": "BLOOMING_AND_SHAPE"
                       },
-                      "value": "Reasonable bloomed and conical shape More than 85 %"
+                      "value": ">=85%"
                     },
                     {
                       "descriptor": {
-                        "code": "FLOWER_DIAMETER_IN_CM"
+                        "code": "FLOWER_DIAMETER_VALUE"
                       },
-                      "value": "3.45 cm"
+                      "value": "3.45"
                     },
                     {
                       "descriptor": {
-                        "code": "STAPLE_LENGTH_OF_COTTON_IN_MM"
+                        "code": "FLOWER_DIAMETER_UNIT"
                       },
-                      "value": "28 ‑ 30 mm"
+                      "value": "cm"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "STAPLE_LENGTH_OF_COTTON_VALUE"
+                      },
+                      "value": "28‑30"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "STAPLE_LENGTH_OF_COTTON_UNIT"
+                      },
+                      "value": "mm"
                     },
                     {
                       "descriptor": {
@@ -511,19 +509,19 @@
                       "descriptor": {
                         "code": "BUNDLE_STRENGTH"
                       },
-                      "value": "24.0 and above"
+                      "value": ">=24.0"
                     },
                     {
                       "descriptor": {
                         "code": "MICRONAIRE"
                       },
-                      "value": "2.8 to 3.0"
+                      "value": "2.8-3.0"
                     },
                     {
                       "descriptor": {
                         "code": "PERCENTAGE_OF_MATURED_FIBERS"
                       },
-                      "value": "Above 70.0-75.0 mm"
+                      "value": ">=70.0"
                     },
                     {
                       "descriptor": {
@@ -533,33 +531,39 @@
                     },
                     {
                       "descriptor": {
-                        "code": "NUMBER_OF_NUTS_PER_KG"
+                        "code": "NUMBER_OF_NUTS_VALUE"
                       },
                       "value": "210"
                     },
                     {
                       "descriptor": {
-                        "code": "VOID_NUTS_PERCENTAGE"
+                        "code": "NUMBER_OF_NUTS_UNIT"
                       },
-                      "value": "1"
+                      "value": "kg"
                     },
                     {
                       "descriptor": {
-                        "code": "IMMATURE_NUTS_PERCENTAGE"
+                        "code": "VOID_NUTS"
                       },
-                      "value": "2"
+                      "value": "1%"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "IMMATURE_NUTS"
+                      },
+                      "value": "2%"
                     },
                     {
                       "descriptor": {
                         "code": "STRENGTH"
                       },
-                      "value": "Need strength to break the fiber and sharp audible sound at thetime of breakage (Excellent 30)"
+                      "value": "Excellent"
                     },
                     {
                       "descriptor": {
                         "code": "FINENESS"
                       },
-                      "value": "Fine (10)"
+                      "value": "10"
                     }
                   ]
                 },
@@ -570,183 +574,124 @@
                   "list": [
                     {
                       "descriptor": {
-                        "code": "MOISTURE"
-                      },
-                      "value": "10%"
+                        "code": "items.price.value"
+                      }
                     },
                     {
                       "descriptor": {
-                        "code": "FOREIGN_MATTER"
-                      },
-                      "value": "3%"
+                        "code": "items.quantity.available.count"
+                      }
                     },
                     {
                       "descriptor": {
-                        "code": "OIL_CONTENT"
-                      },
-                      "value": "2%"
+                        "code": "items.tags.commodity_specification.moisture"
+                      }
                     },
                     {
                       "descriptor": {
-                        "code": "DEFECTIVES"
-                      },
-                      "value": "7%"
+                        "code": "items.tags.commodity_specification.foreign_matter"
+                      }
                     },
                     {
                       "descriptor": {
-                        "code": "OTHER_EDIBLE_GRAINS"
-                      },
-                      "value": "1%"
+                        "code": "items.tags.commodity_specification.defectives"
+                      }
                     },
                     {
                       "descriptor": {
-                        "code": "SIZE_RANGE_MEASURE"
-                      },
-                      "value": "Diameter"
+                        "code": "items.tags.commodity_specification.other_edible_grains"
+                      }
                     },
                     {
                       "descriptor": {
-                        "code": "SIZE_RANGE"
-                      },
-                      "value": "15-18"
+                        "code": "items.tags.commodity_specification.size_range"
+                      }
                     },
                     {
                       "descriptor": {
-                        "code": "PERCENTAGE_OF_DEFECTS"
-                      },
-                      "value": "1.5%"
+                        "code": "items.tags.commodity_specification.percentage_of_defects"
+                      }
                     },
                     {
                       "descriptor": {
-                        "code": "PERCENTAGE_OF_WASTAGE"
-                      },
-                      "value": "3%"
+                        "code": "items.tags.commodity_specification.percentage_of_wastage"
+                      }
                     },
                     {
                       "descriptor": {
-                        "code": "BUNCH_SIZE"
-                      },
-                      "value": "50"
+                        "code": "items.tags.commodity_specification.colour_percentage"
+                      }
                     },
                     {
                       "descriptor": {
-                        "code": "BUNCH_SIZE_UNIT"
-                      },
-                      "value": "gm"
+                        "code": "items.tags.commodity_specification.traces_of_soil"
+                      }
                     },
                     {
                       "descriptor": {
-                        "code": "VISIBLE_COLOUR"
-                      },
-                      "value": "Brown"
+                        "code": "items.tags.commodity_specification.total_ash"
+                      }
                     },
                     {
                       "descriptor": {
-                        "code": "COLOUR_PERCENTAGE"
-                      },
-                      "value": "More than 70"
+                        "code": "items.tags.commodity_specification.coriander_split_seeds_percentage"
+                      }
                     },
                     {
                       "descriptor": {
-                        "code": "TRACES_OF_SOIL"
-                      },
-                      "value": "Sight traces"
+                        "code": "items.tags.commodity_specification.min_flower_per_stem"
+                      }
                     },
                     {
                       "descriptor": {
-                        "code": "VOLATILE_OIL_PERCENTAGE"
-                      },
-                      "value": "Up to 2.5"
+                        "code": "items.tags.commodity_specification.girth_at_thin_end"
+                      }
                     },
                     {
                       "descriptor": {
-                        "code": "TOTAL_ASH_PERCENTAGE"
-                      },
-                      "value": "Not more than 7.0"
+                        "code": "items.tags.commodity_specification.trash_percentage"
+                      }
                     },
                     {
                       "descriptor": {
-                        "code": "CORIANDER_SPLIT_SEEDS_PERCENTAGE"
-                      },
-                      "value": "5%"
+                        "code": "items.tags.commodity_specification.bundle_strength"
+                      }
                     },
                     {
                       "descriptor": {
-                        "code": "MIN_FLOWER_PER_STEM"
-                      },
-                      "value": "1"
+                        "code": "items.tags.commodity_specification.micronaire"
+                      }
                     },
                     {
                       "descriptor": {
-                        "code": "GIRTH_AT_THIN_END"
-                      },
-                      "value": "less than 6 cm"
+                        "code": "items.tags.commodity_specification.percentage_of_matured_fibers"
+                      }
                     },
                     {
                       "descriptor": {
-                        "code": "FLOWER_DIAMETER_IN_CM"
-                      },
-                      "value": "3.45"
+                        "code": "items.tags.commodity_specification.sieve_analysis"
+                      }
                     },
                     {
                       "descriptor": {
-                        "code": "STAPLE_LENGTH_OF_COTTON_IN_MM"
-                      },
-                      "value": "28‑30"
+                        "code": "items.tags.commodity_specification.number_of_nuts"
+                      }
                     },
                     {
                       "descriptor": {
-                        "code": "TRASH_PERCENTAGE"
-                      },
-                      "value": "3%"
+                        "code": "items.tags.commodity_specification.void_nuts"
+                      }
                     },
                     {
                       "descriptor": {
-                        "code": "BUNDLE_STRENGTH"
-                      },
-                      "value": "24.0 and above"
+                        "code": "items.tags.commodity_specification.immature_nuts"
+                      }
                     },
                     {
                       "descriptor": {
-                        "code": "MICRONAIRE"
+                        "code": "items.tags.commodity_specification.fineness"
                       },
-                      "value": "2.8 to 3.0"
-                    },
-                    {
-                      "descriptor": {
-                        "code": "PERCENTAGE_OF_MATURED_FIBERS"
-                      },
-                      "value": "Above 70.0-75.0 mm"
-                    },
-                    {
-                      "descriptor": {
-                        "code": "SIEVE_ANALYSIS"
-                      },
-                      "value": "98"
-                    },
-                    {
-                      "descriptor": {
-                        "code": "NUMBER_OF_NUTS_PER_KG"
-                      },
-                      "value": "210"
-                    },
-                    {
-                      "descriptor": {
-                        "code": "VOID_NUTS_PERCENTAGE"
-                      },
-                      "value": "1"
-                    },
-                    {
-                      "descriptor": {
-                        "code": "IMMATURE_NUTS_PERCENTAGE"
-                      },
-                      "value": "2"
-                    },
-                    {
-                      "descriptor": {
-                        "code": "FINENESS"
-                      },
-                      "value": "Fine (10)"
+                      "value": "10"
                     }
                   ]
                 }

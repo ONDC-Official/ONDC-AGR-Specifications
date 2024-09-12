@@ -49,9 +49,23 @@
           },
           "price": {
             "currency": "INR",
-            "value": "280.00",
-            "offered_value": "270.00"
-          }
+            "value": "280.00"
+          },
+          "tags": [
+            {
+              "descriptor": {
+                "code": "NEGOTIATION_BAP"
+              },
+              "list": [
+                {
+                  "descriptor": {
+                    "code": "items.price.value"
+                  },
+                  "value": "270.00"
+                }
+              ]
+            }
+          ]
         }
       ],
       "fulfillments": [

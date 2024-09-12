@@ -49,8 +49,7 @@
           },
           "price": {
             "currency": "INR",
-            "value": "280.00",
-            "offered_value": "270.00"
+            "value": "280.00"
           },
           "tags": [
             {
@@ -60,21 +59,15 @@
               "list": [
                 {
                   "descriptor": {
-                    "code": "MOISTURE"
+                    "code": "items.price.value"
+                  },
+                  "value": "270.00"
+                },
+                {
+                  "descriptor": {
+                    "code": "items.tags.commodity_specification.moisture"
                   },
                   "value": "4%"
-                },
-                {
-                  "descriptor": {
-                    "code": "OIL_CONTENT"
-                  },
-                  "value": "2%"
-                },
-                {
-                  "descriptor": {
-                    "code": "DEFECTIVES"
-                  },
-                  "value": "7%"
                 }
               ]
             }

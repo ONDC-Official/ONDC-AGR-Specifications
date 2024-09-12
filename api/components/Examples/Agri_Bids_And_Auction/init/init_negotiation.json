@@ -50,7 +50,22 @@
             "selected": {
               "count": 100
             }
-          }
+          },
+          "tags": [
+            {
+              "descriptor": {
+                "code": "NEGOTIATION_BAP"
+              },
+              "list": [
+                {
+                  "descriptor": {
+                    "code": "items.price.value"
+                  },
+                  "value": "270.00"
+                }
+              ]
+            }
+          ]
         }
       ],
       "billing": {

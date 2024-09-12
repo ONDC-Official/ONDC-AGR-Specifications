@@ -229,7 +229,7 @@ COMMODITY_SPECIFICATION:
   - code: PERCENTAGE_OF_WASTAGE
     description: '% of Wastage Not fit for Human Consumption (Rotten, Fungal infected, Diseased, Totally Damaged) for the commodity if applicable (Optional - depends on commodity)'
     reference: <PR/Issue/Discussion Links md format text>
-  - code: BUNCH_SIZE
+  - code: BUNCH_SIZE_VALUE
     description: Bunch size for leafy vegetables weight (gm) for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
   - code: BUNCH_SIZE_UNIT
@@ -247,10 +247,10 @@ COMMODITY_SPECIFICATION:
   - code: TRACES_OF_SOIL
     description: Traces of Soil for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
-  - code: VOLATILE_OIL_PERCENTAGE
+  - code: VOLATILE_OIL
     description: Volatile oil % for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
-  - code: TOTAL_ASH_PERCENTAGE
+  - code: TOTAL_ASH
     description: Total Ash, % (m/m) for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
   - code: CORIANDER_SPLIT_SEEDS_PERCENTAGE
@@ -259,17 +259,26 @@ COMMODITY_SPECIFICATION:
   - code: MIN_FLOWER_PER_STEM
     description: Min. flower per stem for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
-  - code: GIRTH_AT_THIN_END
+  - code: GIRTH_AT_THIN_END_VALUE
     description: Girth at thin end for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
+  - code: GIRTH_AT_THIN_END_UNIT
+    description: Girth at thin end unit (Like cm) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
   - code: BLOOMING_AND_SHAPE
-    description: Blooming and Shape for the commodity if applicable like - Reasonable bloomed and conical shape More than 85 %, Slightly bloomed and conical shape More than 90 %, Perfect bloomed and conical shape More than 95 % (Optional - depends on commodity)
+    description: Blooming and Shape for the commodity if applicable like - >=85%, Slightly bloomed and conical shape More than 90 %, Perfect bloomed and conical shape More than 95 % (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
-  - code: FLOWER_DIAMETER_IN_CM
-    description: Flower Diameter in cm for the commodity if applicable (Optional - depends on commodity)
+  - code: FLOWER_DIAMETER_VALUE
+    description: Flower Diameter for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
-  - code: STAPLE_LENGTH_OF_COTTON_IN_MM
-    description: Staple Length of cotton (in mm) for the commodity if applicable (Optional - depends on commodity)
+  - code: FLOWER_DIAMETER_UNIT
+    description: Flower Diameter unit for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: STAPLE_LENGTH_OF_COTTON_VALUE
+    description: Staple Length of cotton for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: STAPLE_LENGTH_OF_COTTON_UNIT
+    description: Staple Length of cotton unit for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
   - code: TRASH_PERCENTAGE
     description: Trash (% by wt) for the commodity if applicable (Optional - depends on commodity)
@@ -286,13 +295,16 @@ COMMODITY_SPECIFICATION:
   - code: SIEVE_ANALYSIS
     description: Sieve analysis (% passing through 75 µm IS Sieve) for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
-  - code: NUMBER_OF_NUTS_PER_KG
-    description: Number of nuts per kg for the commodity if applicable (Optional - depends on commodity)
+  - code: NUMBER_OF_NUTS_VALUE
+    description: Number of nuts for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
-  - code: VOID_NUTS_PERCENTAGE
+  - code: NUMBER_OF_NUTS_UNIT
+    description: Number of nuts unit (like per kg) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: VOID_NUTS
     description: Void nuts (% by Weight) for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
-  - code: IMMATURE_NUTS_PERCENTAGE
+  - code: IMMATURE_NUTS
     description: Immature nuts (% by Weight) for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
   - code: STRENGTH
@@ -335,7 +347,7 @@ NEGOTIATION_SPECIFICATION:
   - code: PERCENTAGE_OF_WASTAGE
     description: '% of Wastage Not fit for Human Consumption (Rotten, Fungal infected, Diseased, Totally Damaged) for the commodity if applicable (Optional - depends on commodity)'
     reference: <PR/Issue/Discussion Links md format text>
-  - code: BUNCH_SIZE
+  - code: BUNCH_SIZE_VALUE
     description: Bunch size for leafy vegetables weight (gm) for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
   - code: BUNCH_SIZE_UNIT
@@ -353,10 +365,10 @@ NEGOTIATION_SPECIFICATION:
   - code: TRACES_OF_SOIL
     description: Traces of Soil for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
-  - code: VOLATILE_OIL_PERCENTAGE
+  - code: VOLATILE_OIL
     description: Volatile oil % for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
-  - code: TOTAL_ASH_PERCENTAGE
+  - code: TOTAL_ASH
     description: Total Ash, % (m/m) for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
   - code: CORIANDER_SPLIT_SEEDS_PERCENTAGE
@@ -365,14 +377,23 @@ NEGOTIATION_SPECIFICATION:
   - code: MIN_FLOWER_PER_STEM
     description: Min. flower per stem for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
-  - code: GIRTH_AT_THIN_END
+  - code: GIRTH_AT_THIN_END_VALUE
     description: Girth at thin end for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
-  - code: FLOWER_DIAMETER_IN_CM
-    description: Flower Diameter in cm for the commodity if applicable (Optional - depends on commodity)
+  - code: GIRTH_AT_THIN_END_UNIT
+    description: Girth at thin end unit (Like cm) for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
-  - code: STAPLE_LENGTH_OF_COTTON_IN_MM
-    description: Staple Length of cotton (in mm) for the commodity if applicable (Optional - depends on commodity)
+  - code: FLOWER_DIAMETER_VALUE
+    description: Flower Diameter for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: FLOWER_DIAMETER_UNIT
+    description: Flower Diameter unit for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: STAPLE_LENGTH_OF_COTTON_VALUE
+    description: Staple Length of cotton for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: STAPLE_LENGTH_OF_COTTON_UNIT
+    description: Staple Length of cotton unit for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
   - code: TRASH_PERCENTAGE
     description: Trash (% by wt) for the commodity if applicable (Optional - depends on commodity)
@@ -389,13 +410,16 @@ NEGOTIATION_SPECIFICATION:
   - code: SIEVE_ANALYSIS
     description: Sieve analysis (% passing through 75 µm IS Sieve) for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
-  - code: NUMBER_OF_NUTS_PER_KG
-    description: Number of nuts per kg for the commodity if applicable (Optional - depends on commodity)
+  - code: NUMBER_OF_NUTS_VALUE
+    description: Number of nuts for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
-  - code: VOID_NUTS_PERCENTAGE
+  - code: NUMBER_OF_NUTS_UNIT
+    description: Number of nuts unit (like per kg) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: VOID_NUTS
     description: Void nuts (% by Weight) for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
-  - code: IMMATURE_NUTS_PERCENTAGE
+  - code: IMMATURE_NUTS
     description: Immature nuts (% by Weight) for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
   - code: STRENGTH
@@ -438,7 +462,7 @@ NEGOTIATION_BPP:
   - code: PERCENTAGE_OF_WASTAGE
     description: '% of Wastage Not fit for Human Consumption (Rotten, Fungal infected, Diseased, Totally Damaged) for the commodity if applicable (Optional - depends on commodity)'
     reference: <PR/Issue/Discussion Links md format text>
-  - code: BUNCH_SIZE
+  - code: BUNCH_SIZE_VALUE
     description: Bunch size for leafy vegetables weight (gm) for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
   - code: BUNCH_SIZE_UNIT
@@ -456,10 +480,10 @@ NEGOTIATION_BPP:
   - code: TRACES_OF_SOIL
     description: Traces of Soil for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
-  - code: VOLATILE_OIL_PERCENTAGE
+  - code: VOLATILE_OIL
     description: Volatile oil % for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
-  - code: TOTAL_ASH_PERCENTAGE
+  - code: TOTAL_ASH
     description: Total Ash, % (m/m) for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
   - code: CORIANDER_SPLIT_SEEDS_PERCENTAGE
@@ -468,14 +492,23 @@ NEGOTIATION_BPP:
   - code: MIN_FLOWER_PER_STEM
     description: Min. flower per stem for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
-  - code: GIRTH_AT_THIN_END
+  - code: GIRTH_AT_THIN_END_VALUE
     description: Girth at thin end for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
-  - code: FLOWER_DIAMETER_IN_CM
-    description: Flower Diameter in cm for the commodity if applicable (Optional - depends on commodity)
+  - code: GIRTH_AT_THIN_END_UNIT
+    description: Girth at thin end unit (Like cm) for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
-  - code: STAPLE_LENGTH_OF_COTTON_IN_MM
-    description: Staple Length of cotton (in mm) for the commodity if applicable (Optional - depends on commodity)
+  - code: FLOWER_DIAMETER_VALUE
+    description: Flower Diameter for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: FLOWER_DIAMETER_UNIT
+    description: Flower Diameter unit for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: STAPLE_LENGTH_OF_COTTON_VALUE
+    description: Staple Length of cotton for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: STAPLE_LENGTH_OF_COTTON_UNIT
+    description: Staple Length of cotton unit for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
   - code: TRASH_PERCENTAGE
     description: Trash (% by wt) for the commodity if applicable (Optional - depends on commodity)
@@ -492,13 +525,16 @@ NEGOTIATION_BPP:
   - code: SIEVE_ANALYSIS
     description: Sieve analysis (% passing through 75 µm IS Sieve) for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
-  - code: NUMBER_OF_NUTS_PER_KG
-    description: Number of nuts per kg for the commodity if applicable (Optional - depends on commodity)
+  - code: NUMBER_OF_NUTS_VALUE
+    description: Number of nuts for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
-  - code: VOID_NUTS_PERCENTAGE
+  - code: NUMBER_OF_NUTS_UNIT
+    description: Number of nuts unit (like per kg) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: VOID_NUTS
     description: Void nuts (% by Weight) for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
-  - code: IMMATURE_NUTS_PERCENTAGE
+  - code: IMMATURE_NUTS
     description: Immature nuts (% by Weight) for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
   - code: STRENGTH
@@ -541,7 +577,7 @@ NEGOTIATION_BAP:
   - code: PERCENTAGE_OF_WASTAGE
     description: '% of Wastage Not fit for Human Consumption (Rotten, Fungal infected, Diseased, Totally Damaged) for the commodity if applicable (Optional - depends on commodity)'
     reference: <PR/Issue/Discussion Links md format text>
-  - code: BUNCH_SIZE
+  - code: BUNCH_SIZE_VALUE
     description: Bunch size for leafy vegetables weight (gm) for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
   - code: BUNCH_SIZE_UNIT
@@ -559,10 +595,10 @@ NEGOTIATION_BAP:
   - code: TRACES_OF_SOIL
     description: Traces of Soil for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
-  - code: VOLATILE_OIL_PERCENTAGE
+  - code: VOLATILE_OIL
     description: Volatile oil % for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
-  - code: TOTAL_ASH_PERCENTAGE
+  - code: TOTAL_ASH
     description: Total Ash, % (m/m) for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
   - code: CORIANDER_SPLIT_SEEDS_PERCENTAGE
@@ -571,14 +607,23 @@ NEGOTIATION_BAP:
   - code: MIN_FLOWER_PER_STEM
     description: Min. flower per stem for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
-  - code: GIRTH_AT_THIN_END
+  - code: GIRTH_AT_THIN_END_VALUE
     description: Girth at thin end for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
-  - code: FLOWER_DIAMETER_IN_CM
-    description: Flower Diameter in cm for the commodity if applicable (Optional - depends on commodity)
+  - code: GIRTH_AT_THIN_END_UNIT
+    description: Girth at thin end unit (Like cm) for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
-  - code: STAPLE_LENGTH_OF_COTTON_IN_MM
-    description: Staple Length of cotton (in mm) for the commodity if applicable (Optional - depends on commodity)
+  - code: FLOWER_DIAMETER_VALUE
+    description: Flower Diameter for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: FLOWER_DIAMETER_UNIT
+    description: Flower Diameter unit for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: STAPLE_LENGTH_OF_COTTON_VALUE
+    description: Staple Length of cotton for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: STAPLE_LENGTH_OF_COTTON_UNIT
+    description: Staple Length of cotton unit for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
   - code: TRASH_PERCENTAGE
     description: Trash (% by wt) for the commodity if applicable (Optional - depends on commodity)
@@ -595,13 +640,16 @@ NEGOTIATION_BAP:
   - code: SIEVE_ANALYSIS
     description: Sieve analysis (% passing through 75 µm IS Sieve) for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
-  - code: NUMBER_OF_NUTS_PER_KG
-    description: Number of nuts per kg for the commodity if applicable (Optional - depends on commodity)
+  - code: NUMBER_OF_NUTS_VALUE
+    description: Number of nuts for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
-  - code: VOID_NUTS_PERCENTAGE
+  - code: NUMBER_OF_NUTS_UNIT
+    description: Number of nuts unit (like per kg) for the commodity if applicable (Optional - depends on commodity)
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: VOID_NUTS
     description: Void nuts (% by Weight) for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
-  - code: IMMATURE_NUTS_PERCENTAGE
+  - code: IMMATURE_NUTS
     description: Immature nuts (% by Weight) for the commodity if applicable (Optional - depends on commodity)
     reference: <PR/Issue/Discussion Links md format text>
   - code: STRENGTH

@@ -34,26 +34,40 @@ value:
           price:
             currency: INR
             value: '280.00'
-            offered_value: '250.00'
           tags:
             - descriptor:
                 code: NEGOTIATION_BAP
               list:
                 - descriptor:
-                    code: MOISTURE
+                    code: items.price.value
+                  value: '250.00'
+                - descriptor:
+                    code: items.tags.commodity_specification.moisture
                   value: 4%
-                - descriptor:
-                    code: OIL_CONTENT
-                  value: 2%
-                - descriptor:
-                    code: DEFECTIVES
-                  value: 7%
             - descriptor:
                 code: NEGOTIATION_BPP
               list:
                 - descriptor:
+                    code: items.price.value
+                  value: '280.00'
+                - descriptor:
+                    code: items.tags.commodity_specification.moisture
+                  value: 5%
+            - descriptor:
+                code: COMMODITY_SPECIFICATION
+              list:
+                - descriptor:
+                    code: REFERENCE_DOCS_MIME_TYPE
+                  value: application/pdf
+                - descriptor:
+                    code: REFERENCE_DOCS_COPY
+                  value: https://abc.com/commodity_specification.pdf
+                - descriptor:
+                    code: SHELF_LIFE
+                  value: P10M
+                - descriptor:
                     code: MOISTURE
-                  value: 8%
+                  value: 10%
                 - descriptor:
                     code: FOREIGN_MATTER
                   value: 3%
@@ -67,6 +81,15 @@ value:
                     code: OTHER_EDIBLE_GRAINS
                   value: 1%
                 - descriptor:
+                    code: URIC_ACID
+                  value: '101'
+                - descriptor:
+                    code: AFLATOXIN
+                  value: '15'
+                - descriptor:
+                    code: ARGEMONE_SEEDS
+                  value: 'Yes'
+                - descriptor:
                     code: SIZE_RANGE_MEASURE
                   value: Diameter
                 - descriptor:
@@ -79,7 +102,7 @@ value:
                     code: PERCENTAGE_OF_WASTAGE
                   value: 3%
                 - descriptor:
-                    code: BUNCH_SIZE
+                    code: BUNCH_SIZE_VALUE
                   value: '50'
                 - descriptor:
                     code: BUNCH_SIZE_UNIT
@@ -89,16 +112,19 @@ value:
                   value: Brown
                 - descriptor:
                     code: COLOUR_PERCENTAGE
-                  value: More than 70
+                  value: '>=70%'
+                - descriptor:
+                    code: TOTAL_SOLUBLE_SOLIDS
+                  value: 16 degree Brix
                 - descriptor:
                     code: TRACES_OF_SOIL
                   value: Sight traces
                 - descriptor:
-                    code: VOLATILE_OIL_PERCENTAGE
-                  value: Up to 2.5
+                    code: VOLATILE_OIL
+                  value: <=2.5%
                 - descriptor:
-                    code: TOTAL_ASH_PERCENTAGE
-                  value: Not more than 7.0
+                    code: TOTAL_ASH
+                  value: <=7%
                 - descriptor:
                     code: CORIANDER_SPLIT_SEEDS_PERCENTAGE
                   value: 5%
@@ -106,41 +132,59 @@ value:
                     code: MIN_FLOWER_PER_STEM
                   value: '1'
                 - descriptor:
-                    code: GIRTH_AT_THIN_END
-                  value: less than 6 cm
+                    code: GIRTH_AT_THIN_END_VALUE
+                  value: <=6
                 - descriptor:
-                    code: FLOWER_DIAMETER_IN_CM
+                    code: GIRTH_AT_THIN_END_UNIT
+                  value: cm
+                - descriptor:
+                    code: BLOOMING_AND_SHAPE
+                  value: '>=85%'
+                - descriptor:
+                    code: FLOWER_DIAMETER_VALUE
                   value: '3.45'
                 - descriptor:
-                    code: STAPLE_LENGTH_OF_COTTON_IN_MM
+                    code: FLOWER_DIAMETER_UNIT
+                  value: cm
+                - descriptor:
+                    code: STAPLE_LENGTH_OF_COTTON_VALUE
                   value: 28‑30
+                - descriptor:
+                    code: STAPLE_LENGTH_OF_COTTON_UNIT
+                  value: mm
                 - descriptor:
                     code: TRASH_PERCENTAGE
                   value: 3%
                 - descriptor:
                     code: BUNDLE_STRENGTH
-                  value: 24.0 and above
+                  value: '>=24.0'
                 - descriptor:
                     code: MICRONAIRE
-                  value: 2.8 to 3.0
+                  value: 2.8-3.0
                 - descriptor:
                     code: PERCENTAGE_OF_MATURED_FIBERS
-                  value: Above 70.0-75.0 mm
+                  value: '>=70.0'
                 - descriptor:
                     code: SIEVE_ANALYSIS
                   value: '98'
                 - descriptor:
-                    code: NUMBER_OF_NUTS_PER_KG
+                    code: NUMBER_OF_NUTS_VALUE
                   value: '210'
                 - descriptor:
-                    code: VOID_NUTS_PERCENTAGE
-                  value: '1'
+                    code: NUMBER_OF_NUTS_UNIT
+                  value: kg
                 - descriptor:
-                    code: IMMATURE_NUTS_PERCENTAGE
-                  value: '2'
+                    code: VOID_NUTS
+                  value: 1%
+                - descriptor:
+                    code: IMMATURE_NUTS
+                  value: 2%
+                - descriptor:
+                    code: STRENGTH
+                  value: Excellent
                 - descriptor:
                     code: FINENESS
-                  value: Fine (10)
+                  value: '10'
       fulfillments:
         - id: F1
           stops:
@@ -157,7 +201,6 @@ value:
         price:
           currency: INR
           value: '28050.00'
-          offered_value: '25050.00'
         breakup:
           - title: Wheat (Negotiation)
             price:
