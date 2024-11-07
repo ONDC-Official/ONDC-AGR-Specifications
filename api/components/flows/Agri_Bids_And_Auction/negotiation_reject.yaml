@@ -1,8 +1,8 @@
 summary: Agricultural output product - Negotiation rejected by seller
 description: The following is an illustrative flow to perform a transaction of a nature where a buyer would like to negotiate for agricultural commodity. The Negotiation majorly happens in four phases of order processing flow, i.e. Discovery of available commodity and service providers, order, fulfillment and post-fulfillment.
 details:
-
   - description: Sequence Diagram for Negotiation
+    explanation: '<b>For negotiation</b>: A seller can send a catalog and allow negotiation for a particular item over price, quanity and commodity specification. All the terms that are negotiable among these three must be specified in the "NEGOTIATION_SPECIFICATION" tag group, with the path of the attribute mentioned in the "code". "NEGOTIATION_SPECIFICATION" must only be sent when the seller wants to allow negotiation over the item attributes/price/quantity.'
     mermaidGraph: >-
       sequenceDiagram
         participant B as Buyer
@@ -23,6 +23,7 @@ details:
         BA ->> B: Shows all the avilable product <br>options from sellers
 
   - description: Selection and Negotiation
+    explanation: '<b>For negotiation (as a Buyer)</b>: A buyer can change the value of the attributes whose path was passed by the seller in the "NEGOTIATION_SPECIFICATION" tag group in a new tag group "NEGOTIATION_BAP". This tag group can only contain codes that were previously passed in "NEGOTIATION_SPECIFICATION".<br><b>For negotiation (as a Seller)</b>: The seller can reject the offer by sending error code in /on_select or counter-negotiate or accept the offer. For counter-negotiation, seller needs to add the same attribute code path in the "NEGOTIATION_BPP" tag group. The values of the code must differ from values proposed by buyer in "NEGOTIATION_BAP". For accepting an offer, a seller will send the same exact values as buyer in the "NEGOTIATON_BPP" tag group and if both of these tag groups are matched, the negotiation can be termed as success. A final quote should be shared by the seller in the same /on_select.'
     mermaidGraph: >-
       sequenceDiagram
         participant B as Buyer
@@ -46,7 +47,6 @@ details:
         BA ->> B: Shows response with price details if item is in stock
         note right of BA: Everything else works as per the protocol
 
-
   - description: Initializing the order
     mermaidGraph: >-
       sequenceDiagram
@@ -69,7 +69,7 @@ details:
         B ->> BA: Confirms the Order
         BA ->> SA: **/confirm** - Buyer confirms the order
         SA ->> BA: **/on_confirm** - Seller responds with /on_confirm, <br> creating an Order ID for negotiated placed order
-        BA ->> B: Confirms the order 
+        BA ->> B: Confirms the order
 
   - description: Fulfillment
     mermaidGraph: >-
@@ -81,8 +81,7 @@ details:
         B ->> BA: Checks the order status
         BA ->> SA: **/status** - Enquire order status
         SA ->> BA: **/on_status** - Seller responds with the current order status
-        BA ->> B: Updates the latest status 
-
+        BA ->> B: Updates the latest status
 
 reference: if any
 steps:
@@ -104,10 +103,9 @@ steps:
     reference: if any
     example:
       $ref: "../../Examples/Agri_Bids_And_Auction_yaml/select/select_negotiation_start.yaml"
-  - summary: Seller reject the offer due to very low price asked by buyer 
+  - summary: Seller reject the offer due to very low price asked by buyer
     api: on_select (reject)
     description: Seller reject the offer due to very low price asked by buyer
     reference: if any
     example:
       $ref: "../../Examples/Agri_Bids_And_Auction_yaml/on_select/on_select_negotiation_reject.yaml"
-  

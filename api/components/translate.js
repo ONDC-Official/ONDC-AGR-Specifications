@@ -28,8 +28,8 @@ const traverse = (source) => {
   }
 };
 
-let folderName = "Agri_Equipment_Hiring";
-const traversedPaths = traverse("./Examples/Agri_Equipment_Hiring");
+let folderName = "Agri_Bids_And_Auction";
+const traversedPaths = traverse("./Examples/Agri_Bids_And_Auction");
 
 traversedPaths.forEach((path, i) => {
   path.forEach((jsonPath, j) => {

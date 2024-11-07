@@ -1,7 +1,6 @@
 summary: Agricultural product - Bids and Auction for a Commodity
 description: The following is an illustrative flow to perform a transaction of a nature where a buyer would like to bids for agricultural commodity. The bids and auction majorly happens in four phases of order processing flow, i.e. Discovery of available commodity and service providers, order, fulfillment and post-fulfillment.
 details:
-
   - description: Sequence Diagram for Bids and Auction
     mermaidGraph: >-
       sequenceDiagram
@@ -46,6 +45,8 @@ details:
         BA ->> SA: **/init** - Buyer requests participation with /init
         SA ->> BA: **/on_init** - Seller responds with /on_init, <br> sending a payment gateway (PG) link for payment.
         B ->> BA: Buyer makes the payment.
+        BA -->> SA: Payment received.
+        SA ->> BA: **/on_status** - Seller confirms the paymnet has been received.
 
   - description: Bid Placement
     mermaidGraph: >-
@@ -69,7 +70,7 @@ details:
         B ->> BA: Confirms the Order
         BA ->> SA: **/confirm** - Buyer confirms the order
         SA ->> BA: **/on_confirm** - Seller responds with /on_confirm, <br> creating an Order ID with the bid state set to "Placed."
-        BA ->> B: Confirms the bids 
+        BA ->> B: Confirms the bids
 
   - description: Fulfillment
     mermaidGraph: >-
@@ -81,7 +82,7 @@ details:
         B ->> BA: Checks the bid status
         BA ->> SA: **/status** - Enquire bid status <br>or maximum bid price (if open bid)
         SA ->> BA: **/on_status** - Seller responds with the highest price
-        BA ->> B: Updates the latest status 
+        BA ->> B: Updates the latest status
 
   - description: Update Requests
     mermaidGraph: >-
@@ -129,9 +130,9 @@ steps:
     reference: if any
     example:
       $ref: "../../Examples/Agri_Bids_And_Auction_yaml/select/select.yaml"
-  - summary: Seller verifies the Buyer's ID whether he is allowed or not. 
+  - summary: Seller verifies the Buyer's ID whether he is allowed or not.
     api: on_select
-    description: Seller verifies the Buyer's ID whether he is allowed or not. 
+    description: Seller verifies the Buyer's ID whether he is allowed or not.
     reference: if any
     example:
       $ref: "../../Examples/Agri_Bids_And_Auction_yaml/on_select/on_select.yaml"
@@ -147,6 +148,12 @@ steps:
     reference: if any
     example:
       $ref: "../../Examples/Agri_Bids_And_Auction_yaml/on_init/on_init.yaml"
+  - summary: Once Buyer pays on the PG Link, Seller sends an /on_status indicating the confirmation of payment.
+    api: on_status (Payment Confirmation)
+    description: Seller responds with /on_status, confirming the payment.
+    reference: if any
+    example:
+      $ref: "../../Examples/Agri_Bids_And_Auction_yaml/on_status/on_status_payment_confirmation.yaml"
   - summary: Buyer sends /init, indicating bid placement. The bid price will be shared in the intent.
     api: init (Bid Placement)
     description: Buyer sends /init, indicating bid placement. The bid price will be shared in the intent.
@@ -175,7 +182,7 @@ steps:
     description: Buyer requests for the status of the bid
     example:
       $ref: "../../Examples/Agri_Bids_And_Auction_yaml/status/status.yaml"
-  - summary: Seller app sends bid status update 
+  - summary: Seller app sends bid status update
     api: on_status
     description: Seller app sends bids status update with the highest price
     example:
@@ -195,7 +202,7 @@ steps:
     description: Seller app sends bids status if Awarded
     example:
       $ref: "../../Examples/Agri_Bids_And_Auction_yaml/on_update/on_update_awarded.yaml"
-  - summary: Seller app sends bids status if Not Awarded 
+  - summary: Seller app sends bids status if Not Awarded
     api: on_update (Not Awarded)
     description: Seller app sends bids status as cancel if Not Awarded
     example:
@@ -206,4 +213,3 @@ steps:
   #   reference: if any
   #   example:
   #     $ref: "../../Examples/Agri_Bids_And_Auction_yaml/rating/rating.yaml"
-

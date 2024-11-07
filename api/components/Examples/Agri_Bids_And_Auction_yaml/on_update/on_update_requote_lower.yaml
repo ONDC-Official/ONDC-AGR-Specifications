@@ -154,38 +154,6 @@ value:
           state:
             descriptor:
               code: Placed
-          stops:
-            - type: end
-              location:
-                gps: 12.974002,77.613458
-                address: 'My House #, My buildin'
-                city:
-                  name: Bengaluru
-                country:
-                  code: IND
-                area_code: '560001'
-                state:
-                  name: Karnataka
-              contact:
-                phone: '9886098860'
-                email: nobody@nomail.com
-              time:
-                label: confirmed
-                range:
-                  start: '2024-06-09T22:00:00.000Z'
-                  end: '2024-06-10T02:00:00.000Z'
-              person:
-                name: Ramu
-              instructions:
-                name: Special Instructions
-                short_desc: Customer Special Instructions
-              authorization:
-                type: OTP
-                token: '1234'
-                valid_from: '2024-06-10T22:00:00Z'
-                valid_to: '2024-06-10T23:00:00Z'
-                status: valid
-          rateable: true
       quote:
         price:
           currency: INR
