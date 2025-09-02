@@ -5017,14 +5017,21 @@ x-flows:
                         creator:
                           descriptor:
                             name: Any Marketer if (applicable)
-                            contact:
-                              name: Any Marketer
-                              address:
-                                full: >-
-                                  Wheat Pvt Ltd, A-3, NDDB House, Sector-1,
-                                  Chandigarh, 140301
-                              phone: '18000000000'
-                              email: abc@xyz.com
+                            short_desc: Marketer short desc
+                            long_desc: Marketer long desc
+                            images:
+                              - url: https://abc.com/images/1-shop-img
+                          contact:
+                            email: abc@xyz.com
+                            phone: '18000000000'
+                          address: >-
+                            Wheat Pvt Ltd, A-3, NDDB House, Sector-1,
+                            Chandigarh, 140301
+                          city:
+                            code: std:080
+                            name: Bengaluru
+                          state:
+                            code: KA
                         price:
                           currency: INR
                           value: '300.00'
@@ -6570,9 +6577,8 @@ x-flows:
                           range:
                             start: '2024-06-09T22:00:00.000Z'
                             end: '2024-06-10T02:00:00.000Z'
-                        customer:
-                          person:
-                            name: Ramu
+                        person:
+                          name: Ramu
                         instructions:
                           name: Special Instructions
                           short_desc: Customer Special Instructions
@@ -10155,9 +10161,8 @@ x-flows:
                           range:
                             start: '2024-06-09T22:00:00.000Z'
                             end: '2024-06-30T00:00:00.000Z'
-                        customer:
-                          person:
-                            name: Ramu
+                        person:
+                          name: Ramu
                         instructions:
                           name: Special Instructions
                           short_desc: Customer Special Instructions
@@ -10244,7 +10249,7 @@ x-flows:
                         list:
                           - descriptor:
                               code: Counterparty
-                            value: BPP
+                            value: BAP
                           - descriptor:
                               code: Mode
                             value: UPI
@@ -12777,14 +12782,21 @@ x-flows:
                         creator:
                           descriptor:
                             name: Any Marketer if (applicable)
-                            contact:
-                              name: Any Marketer
-                              address:
-                                full: >-
-                                  Wheat Pvt Ltd, A-3, NDDB House, Sector-1,
-                                  Chandigarh, 140301
-                              phone: '18000000000'
-                              email: abc@xyz.com
+                            short_desc: Marketer short desc
+                            long_desc: Marketer long desc
+                            images:
+                              - url: https://abc.com/images/1-shop-img
+                          contact:
+                            email: abc@xyz.com
+                            phone: '18000000000'
+                          address: >-
+                            Wheat Pvt Ltd, A-3, NDDB House, Sector-1,
+                            Chandigarh, 140301
+                          city:
+                            code: std:080
+                            name: Bengaluru
+                          state:
+                            code: KA
                         price:
                           currency: INR
                           value: '250.00'
@@ -13444,7 +13456,7 @@ x-flows:
                         list:
                           - descriptor:
                               code: Counterparty
-                            value: BPP
+                            value: BAP
                           - descriptor:
                               code: Mode
                             value: UPI
@@ -13576,7 +13588,7 @@ x-flows:
                         list:
                           - descriptor:
                               code: Counterparty
-                            value: BPP
+                            value: BAP
                           - descriptor:
                               code: Mode
                             value: UPI
@@ -13879,7 +13891,7 @@ x-flows:
                         list:
                           - descriptor:
                               code: Counterparty
-                            value: BPP
+                            value: BAP
                           - descriptor:
                               code: Mode
                             value: UPI
@@ -13910,7 +13922,7 @@ x-flows:
                         list:
                           - descriptor:
                               code: Counterparty
-                            value: BPP
+                            value: BAP
                           - descriptor:
                               code: Mode
                             value: UPI
@@ -14021,9 +14033,8 @@ x-flows:
                           range:
                             start: '2024-06-09T22:00:00.000Z'
                             end: '2024-06-30T00:00:00.000Z'
-                        customer:
-                          person:
-                            name: Ramu
+                        person:
+                          name: Ramu
                         instructions:
                           name: Special Instructions
                           short_desc: Customer Special Instructions
@@ -14127,7 +14138,7 @@ x-flows:
                         list:
                           - descriptor:
                               code: Counterparty
-                            value: BPP
+                            value: BAP
                           - descriptor:
                               code: Mode
                             value: UPI
@@ -14158,7 +14169,7 @@ x-flows:
                         list:
                           - descriptor:
                               code: Counterparty
-                            value: BPP
+                            value: BAP
                           - descriptor:
                               code: Mode
                             value: UPI
@@ -14375,7 +14386,7 @@ x-flows:
                         list:
                           - descriptor:
                               code: Counterparty
-                            value: BPP
+                            value: BAP
                           - descriptor:
                               code: Mode
                             value: UPI
@@ -14406,7 +14417,7 @@ x-flows:
                         list:
                           - descriptor:
                               code: Counterparty
-                            value: BPP
+                            value: BAP
                           - descriptor:
                               code: Mode
                             value: UPI
@@ -14640,7 +14651,7 @@ x-flows:
                         list:
                           - descriptor:
                               code: Counterparty
-                            value: BPP
+                            value: BAP
                           - descriptor:
                               code: Mode
                             value: UPI
@@ -14671,7 +14682,7 @@ x-flows:
                         list:
                           - descriptor:
                               code: Counterparty
-                            value: BPP
+                            value: BAP
                           - descriptor:
                               code: Mode
                             value: UPI
@@ -14835,7 +14846,7 @@ x-flows:
                         list:
                           - descriptor:
                               code: Counterparty
-                            value: BPP
+                            value: BAP
                           - descriptor:
                               code: Mode
                             value: UPI
@@ -14866,7 +14877,7 @@ x-flows:
                         list:
                           - descriptor:
                               code: Counterparty
-                            value: BPP
+                            value: BAP
                           - descriptor:
                               code: Mode
                             value: UPI
@@ -15050,7 +15061,7 @@ x-flows:
                         list:
                           - descriptor:
                               code: Counterparty
-                            value: BPP
+                            value: BAP
                           - descriptor:
                               code: Mode
                             value: UPI
@@ -15084,7 +15095,7 @@ x-flows:
                         list:
                           - descriptor:
                               code: Counterparty
-                            value: BPP
+                            value: BAP
                           - descriptor:
                               code: Mode
                             value: UPI
@@ -15297,7 +15308,7 @@ x-flows:
                         list:
                           - descriptor:
                               code: Counterparty
-                            value: BPP
+                            value: BAP
                           - descriptor:
                               code: Mode
                             value: UPI
@@ -15328,7 +15339,7 @@ x-flows:
                         list:
                           - descriptor:
                               code: Counterparty
-                            value: BPP
+                            value: BAP
                           - descriptor:
                               code: Mode
                             value: UPI
@@ -15659,14 +15670,21 @@ x-flows:
                         creator:
                           descriptor:
                             name: Any Marketer if (applicable)
-                            contact:
-                              name: Any Marketer
-                              address:
-                                full: >-
-                                  Wheat Pvt Ltd, A-3, NDDB House, Sector-1,
-                                  Chandigarh, 140301
-                              phone: '18000000000'
-                              email: abc@xyz.com
+                            short_desc: Marketer short desc
+                            long_desc: Marketer long desc
+                            images:
+                              - url: https://abc.com/images/1-shop-img
+                          contact:
+                            email: abc@xyz.com
+                            phone: '18000000000'
+                          address: >-
+                            Wheat Pvt Ltd, A-3, NDDB House, Sector-1,
+                            Chandigarh, 140301
+                          city:
+                            code: std:080
+                            name: Bengaluru
+                          state:
+                            code: KA
                         price:
                           currency: INR
                           value: '250.00'
@@ -16170,7 +16188,7 @@ x-flows:
                         list:
                           - descriptor:
                               code: Counterparty
-                            value: BPP
+                            value: BAP
                           - descriptor:
                               code: Mode
                             value: UPI
@@ -16383,7 +16401,7 @@ x-flows:
                         list:
                           - descriptor:
                               code: Counterparty
-                            value: BPP
+                            value: BAP
                           - descriptor:
                               code: Mode
                             value: UPI
@@ -16414,7 +16432,7 @@ x-flows:
                         list:
                           - descriptor:
                               code: Counterparty
-                            value: BPP
+                            value: BAP
                           - descriptor:
                               code: Mode
                             value: UPI
@@ -16646,7 +16664,7 @@ x-flows:
                         list:
                           - descriptor:
                               code: Counterparty
-                            value: BPP
+                            value: BAP
                           - descriptor:
                               code: Mode
                             value: UPI
@@ -16677,7 +16695,7 @@ x-flows:
                         list:
                           - descriptor:
                               code: Counterparty
-                            value: BPP
+                            value: BAP
                           - descriptor:
                               code: Mode
                             value: UPI
@@ -16799,7 +16817,7 @@ x-flows:
                         list:
                           - descriptor:
                               code: Counterparty
-                            value: BPP
+                            value: BAP
                           - descriptor:
                               code: Mode
                             value: UPI
@@ -16833,7 +16851,7 @@ x-flows:
                         list:
                           - descriptor:
                               code: Counterparty
-                            value: BPP
+                            value: BAP
                           - descriptor:
                               code: Mode
                             value: UPI
@@ -17396,7 +17414,7 @@ x-flows:
                         list:
                           - descriptor:
                               code: Counterparty
-                            value: BPP
+                            value: BAP
                           - descriptor:
                               code: Mode
                             value: UPI
@@ -17427,7 +17445,7 @@ x-flows:
                         list:
                           - descriptor:
                               code: Counterparty
-                            value: BPP
+                            value: BAP
                           - descriptor:
                               code: Mode
                             value: UPI
@@ -18364,14 +18382,21 @@ x-flows:
                         creator:
                           descriptor:
                             name: Any Marketer if (applicable)
-                            contact:
-                              name: Any Marketer
-                              address:
-                                full: >-
-                                  Wheat Pvt Ltd, A-3, NDDB House, Sector-1,
-                                  Chandigarh, 140301
-                              phone: '18000000000'
-                              email: abc@xyz.com
+                            short_desc: Marketer short desc
+                            long_desc: Marketer long desc
+                            images:
+                              - url: https://abc.com/images/1-shop-img
+                          contact:
+                            email: abc@xyz.com
+                            phone: '18000000000'
+                          address: >-
+                            Wheat Pvt Ltd, A-3, NDDB House, Sector-1,
+                            Chandigarh, 140301
+                          city:
+                            code: std:080
+                            name: Bengaluru
+                          state:
+                            code: KA
                         price:
                           currency: INR
                           value: '300.00'
@@ -18793,14 +18818,21 @@ x-flows:
                         creator:
                           descriptor:
                             name: Any Marketer if (applicable)
-                            contact:
-                              name: Any Marketer
-                              address:
-                                full: >-
-                                  Wheat Pvt Ltd, A-3, NDDB House, Sector-1,
-                                  Chandigarh, 140301
-                              phone: '18000000000'
-                              email: abc@xyz.com
+                            short_desc: Marketer short desc
+                            long_desc: Marketer long desc
+                            images:
+                              - url: https://abc.com/images/1-shop-img
+                          contact:
+                            email: abc@xyz.com
+                            phone: '18000000000'
+                          address: >-
+                            Wheat Pvt Ltd, A-3, NDDB House, Sector-1,
+                            Chandigarh, 140301
+                          city:
+                            code: std:080
+                            name: Bengaluru
+                          state:
+                            code: KA
                         price:
                           currency: INR
                           value: '350.00'
@@ -19218,14 +19250,21 @@ x-flows:
                         creator:
                           descriptor:
                             name: Any Marketer if (applicable)
-                            contact:
-                              name: Any Marketer
-                              address:
-                                full: >-
-                                  Wheat Pvt Ltd, A-3, NDDB House, Sector-1,
-                                  Chandigarh, 140301
-                              phone: '18000000000'
-                              email: abc@xyz.com
+                            short_desc: Marketer short desc
+                            long_desc: Marketer long desc
+                            images:
+                              - url: https://abc.com/images/1-shop-img
+                          contact:
+                            email: abc@xyz.com
+                            phone: '18000000000'
+                          address: >-
+                            Wheat Pvt Ltd, A-3, NDDB House, Sector-1,
+                            Chandigarh, 140301
+                          city:
+                            code: std:080
+                            name: Bengaluru
+                          state:
+                            code: KA
                         price:
                           currency: INR
                           value: '300.00'
@@ -19766,14 +19805,21 @@ x-flows:
                         creator:
                           descriptor:
                             name: Any Marketer if (applicable)
-                            contact:
-                              name: Any Marketer
-                              address:
-                                full: >-
-                                  Wheat Pvt Ltd, A-3, NDDB House, Sector-1,
-                                  Chandigarh, 140301
-                              phone: '18000000000'
-                              email: abc@xyz.com
+                            short_desc: Marketer short desc
+                            long_desc: Marketer long desc
+                            images:
+                              - url: https://abc.com/images/1-shop-img
+                          contact:
+                            email: abc@xyz.com
+                            phone: '18000000000'
+                          address: >-
+                            Wheat Pvt Ltd, A-3, NDDB House, Sector-1,
+                            Chandigarh, 140301
+                          city:
+                            code: std:080
+                            name: Bengaluru
+                          state:
+                            code: KA
                         price:
                           currency: INR
                           value: '250.00'
@@ -20490,7 +20536,7 @@ x-flows:
                         list:
                           - descriptor:
                               code: Counterparty
-                            value: BPP
+                            value: BAP
                           - descriptor:
                               code: Mode
                             value: UPI
@@ -20521,7 +20567,7 @@ x-flows:
                         list:
                           - descriptor:
                               code: Counterparty
-                            value: BPP
+                            value: BAP
                           - descriptor:
                               code: Mode
                             value: UPI
@@ -20891,7 +20937,7 @@ x-flows:
                         list:
                           - descriptor:
                               code: Counterparty
-                            value: BPP
+                            value: BAP
                           - descriptor:
                               code: Mode
                             value: UPI
@@ -20922,7 +20968,7 @@ x-flows:
                         list:
                           - descriptor:
                               code: Counterparty
-                            value: BPP
+                            value: BAP
                           - descriptor:
                               code: Mode
                             value: UPI
@@ -22159,9 +22205,8 @@ x-examples:
                             range:
                               start: '2024-06-09T22:00:00.000Z'
                               end: '2024-06-10T02:00:00.000Z'
-                          customer:
-                            person:
-                              name: Ramu
+                          person:
+                            name: Ramu
                           instructions:
                             name: Special Instructions
                             short_desc: Customer Special Instructions
@@ -22341,9 +22386,8 @@ x-examples:
                             range:
                               start: '2024-06-09T22:00:00.000Z'
                               end: '2024-06-30T00:00:00.000Z'
-                          customer:
-                            person:
-                              name: Ramu
+                          person:
+                            name: Ramu
                           instructions:
                             name: Special Instructions
                             short_desc: Customer Special Instructions
@@ -22447,7 +22491,7 @@ x-examples:
                           list:
                             - descriptor:
                                 code: Counterparty
-                              value: BPP
+                              value: BAP
                             - descriptor:
                                 code: Mode
                               value: UPI
@@ -22478,7 +22522,7 @@ x-examples:
                           list:
                             - descriptor:
                                 code: Counterparty
-                              value: BPP
+                              value: BAP
                             - descriptor:
                                 code: Mode
                               value: UPI
@@ -22581,9 +22625,8 @@ x-examples:
                             range:
                               start: '2024-06-09T22:00:00.000Z'
                               end: '2024-06-30T00:00:00.000Z'
-                          customer:
-                            person:
-                              name: Ramu
+                          person:
+                            name: Ramu
                           instructions:
                             name: Special Instructions
                             short_desc: Customer Special Instructions
@@ -22670,7 +22713,7 @@ x-examples:
                           list:
                             - descriptor:
                                 code: Counterparty
-                              value: BPP
+                              value: BAP
                             - descriptor:
                                 code: Mode
                               value: UPI
@@ -23140,7 +23183,7 @@ x-examples:
                           list:
                             - descriptor:
                                 code: Counterparty
-                              value: BPP
+                              value: BAP
                             - descriptor:
                                 code: Mode
                               value: UPI
@@ -23171,7 +23214,7 @@ x-examples:
                           list:
                             - descriptor:
                                 code: Counterparty
-                              value: BPP
+                              value: BAP
                             - descriptor:
                                 code: Mode
                               value: UPI
@@ -23331,14 +23374,21 @@ x-examples:
                           creator:
                             descriptor:
                               name: Any Marketer if (applicable)
-                              contact:
-                                name: Any Marketer
-                                address:
-                                  full: >-
-                                    Wheat Pvt Ltd, A-3, NDDB House, Sector-1,
-                                    Chandigarh, 140301
-                                phone: '18000000000'
-                                email: abc@xyz.com
+                              short_desc: Marketer short desc
+                              long_desc: Marketer long desc
+                              images:
+                                - url: https://abc.com/images/1-shop-img
+                            contact:
+                              email: abc@xyz.com
+                              phone: '18000000000'
+                            address: >-
+                              Wheat Pvt Ltd, A-3, NDDB House, Sector-1,
+                              Chandigarh, 140301
+                            city:
+                              code: std:080
+                              name: Bengaluru
+                            state:
+                              code: KA
                           price:
                             currency: INR
                             value: '300.00'
@@ -23779,14 +23829,21 @@ x-examples:
                           creator:
                             descriptor:
                               name: Any Marketer if (applicable)
-                              contact:
-                                name: Any Marketer
-                                address:
-                                  full: >-
-                                    Wheat Pvt Ltd, A-3, NDDB House, Sector-1,
-                                    Chandigarh, 140301
-                                phone: '18000000000'
-                                email: abc@xyz.com
+                              short_desc: Marketer short desc
+                              long_desc: Marketer long desc
+                              images:
+                                - url: https://abc.com/images/1-shop-img
+                            contact:
+                              email: abc@xyz.com
+                              phone: '18000000000'
+                            address: >-
+                              Wheat Pvt Ltd, A-3, NDDB House, Sector-1,
+                              Chandigarh, 140301
+                            city:
+                              code: std:080
+                              name: Bengaluru
+                            state:
+                              code: KA
                           price:
                             currency: INR
                             value: '250.00'
@@ -24200,14 +24257,21 @@ x-examples:
                           creator:
                             descriptor:
                               name: Any Marketer if (applicable)
-                              contact:
-                                name: Any Marketer
-                                address:
-                                  full: >-
-                                    Wheat Pvt Ltd, A-3, NDDB House, Sector-1,
-                                    Chandigarh, 140301
-                                phone: '18000000000'
-                                email: abc@xyz.com
+                              short_desc: Marketer short desc
+                              long_desc: Marketer long desc
+                              images:
+                                - url: https://abc.com/images/1-shop-img
+                            contact:
+                              email: abc@xyz.com
+                              phone: '18000000000'
+                            address: >-
+                              Wheat Pvt Ltd, A-3, NDDB House, Sector-1,
+                              Chandigarh, 140301
+                            city:
+                              code: std:080
+                              name: Bengaluru
+                            state:
+                              code: KA
                           price:
                             currency: INR
                             value: '250.00'
@@ -26118,7 +26182,7 @@ x-examples:
                           list:
                             - descriptor:
                                 code: Counterparty
-                              value: BPP
+                              value: BAP
                             - descriptor:
                                 code: Mode
                               value: UPI
@@ -26322,7 +26386,7 @@ x-examples:
                           list:
                             - descriptor:
                                 code: Counterparty
-                              value: BPP
+                              value: BAP
                             - descriptor:
                                 code: Mode
                               value: UPI
@@ -26353,7 +26417,7 @@ x-examples:
                           list:
                             - descriptor:
                                 code: Counterparty
-                              value: BPP
+                              value: BAP
                             - descriptor:
                                 code: Mode
                               value: UPI
@@ -27267,7 +27331,7 @@ x-examples:
                           list:
                             - descriptor:
                                 code: Counterparty
-                              value: BPP
+                              value: BAP
                             - descriptor:
                                 code: Mode
                               value: UPI
@@ -27298,7 +27362,7 @@ x-examples:
                           list:
                             - descriptor:
                                 code: Counterparty
-                              value: BPP
+                              value: BAP
                             - descriptor:
                                 code: Mode
                               value: UPI
@@ -28231,7 +28295,7 @@ x-examples:
                           list:
                             - descriptor:
                                 code: Counterparty
-                              value: BPP
+                              value: BAP
                             - descriptor:
                                 code: Mode
                               value: UPI
@@ -28262,7 +28326,7 @@ x-examples:
                           list:
                             - descriptor:
                                 code: Counterparty
-                              value: BPP
+                              value: BAP
                             - descriptor:
                                 code: Mode
                               value: UPI
@@ -31596,7 +31660,7 @@ x-examples:
                           list:
                             - descriptor:
                                 code: Counterparty
-                              value: BPP
+                              value: BAP
                             - descriptor:
                                 code: Mode
                               value: UPI
@@ -31627,7 +31691,7 @@ x-examples:
                           list:
                             - descriptor:
                                 code: Counterparty
-                              value: BPP
+                              value: BAP
                             - descriptor:
                                 code: Mode
                               value: UPI
@@ -32064,7 +32128,7 @@ x-examples:
                           list:
                             - descriptor:
                                 code: Counterparty
-                              value: BPP
+                              value: BAP
                             - descriptor:
                                 code: Mode
                               value: UPI
@@ -32095,7 +32159,7 @@ x-examples:
                           list:
                             - descriptor:
                                 code: Counterparty
-                              value: BPP
+                              value: BAP
                             - descriptor:
                                 code: Mode
                               value: UPI
@@ -32191,7 +32255,7 @@ x-examples:
                           list:
                             - descriptor:
                                 code: Counterparty
-                              value: BPP
+                              value: BAP
                             - descriptor:
                                 code: Mode
                               value: UPI
@@ -32222,7 +32286,7 @@ x-examples:
                           list:
                             - descriptor:
                                 code: Counterparty
-                              value: BPP
+                              value: BAP
                             - descriptor:
                                 code: Mode
                               value: UPI
@@ -32403,7 +32467,7 @@ x-examples:
                           list:
                             - descriptor:
                                 code: Counterparty
-                              value: BPP
+                              value: BAP
                             - descriptor:
                                 code: Mode
                               value: UPI
@@ -32437,7 +32501,7 @@ x-examples:
                           list:
                             - descriptor:
                                 code: Counterparty
-                              value: BPP
+                              value: BAP
                             - descriptor:
                                 code: Mode
                               value: UPI
@@ -32647,7 +32711,7 @@ x-examples:
                           list:
                             - descriptor:
                                 code: Counterparty
-                              value: BPP
+                              value: BAP
                             - descriptor:
                                 code: Mode
                               value: UPI
@@ -32678,7 +32742,7 @@ x-examples:
                           list:
                             - descriptor:
                                 code: Counterparty
-                              value: BPP
+                              value: BAP
                             - descriptor:
                                 code: Mode
                               value: UPI
@@ -33364,14 +33428,21 @@ x-examples:
                           creator:
                             descriptor:
                               name: Any Marketer if (applicable)
-                              contact:
-                                name: Any Marketer
-                                address:
-                                  full: >-
-                                    Wheat Pvt Ltd, A-3, NDDB House, Sector-1,
-                                    Chandigarh, 140301
-                                phone: '18000000000'
-                                email: abc@xyz.com
+                              short_desc: Marketer short desc
+                              long_desc: Marketer long desc
+                              images:
+                                - url: https://abc.com/images/1-shop-img
+                            contact:
+                              email: abc@xyz.com
+                              phone: '18000000000'
+                            address: >-
+                              Wheat Pvt Ltd, A-3, NDDB House, Sector-1,
+                              Chandigarh, 140301
+                            city:
+                              code: std:080
+                              name: Bengaluru
+                            state:
+                              code: KA
                           price:
                             currency: INR
                             value: '350.00'
@@ -33928,7 +33999,7 @@ x-examples:
                           list:
                             - descriptor:
                                 code: Counterparty
-                              value: BPP
+                              value: BAP
                             - descriptor:
                                 code: Mode
                               value: UPI
@@ -33959,7 +34030,7 @@ x-examples:
                           list:
                             - descriptor:
                                 code: Counterparty
-                              value: BPP
+                              value: BAP
                             - descriptor:
                                 code: Mode
                               value: UPI
@@ -34097,7 +34168,7 @@ x-examples:
                           list:
                             - descriptor:
                                 code: Counterparty
-                              value: BPP
+                              value: BAP
                             - descriptor:
                                 code: Mode
                               value: UPI
@@ -34321,7 +34392,7 @@ x-examples:
                           list:
                             - descriptor:
                                 code: Counterparty
-                              value: BPP
+                              value: BAP
                             - descriptor:
                                 code: Mode
                               value: UPI
@@ -34352,7 +34423,7 @@ x-examples:
                           list:
                             - descriptor:
                                 code: Counterparty
-                              value: BPP
+                              value: BAP
                             - descriptor:
                                 code: Mode
                               value: UPI
@@ -34487,7 +34558,7 @@ x-examples:
                           list:
                             - descriptor:
                                 code: Counterparty
-                              value: BPP
+                              value: BAP
                             - descriptor:
                                 code: Mode
                               value: UPI
@@ -34521,7 +34592,7 @@ x-examples:
                           list:
                             - descriptor:
                                 code: Counterparty
-                              value: BPP
+                              value: BAP
                             - descriptor:
                                 code: Mode
                               value: UPI

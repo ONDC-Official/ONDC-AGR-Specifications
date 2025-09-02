@@ -183,7 +183,7 @@ value:
               list:
                 - descriptor:
                     code: Counterparty
-                  value: BPP
+                  value: BAP
                 - descriptor:
                     code: Mode
                   value: UPI
@@ -214,7 +214,7 @@ value:
               list:
                 - descriptor:
                     code: Counterparty
-                  value: BPP
+                  value: BAP
                 - descriptor:
                     code: Mode
                   value: UPI

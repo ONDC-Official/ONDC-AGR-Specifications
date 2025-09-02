@@ -152,6 +152,17 @@
                   >Feature-UI</a
                 >
               </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="logsubmit-tab"
+                  data-bs-toggle="tab"
+                  href="#logsubmit"
+                  role="tab"
+                  aria-selected="false"
+                  >Logsubmit-UI</a
+                >
+              </li>
             </ul>
           </div>
           <div class="tab-content">
@@ -249,8 +260,8 @@
                   <td>
                     <select
                       id="feature-sets-dropdown"
-                      class="form-select" onchange="markdownConverter()">
-                      <option>BRD</option>
+                      class="form-select" onchange="markdownConverter('feature')">
+                      <option>PRD for Agri Products</option>
                   </select>
                   </td>
                 </tr>
@@ -259,6 +270,27 @@
               <div class="container">
                 <div class="row">
                   <div id="featureDiv" style="color: black;max-height: 700px;overflow: auto;border: 1px solid black;"></div>
+                </div>
+              </div>
+             </div>
+            </div>
+            <div class="tab-pane fade" id="logsubmit" role="tabpanel">
+              <table class="table">
+                <tr>
+                  <td><b>Log Submission</b></td>
+                  <td>
+                    <select
+                      id="logsubmit-sets-dropdown"
+                      class="form-select" onchange="markdownConverter('logsubmit')">
+                      <option>Agri Bids and Auction log submission</option>
+                  </select>
+                  </td>
+                </tr>
+              </table>
+             <div class="card-body">
+              <div class="container">
+                <div class="row">
+                  <div id="logsubmitDiv" style="color: black;max-height: 700px;overflow: auto;border: 1px solid black;"></div>
                 </div>
               </div>
              </div>
@@ -392,11 +424,37 @@
     <script type="text/javascript">
 
       $(document).ready(function() {
-        markdownConverter();
+        markdownConverter('feature');
+        
+        $('#myTabs a[data-bs-toggle="tab"]').on('shown.bs.tab', function (e) {
+          var target = $(e.target).attr("href");
+          
+          if (target === '#feature') {
+            markdownConverter('feature');
+          } else if (target === '#logsubmit') {
+            markdownConverter('logsubmit');
+          }
+        });
       });
 
-      function markdownConverter(){
-        const selectedOption = document.getElementById("feature-sets-dropdown").value.toLowerCase();
+      function markdownConverter(tabType = 'feature'){
+        let selectedOption, targetDiv, dropdownId;
+        
+        if (tabType === 'feature') {
+          dropdownId = 'feature-sets-dropdown';
+          targetDiv = 'featureDiv';
+        } else if (tabType === 'logsubmit') {
+          dropdownId = 'logsubmit-sets-dropdown';
+          targetDiv = 'logsubmitDiv';
+        }
+        
+        const dropdown = document.getElementById(dropdownId);
+        if (!dropdown) {
+          console.error(`Dropdown with id ${dropdownId} not found`);
+          return;
+        }
+        
+        selectedOption = dropdown.value.toLowerCase();
         const arrayWords = selectedOption.split(' ');
         let fileNameLatest = '';
         let fileName
@@ -407,16 +465,29 @@
 
         const fileNameFinal = fileNameLatest + arrayWords[arrayWords.length-1] + '.md';
         const filePath = 'api/docs/' + fileNameFinal;
+        
+        console.log(`Loading file for ${tabType} tab: ${filePath}`);
+        
         const xhr = new XMLHttpRequest();            
         xhr.open("GET", filePath, true); 
         xhr.onreadystatechange = function () { 
           if (xhr.readyState === 4 && xhr.status === 200) { 
-            const textData =xhr.responseText  
+            const textData = xhr.responseText;
             const converter = new showdown.Converter({simpleLineBreaks:true, tables:true, openLinksInNewWindow:true, simplifiedAutoLink:true});
             converter.setFlavor('github');
             const convertedHtmlData = converter.makeHtml(textData);
-            document.getElementById("featureDiv").innerHTML = convertedHtmlData;
-          }            
+            const targetElement = document.getElementById(targetDiv);
+            if (targetElement) {
+              targetElement.innerHTML = convertedHtmlData;
+              console.log(`Content loaded successfully for ${tabType} tab`);
+            }
+          } else if (xhr.readyState === 4) {
+            console.error(`Failed to load file: ${filePath}, Status: ${xhr.status}`);
+            const targetElement = document.getElementById(targetDiv);
+            if (targetElement) {
+              targetElement.innerHTML = `<p style="color: red;">Error loading file: ${filePath}<br>Status: ${xhr.status}<br>Expected filename: ${fileNameFinal}</p>`;
+            }
+          }           
         };            
         xhr.send();
       }
