@@ -102,14 +102,19 @@ value:
               creator:
                 descriptor:
                   name: Any Marketer if (applicable)
-                  contact:
-                    name: Any Marketer
-                    address:
-                      full: >-
-                        Wheat Pvt Ltd, A-3, NDDB House, Sector-1, Chandigarh,
-                        140301
-                    phone: '18000000000'
-                    email: abc@xyz.com
+                  short_desc: Marketer short desc
+                  long_desc: Marketer long desc
+                  images:
+                    - url: https://abc.com/images/1-shop-img
+                contact:
+                  email: abc@xyz.com
+                  phone: '18000000000'
+                address: Wheat Pvt Ltd, A-3, NDDB House, Sector-1, Chandigarh, 140301
+                city:
+                  code: std:080
+                  name: Bengaluru
+                state:
+                  code: KA
               price:
                 currency: INR
                 value: '250.00'

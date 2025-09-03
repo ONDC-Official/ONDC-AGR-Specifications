@@ -120,10 +120,8 @@
                   "end": "2024-06-30T00:00:00.000Z"
                 }
               },
-              "customer": {
-                "person": {
-                  "name": "Ramu"
-                }
+              "person": {
+                "name": "Ramu"
               },
               "instructions": {
                 "name": "Special Instructions",
@@ -277,7 +275,7 @@
                   "descriptor": {
                     "code": "Counterparty"
                   },
-                  "value": "BPP"
+                  "value": "BAP"
                 },
                 {
                   "descriptor": {

@@ -117,7 +117,7 @@
                   "descriptor": {
                     "code": "Counterparty"
                   },
-                  "value": "BPP"
+                  "value": "BAP"
                 },
                 {
                   "descriptor": {
@@ -178,7 +178,7 @@
                   "descriptor": {
                     "code": "Counterparty"
                   },
-                  "value": "BPP"
+                  "value": "BAP"
                 },
                 {
                   "descriptor": {
