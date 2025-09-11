@@ -295,6 +295,18 @@
                         "code": "AGENT_FIRM"
                       },
                       "value": "Abc Firm"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "IS_ALREADY_PRODUCED"
+                      },
+                      "value": "false"
+                    },
+                    {
+                      "descriptor": {
+                        "code": "AVAILABILITY_DATE"
+                      },
+                      "value": "2025-12-15T10:00:00Z"
                     }
                   ]
                 },

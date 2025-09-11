@@ -125,6 +125,12 @@ SERVICE_INFORMATION:
   - code: AGENT_FIRM
     description: "Agent firm : Firm of the person facilitating the sale (Commonly designated as commission agent firm) (Optional)"
     reference: <PR/Issue/Discussion Links md format text>
+  - code: IS_ALREADY_PRODUCED
+    description: "Is Already Produced: Indicates whether the product/service is already produced and available (true/false)"
+    reference: <PR/Issue/Discussion Links md format text>
+  - code: AVAILABILITY_DATE
+    description: "Availability Date: Specifies the date and time when the product/service will be available (ISO 8601 format). Only applicable when IS_ALREADY_PRODUCED is false"
+    reference: <PR/Issue/Discussion Links md format text>
 AUCTION_SPECIFICATION:
   - code: CURRENCY_UNIT
     description: Currency of the applied charges on bids (Required)
