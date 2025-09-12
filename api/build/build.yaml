@@ -3706,6 +3706,17 @@ x-tags:
                       Agent firm : Firm of the person facilitating the sale
                       (Commonly designated as commission agent firm) (Optional)
                     reference: <PR/Issue/Discussion Links md format text>
+                  - code: IS_ALREADY_PRODUCED
+                    description: >-
+                      Is Already Produced: Indicates whether the product/service
+                      is already produced and available (true/false)
+                    reference: <PR/Issue/Discussion Links md format text>
+                  - code: AVAILABILITY_DATE
+                    description: >-
+                      Availability Date: Specifies the date and time when the
+                      product/service will be available (ISO 8601 format). Only
+                      applicable when IS_ALREADY_PRODUCED is false
+                    reference: <PR/Issue/Discussion Links md format text>
               - code: AUCTION_SPECIFICATION
                 description: >-
                   Auction specification for the commodity bid (Required if item
@@ -12862,6 +12873,12 @@ x-flows:
                               - descriptor:
                                   code: AGENT_FIRM
                                 value: Abc Firm
+                              - descriptor:
+                                  code: IS_ALREADY_PRODUCED
+                                value: 'false'
+                              - descriptor:
+                                  code: AVAILABILITY_DATE
+                                value: '2025-12-15T10:00:00Z'
                           - descriptor:
                               code: QUALITY_ASSESSMENT_REPORT
                             display: true
@@ -15746,6 +15763,12 @@ x-flows:
                               - descriptor:
                                   code: AGENT_FIRM
                                 value: Abc Firm
+                              - descriptor:
+                                  code: IS_ALREADY_PRODUCED
+                                value: 'false'
+                              - descriptor:
+                                  code: AVAILABILITY_DATE
+                                value: '2025-12-15T10:00:00Z'
                           - descriptor:
                               code: QUALITY_ASSESSMENT_REPORT
                             display: true
@@ -18462,6 +18485,12 @@ x-flows:
                               - descriptor:
                                   code: AGENT_FIRM
                                 value: Abc Firm
+                              - descriptor:
+                                  code: IS_ALREADY_PRODUCED
+                                value: 'false'
+                              - descriptor:
+                                  code: AVAILABILITY_DATE
+                                value: '2025-12-15T10:00:00Z'
                           - descriptor:
                               code: QUALITY_ASSESSMENT_REPORT
                             display: true
@@ -18898,6 +18927,12 @@ x-flows:
                               - descriptor:
                                   code: AGENT_FIRM
                                 value: Abc Firm
+                              - descriptor:
+                                  code: IS_ALREADY_PRODUCED
+                                value: 'false'
+                              - descriptor:
+                                  code: AVAILABILITY_DATE
+                                value: '2025-12-15T10:00:00Z'
                           - descriptor:
                               code: QUALITY_ASSESSMENT_REPORT
                             display: true
@@ -19330,6 +19365,12 @@ x-flows:
                               - descriptor:
                                   code: AGENT_FIRM
                                 value: Abc Firm
+                              - descriptor:
+                                  code: IS_ALREADY_PRODUCED
+                                value: 'false'
+                              - descriptor:
+                                  code: AVAILABILITY_DATE
+                                value: '2025-12-15T10:00:00Z'
                           - descriptor:
                               code: QUALITY_ASSESSMENT_REPORT
                             display: true
@@ -19885,6 +19926,12 @@ x-flows:
                               - descriptor:
                                   code: AGENT_FIRM
                                 value: Abc Firm
+                              - descriptor:
+                                  code: IS_ALREADY_PRODUCED
+                                value: 'false'
+                              - descriptor:
+                                  code: AVAILABILITY_DATE
+                                value: '2025-12-15T10:00:00Z'
                           - descriptor:
                               code: QUALITY_ASSESSMENT_REPORT
                             display: true
@@ -23909,6 +23956,12 @@ x-examples:
                                 - descriptor:
                                     code: AGENT_FIRM
                                   value: Abc Firm
+                                - descriptor:
+                                    code: IS_ALREADY_PRODUCED
+                                  value: 'false'
+                                - descriptor:
+                                    code: AVAILABILITY_DATE
+                                  value: '2025-12-15T10:00:00Z'
                             - descriptor:
                                 code: QUALITY_ASSESSMENT_REPORT
                               display: true
@@ -24333,6 +24386,12 @@ x-examples:
                                 - descriptor:
                                     code: AGENT_FIRM
                                   value: Abc Firm
+                                - descriptor:
+                                    code: IS_ALREADY_PRODUCED
+                                  value: 'false'
+                                - descriptor:
+                                    code: AVAILABILITY_DATE
+                                  value: '2025-12-15T10:00:00Z'
                             - descriptor:
                                 code: QUALITY_ASSESSMENT_REPORT
                               display: true
@@ -33508,6 +33567,12 @@ x-examples:
                                 - descriptor:
                                     code: AGENT_FIRM
                                   value: Abc Firm
+                                - descriptor:
+                                    code: IS_ALREADY_PRODUCED
+                                  value: 'false'
+                                - descriptor:
+                                    code: AVAILABILITY_DATE
+                                  value: '2025-12-15T10:00:00Z'
                             - descriptor:
                                 code: QUALITY_ASSESSMENT_REPORT
                               display: true
